@@ -1,6 +1,6 @@
 import json
 from dateutil.parser import parse
-with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_4.JSON') as filedata:
+with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as filedata:
     data = json.load(filedata)
     DateOfFinancials = data.get('basicInfo',{}).get('businessInformation',{}).get('financialsLastUpdate',None)
     ClientApprovalDate = data.get('basicInfo',{}).get('approvalStatus',{}).get('approvedDate',None)
@@ -26,11 +26,80 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_4.JSON') as fil
             if i['deliveryType']=='Bulk':
                 DelMethBulkInd = 'Y'
             else:
-                DelMethBulkInd = None
+                DelMethBulkInd = 'N'     
     else:
-       DelMethBulkInd = None
+       DelMethBulkInd = 'N'
 
-    #Assigning default values to custom fields 
+    #Newly added
+
+    del_LoanList=(data.get('loanCriteria',{}).get('correspondent',{}).get('correspondentDelegated',{}).get('loanTypes',[]))
+    non_del_LoanList =(data.get('loanCriteria',{}).get('correspondent',{}).get('correspondentNonDelegated',{}).get('loanTypes',[]))
+    if 'Fha' in del_LoanList and 'Fha' in non_del_LoanList:
+        FHAUndwType='BOTH'
+    elif 'Fha' in del_LoanList:
+        FHAUndwType='DELT'
+    elif 'Fha' in non_del_LoanList:
+        FHAUndwType='NDLT'
+    else: 
+        FHAUndwType=None
+    if 'Conventional' in del_LoanList and 'Conventional' in non_del_LoanList:
+        CONVUndwType='BOTH'
+    elif 'Conventional' in del_LoanList:
+        CONVUndwType='DELT'
+    elif 'Conventional' in non_del_LoanList:
+        CONVUndwType='NDLT'
+    else: 
+        CONVUndwType=None
+    if 'Va' in del_LoanList and 'Va' in non_del_LoanList:
+        VAUndwType='BOTH'
+    elif 'Va' in del_LoanList:
+        VAUndwType='DELT'
+    elif 'Va' in non_del_LoanList:
+        VAUndwType='NDLT'
+    else: 
+        VAUndwType=None
+    USDAUndwType=str(None)+'Usda'
+    if 'Usda' in del_LoanList and 'Usda' in non_del_LoanList:
+        USDAUndwType='BOTH'
+    elif 'Usda' in del_LoanList:
+        USDAUndwType='DELT'
+    elif 'Usda' in non_del_LoanList:
+        USDAUndwType='NDLT'
+    else: 
+        USDAUndwType=None
+    if USDAUndwType==None:
+        RuralApproved='N'
+    else:
+        RuralApproved='Y'
+    if VAUndwType==None:
+        VAApproved='N'
+    else:
+        VAApproved='Y'
+    if CONVUndwType==None:
+        ConventionalApproved='N'
+    else:
+        ConventionalApproved='Y'
+    if FHAUndwType==None:
+        FHAApproved='N'
+    else:
+        FHAApproved='Y'
+    YrsinBusiness=data.get('basicInfo',{}).get('businessInformation').get('yearsInBusiness',None)
+    #print(YrsinBusiness)
+    BillingZip=data.get('basicInfo',{}).get('billingAddress',{}).get('zip',None)
+    #print(BillingZip)
+    BillingState=data.get('basicInfo',{}).get('billingAddress',{}).get('state',None)
+    BillingCity=data.get('basicInfo',{}).get('billingAddress',{}).get('city',None)
+    BillingAddress=data.get('basicInfo',{}).get('billingAddress',{}).get('street1',None)
+    ID=data.get('basicInfo',{}).get('id',None)
+    MaxCommitmentAmount=data.get('commitments',{}).get('maxCommitmentAmount',None)
+    #data.get('commitments',{}).get('deliveryTypes',[]):
+
+
+    
+    # print(RuralApproved)
+    # print(VAApproved)
+    #VW_Authority should be added at the end because it has dependency on JumboUndwtyp
+        #Assigning default values to custom fields 
     ClientStatus=None
     ClientSecStatus=None
     ClientStatusGroup='INACTIVE'
@@ -362,3 +431,5 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_4.JSON') as fil
             RelockDays15= customFields['fieldValue']
         if customFields['fieldName'] == 'Relock Days - 30':
             RelockDays30 = customFields['fieldValue']
+    # VW_Authority
+    #print(JUMBOUndwType)
