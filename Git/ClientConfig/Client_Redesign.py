@@ -3,7 +3,6 @@ from dateutil.parser import parse
 with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as filedata:
     data = json.load(filedata)
     DateOfFinancials = data.get('basicInfo',{}).get('businessInformation',{}).get('financialsLastUpdate',None)
-    print(DateOfFinancials)
     ClientApprovalDate = data.get('basicInfo',{}).get('approvalStatus',{}).get('approvedDate',None)
     AccountManager  = data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('name',None)
     AccountManagerEffectiveDate = data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('assignedDate',None)
@@ -92,7 +91,8 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
     BillingCity=data.get('basicInfo',{}).get('billingAddress',{}).get('city',None)
     BillingAddress=data.get('basicInfo',{}).get('billingAddress',{}).get('street1',None)
     ID=data.get('basicInfo',{}).get('id',None)
-    MaxCommitmentAmount=data.get('commitments',{}).get('maxCommitmentAmount',None)
+    # MaxCommitmentAmountsDJnsjdata.get('commitments',{}).get('maxCommitmentAmount',None)
+
     #data.get('commitments',{}).get('deliveryTypes',[]):
 
 
@@ -146,6 +146,9 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
     LockDays75=None
     RelockDays15=None
     RelockDays30=None
+    LockDays15=None
+    LockDays60=None
+
 
 
 
@@ -432,5 +435,48 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
             RelockDays15= customFields['fieldValue']
         if customFields['fieldName'] == 'Relock Days - 30':
             RelockDays30 = customFields['fieldValue']
+        if customFields['fieldName'] == 'Lock Days - 15':
+            LockDays15= customFields['fieldValue']
+        if customFields['fieldName'] == 'Lock Days - 60':
+            LockDays60 =customFields['fieldValue']
+    #Added by Baji
+
+    ExternalOrgId = data.get('basicInfo',{}).get('id',None)
+    ThirdPartyOrganizationId = data.get('basicInfo',{}).get('tpoId',None)
+    AsgnToId = data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('userId',None)
+    ClientTimeZone = data.get('basicInfo',{}).get('timeZone',None)    #Need to find if this field is there in any json file and Do we need to convert???
+    CoLegalName = data.get('basicInfo',{}).get('companyLegalName',None)
+    StateofIncorporation = data.get('basicInfo',{}).get('businessInformation',{}).get('stateOfIncorporation',None)
+    organizationType = data.get('basicInfo',{}).get('organizationType',None)
+    if organizationType == 'Company': organizationType = 'CORP'
+    elif organizationType == 'Limited Liability Company': organizationType = 'LLC'
+    elif organizationType == 'Partnership': organizationType = 'PSHP'
+    else: organizationType = None
+    #print(organizationType)
+    LEI = data.get('basicInfo',{}).get('businessInformation',{}).get('lei',None)
+    FHASponsorCd = data.get('loanCriteria',{}).get('fhaSponsorId',None)
+    FHAStatus = data.get('loanCriteria',{}).get('fhaStatus',None)
+    FHADirectEndorsement = data.get('loanCriteria',{}).get('fhaDirectEndorsement',None)
+    if FHADirectEndorsement == 'Principal/Agent':
+        FHADirectEndorsement = 'AGEN'
+    #print(FHADirectEndorsement)
+    VASponsorCd = data.get('loanCriteria',{}).get('vaSponsorId',None)       
+    VAStatus = data.get('loanCriteria',{}).get('vaStatus',None)
+    FannieMaeID = data.get('loanCriteria',{}).get('fannieMaeId',None)       
+    FreddieMacID = data.get('loanCriteria',{}).get('freddieMacId',None)       
+    AUSMethod = data.get('loanCriteria',{}).get('ausMethod',None)
+    DailyVolumelimit = data.get('commitments',{}).get('bestEffortDailyVolumeLimit',None)
+    MaxCommitmentAmount = data.get('commitments',{}).get('maxCommitmentAmount',None)
+    if data.get('commitments',{}).get('deliveryTypes',[]):
+        for i in data.get('commitments',{}).get('deliveryTypes',[]):
+            if i['deliveryType']== 'CoIssue':
+                CoissueIndicator = 'Y'
+            else:
+                CoissueIndicator = 'N'
+    else:
+        CoissueIndicator = None
     # VW_Authority
     #print(JUMBOUndwType)
+for vars in dir():
+ if not vars.startswith("var"):
+   print (vars)
