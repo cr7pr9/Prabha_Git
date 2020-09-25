@@ -1,0 +1,1241 @@
+ {
+  "duMessages" : {
+    "engineVersion" : "10.3",
+    "caseFileId" : "1431088062",
+    "recommendation" : "APPROVE-ELIGIBLE",
+    "engineResultsStatusCode" : "3",
+    "lenderLoanNumber" : "7004093019",
+    "submissionDate" : "20191203 10:52",
+    "submissionNumber" : "5",
+    "submittedBy" : "l38remgh",
+    "resultsDateTime" : "20191203 10:52:18",
+    "analysis" : {
+      "paymentShock" : -18.835,
+      "reserves" : 0.00,
+      "reserveMonths" : 0,
+      "shortage" : 0.00,
+      "netCashBack" : 277.79,
+      "cashFromBorrower" : 0.00,
+      "housingExpenseRatio" : 16.65,
+      "totalExpenseRatio" : 27.3,
+      "totalExpenseRatioLT10Mos" : 27.3,
+      "totalExpenseRatioUndisclosed" : 27.3,
+      "ltv" : 69,
+      "cltv" : 69,
+      "qualifyingInterestRate" : 3.875,
+      "fullyIndexedQualifyingInterestRate" : 3.875,
+      "qualifyingPandI" : 1094.01,
+      "qualifyingRatePaymentShock" : -18.835,
+      "assetsToVerify" : 0.00,
+      "reservesToVerify" : 0.00,
+      "percentSellerContribution" : 0.000,
+      "amountSellerContribution" : 0.00,
+      "percentBorrowerContribution" : 0.000,
+      "amountBorrowerContribution" : 0.00,
+      "undrawnHELOCAmount" : 0.00,
+      "closingCostsPaidBySeller" : 0.00,
+      "borrowerFundsPercentToSalesPrice" : 0.000,
+      "refinanceAmount" : 226631.41,
+      "cashOnHandRemaining" : 0.00,
+      "pmimipfundingFee" : 0.00,
+      "ltvnoFinancedMI" : 69,
+      "cltvnoFinancedMI" : 69
+    },
+    "loanDetail" : {
+      "combinedLoanAmount" : 232650.00,
+      "loanTypeCode" : "01",
+      "amortizationType" : "05",
+      "amortizationTerm" : 360,
+      "purposeofLoan" : "05",
+      "purposeofRefi" : "13",
+      "interestRate" : 3.875
+    },
+    "property" : {
+      "subjectPropertyTypeCode" : "01",
+      "propertyStreetAddress" : "4040 Timahoe Dr",
+      "propertyCity" : "Modesto",
+      "propertyState" : "CA",
+      "propertyZipCode" : "95356",
+      "salesPrice" : 0.00,
+      "propertyAppraisedValue" : 340000.00,
+      "propertyWillBe" : "1",
+      "numberUnits" : "1"
+    },
+    "borrowers" : [ 
+	  {
+      "applicantID" : 1045967500,
+      "borrowerName" : "ERIC Popst",
+      "lastName" : "Popst"
+    }, {
+      "applicantID" : 1045967530,
+      "borrowerName" : "Blanca Lopez",
+      "lastName" : "Lopez"
+    } 
+	],
+    "borrowerCreditScore" : [ 
+	{
+        "applicantID": 1045967500,
+        "creditData": {
+          "TransUnion": 800,
+          "Experian": 809,
+          "Equifax": 812
+        }
+      }, {
+        "applicantID": 1045967530,
+        "creditData": {
+          "TransUnion": 636,
+          "Experian": 640,
+          "Equifax": 620
+        }
+      }
+	],
+    "incomeExpenses" : {
+      "totalHousingPayment" : "1277.43",
+      "totalExpensePayment" : "2094.43",
+      "presentHousingExpense" : "1573.86"
+    },
+    "messages" : {
+      "LoanStrengthsWeaknesses" : [ {
+        "lenderMessageLine" : {
+          "text" : "The following risk factors represent strengths in the borrower's loan application:"
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Combined Loan-to-Value Ratio"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "Debt-to-Income Ratio"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "Number of Borrowers"
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "Combined Loan-to-Value Ratio",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "Debt-to-Income Ratio",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "Number of Borrowers",
+          "parameterName" : ""
+        } ],
+        "messageID" : 1437,
+        "messageName" : "REASON-STRENGTHS-RISK-FACTORS",
+        "messageType" : "LoanStrengthsWeaknesses",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "List"
+      } ],
+      "Observations" : [ {
+        "lenderMessageLine" : {
+          "text" : "This case was submitted to Desktop Underwriter version 10.3 by PENNYMAC LOAN SERVICES, LLC.  The following information is associated with this loan:  Casefile ID is 1431088062 and Submission number is 5.  If the loan is delivered to Fannie Mae, the Casefile ID must be provided at delivery."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "10.3",
+          "parameterName" : "DUVersion"
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "PENNYMAC LOAN SERVICES, LLC",
+          "parameterName" : "Insitution"
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "1431088062",
+          "parameterName" : "CasefileID"
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "5",
+          "parameterName" : "SubmissionNumber"
+        } ],
+        "messageID" : 943,
+        "messageName" : "KB-VERSION-CASEID-OBSERVATION",
+        "messageType" : "Observations",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Parametric"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "The following list of special feature codes is provided to assist you in determining which codes may be associated with this loan. Other codes may be required. Refer to the Special Feature Codes list on fanniemae.com for a comprehensive list."
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Special Feature Code"
+          }, {
+            "value" : "Description"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "127"
+          }, {
+            "value" : "DU Loan"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "007"
+          }, {
+            "value" : "Limited Cash-out Refinance"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "801"
+          }, {
+            "value" : "Appraisal Waiver"
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "127",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "DU Loan",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "007",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "Limited Cash-out Refinance",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "801",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "Appraisal Waiver",
+          "parameterName" : ""
+        } ],
+        "messageID" : 1387,
+        "messageName" : "SFC-LIST",
+        "messageType" : "Observations",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "List"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "The following Credit Report is associated with this submission:"
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Borrower Name"
+          }, {
+            "value" : "Credit Agency"
+          }, {
+            "value" : "Credit Report ID"
+          }, {
+            "value" : " Credit Report Date"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "Blanca Lopez"
+          }, {
+            "value" : "CoreLogic Credco"
+          }, {
+            "value" : "113831389410000"
+          }, {
+            "value" : "11/22/2019"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "ERIC Popst"
+          }, {
+            "value" : "CoreLogic Credco"
+          }, {
+            "value" : "113831389410000"
+          }, {
+            "value" : "11/22/2019"
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "Blanca Lopez",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "CoreLogic Credco",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "113831389410000",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "11/22/2019",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "ERIC Popst",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "CoreLogic Credco",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "113831389410000",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "11/22/2019",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2113,
+        "messageName" : "CREDIT-REPORT-OBSERVATION",
+        "messageType" : "Observations",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "List"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "The following credit scores are included in the credit report:"
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Borrower"
+          }, {
+            "value" : "Credit Score(s)"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "ERIC Popst"
+          }, {
+            "value" : "686 690 707"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "Blanca Lopez"
+          }, {
+            "value" : "671 686 691"
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "ERIC Popst",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "686 690 707",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "Blanca Lopez",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "671 686 691",
+          "parameterName" : ""
+        } ],
+        "messageID" : 1132,
+        "messageName" : "CREDIT-SCORE-OBSERVATION",
+        "messageType" : "Observations",
+        "messageSubType1" : "Credit and Liability Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "List"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "The following sources of income were used in the underwriting analysis:"
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Borrower"
+          }, {
+            "value" : "Income Type"
+          }, {
+            "value" : "Amount"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "Blanca Lopez"
+          }, {
+            "value" : "Base employment income"
+          }, {
+            "value" : "3500.00"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "ERIC Popst"
+          }, {
+            "value" : "Base employment income"
+          }, {
+            "value" : "4171.36"
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "Blanca Lopez",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "Base employment income",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "3500.00",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "ERIC Popst",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "Base employment income",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "4171.36",
+          "parameterName" : ""
+        } ],
+        "messageID" : 153,
+        "messageName" : "LIST-INCOME-USED",
+        "messageType" : "Observations",
+        "messageSubType1" : "Employment and Income Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "List"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Desktop Underwriter does not include cash back received from the transaction in the borrower's cash reserves calculation.  Therefore, the amount of cash back, $277.79, has not been included in cash reserves."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "277.79",
+          "parameterName" : "CashBack"
+        } ],
+        "messageID" : 119,
+        "messageName" : "CASH-BACK-TO-BORROWER",
+        "messageType" : "Observations",
+        "messageSubType1" : "Asset Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Parametric"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "In order to exercise the appraisal waiver option and be eligible for representation and warranty relief on the value, condition, and marketability of the property on this loan, the appraisal waiver Special Feature Code 801 and the Casefile ID must be included in the loan delivery file."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2093,
+        "messageName" : "APPRAISAL-WAIVER-OBSERVATION",
+        "messageType" : "Observations",
+        "messageSubType1" : "Property and Appraisal Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      } ],
+	   "CollateralUnderwriter" : [ {
+        "lenderMessageLine" : {
+          "text" : "The risk profile of this loan casefile appears to meet Fannie Mae's guidelines."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 8,
+        "messageName" : "APPROVE-ELIGIBLE-ADVICE",
+        "messageType" : "CollateralUnderwriter",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "This loan casefile appears to meet Fannie Mae's eligibility requirements."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 9,
+        "messageName" : "ELIGIBLE-ADVICE",
+        "messageType" : "CollateralUnderwriter",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "This loan casefile has been underwritten as a limited cash-out refinance.  Review the short-term financing guidelines if the first mortgage being paid off with this transaction was originated less than six months prior to the disbursement date of the new mortgage loan, and determine whether this transaction is still eligible for delivery as a limited cash-out refinance.  Ensure that the property is currently not listed for sale.  Refer to the Selling Guide for additional information."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2375,
+        "messageName" : "LCOR-REFINANCE-TRANSACTIONS",
+        "messageType" : "CollateralUnderwriter",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      } ],
+	   "LenderGuidanceforApplicants" : [ {
+        "lenderMessageLine" : {
+          "text" : "The risk profile of this loan casefile appears to meet Fannie Mae's guidelines."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 8,
+        "messageName" : "APPROVE-ELIGIBLE-ADVICE",
+        "messageType" : "LenderGuidanceforApplicants",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "This loan casefile appears to meet Fannie Mae's eligibility requirements."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 9,
+        "messageName" : "ELIGIBLE-ADVICE",
+        "messageType" : "LenderGuidanceforApplicants",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "This loan casefile has been underwritten as a limited cash-out refinance.  Review the short-term financing guidelines if the first mortgage being paid off with this transaction was originated less than six months prior to the disbursement date of the new mortgage loan, and determine whether this transaction is still eligible for delivery as a limited cash-out refinance.  Ensure that the property is currently not listed for sale.  Refer to the Selling Guide for additional information."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2375,
+        "messageName" : "LCOR-REFINANCE-TRANSACTIONS",
+        "messageType" : "LenderGuidanceforApplicants",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      } ],
+      "PotentialRedFlags" : [ {
+        "lenderMessageLine" : {
+          "text" : "The risk profile of this loan casefile appears to meet Fannie Mae's guidelines."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 8,
+        "messageName" : "APPROVE-ELIGIBLE-ADVICE",
+        "messageType" : "PotentialRedFlags",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "This loan casefile appears to meet Fannie Mae's eligibility requirements."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 9,
+        "messageName" : "ELIGIBLE-ADVICE",
+        "messageType" : "PotentialRedFlags",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "This loan casefile has been underwritten as a limited cash-out refinance.  Review the short-term financing guidelines if the first mortgage being paid off with this transaction was originated less than six months prior to the disbursement date of the new mortgage loan, and determine whether this transaction is still eligible for delivery as a limited cash-out refinance.  Ensure that the property is currently not listed for sale.  Refer to the Selling Guide for additional information."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2375,
+        "messageName" : "LCOR-REFINANCE-TRANSACTIONS",
+        "messageType" : "PotentialRedFlags",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      } ],
+	  "RiskEligibility" : [ {
+        "lenderMessageLine" : {
+          "text" : "The risk profile of this loan casefile appears to meet Fannie Mae's guidelines."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 8,
+        "messageName" : "APPROVE-ELIGIBLE-ADVICE",
+        "messageType" : "RiskEligibility",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "sxp",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "This loan casefile appears to meet Fannie Mae's eligibility requirements."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 9,
+        "messageName" : "ELIGIBLE-ADVICE",
+        "messageType" : "RiskEligibility",
+        "messageSubType1" : "Risk Assessment Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "This loan casefile has been underwritten as a limited cash-out refinance.  Review the short-term financing guidelines if the first mortgage being paid off with this transaction was originated less than six months prior to the disbursement date of the new mortgage loan, and determine whether this transaction is still eligible for delivery as a limited cash-out refinance.  Ensure that the property is currently not listed for sale.  Refer to the Selling Guide for additional information."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2375,
+        "messageName" : "LCOR-REFINANCE-TRANSACTIONS",
+        "messageType" : "RiskEligibility",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      } ],
+      "VerificationApprovalConditions" : [ {
+        "lenderMessageLine" : {
+          "text" : "This loan is subject to all lender specified conditions and must comply with all applicable federal, state, and local laws and regulations."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 278,
+        "messageName" : "LENDER-CONDITIONS-VERIFICATION",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Verify that Blanca Lopez is a legal resident of the United States."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "Blanca Lopez",
+          "parameterName" : "Borrower"
+        } ],
+        "messageID" : 385,
+        "messageName" : "PERMANENT-RESIDENT-ALIEN",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Parametric"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Based on the credit report obtained through DU, this loan casefile must close on or before 03/22/2020.  All credit documents must be no more than four months old on the note date. Refer to the Selling Guide for guidelines on the age of the appraisal or property inspection report."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "03/22/2020",
+          "parameterName" : "CloseByDate"
+        } ],
+        "messageID" : 420,
+        "messageName" : "DOCUMENT-EXPIRATION-NOTIFICATION",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Parametric"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "If there is a home equity line of credit secured against the subject property the maximum allowable HCLTV is 97 percent, verify the terms of the home equity line of credit for compliance with the Selling Guide, and calculate the HCLTV using the maximum credit limit of the equity line."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "97",
+          "parameterName" : "MaximumHCLTV"
+        } ],
+        "messageID" : 1802,
+        "messageName" : "HELOC-CLTV-LIMIT",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Parametric"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Loan Level Price Adjustments may be applied when this loan is delivered to Fannie Mae.  Refer to the Selling Guide and Loan-level Price Adjustment (LLPA) Matrix on fanniemae.com for specific details."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2343,
+        "messageName" : "ADVERSE-DELIVERY-MARKET-CHARGE",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Eligibility Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Include evidence of payoff of the following debts (other than 30 day accounts) in the loan file:"
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Borrower"
+          }, {
+            "value" : "Creditor"
+          }, {
+            "value" : "Account Number"
+          }, {
+            "value" : "Balance"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "ERIC Popst"
+          }, {
+            "value" : "PENNYMAC LOAN SERVICES"
+          }, {
+            "value" : "SSE0017002850721"
+          }, {
+            "value" : "226631.41"
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "ERIC Popst",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "PENNYMAC LOAN SERVICES",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "SSE0017002850721",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "226631.41",
+          "parameterName" : ""
+        } ],
+        "messageID" : 225,
+        "messageName" : "PAID-BY-CLOSING-VERIFICATION",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Credit and Liability Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "List"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Document Blanca Lopez's income using a paystub and a W-2 from the prior year, or using a standard Verification of Employment (1005).  The paystub must be dated no earlier than 30 days prior to the initial loan application date, include all year-to-date earnings, and include sufficient information to appropriately calculate income.  Otherwise, additional documentation must be obtained.  If a W-2 is not available from the prior year, the lender must determine if the income would still be acceptable per the Selling Guide.  If a standard Verification of Employment (1005) will be obtained it must include all year-to-date earnings as well as prior year earnings if a W-2 is not being provided.  Direct verifications provided by a third party employment verification vendor are acceptable if completed in accordance with the Selling Guide."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "Blanca Lopez",
+          "parameterName" : "Borrower"
+        } ],
+        "messageID" : 162,
+        "messageName" : "TIMESAVER-INCOME-REQMNTS",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Employment and Income Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Parametric"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Document ERIC Popst's income using a paystub and a W-2 from the prior year, or using a standard Verification of Employment (1005).  The paystub must be dated no earlier than 30 days prior to the initial loan application date, include all year-to-date earnings, and include sufficient information to appropriately calculate income.  Otherwise, additional documentation must be obtained.  If a W-2 is not available from the prior year, the lender must determine if the income would still be acceptable per the Selling Guide.  If a standard Verification of Employment (1005) will be obtained it must include all year-to-date earnings as well as prior year earnings if a W-2 is not being provided.  Direct verifications provided by a third party employment verification vendor are acceptable if completed in accordance with the Selling Guide."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "ERIC Popst",
+          "parameterName" : "Borrower"
+        } ],
+        "messageID" : 162,
+        "messageName" : "TIMESAVER-INCOME-REQMNTS",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Employment and Income Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Parametric"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Perform and document a verbal verification of employment for each borrower. For all borrowers who are not Self-Employed no more than 10 business days prior to the note date, or Self-Employed within 120 calendar days prior to the note date.  Direct verification by a third party employment verification vendor is acceptable if completed within the same timeframes, and the information is not more than 35 days old (120 days old if self employed) as of the note date.  If the borrower is in the military, obtain either a Military Leave and Earnings Statement within 31 calendar days prior to the note date or a verification of employment through the Defense Manpower Data Center (https://mla.dmdc.osd.mil/mla/#/home). Lenders also have the option of obtaining the verbal verification of employment after the note date (and prior to delivery of the loan to Fannie Mae), but when using this option must ensure compliance with the Selling Guide."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2469,
+        "messageName" : "VERBAL-VOE",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Employment and Income Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Obtain a completed and signed Form 4506-T for each borrower at or before closing. If all of a borrower's income has been validated through the DU validation service, a completed and signed Form 4506-T is not required for that borrower. Form 4506, Form 4506T-EZ, or Form 8821 may be used in lieu of Form 4506-T. Refer to the Selling Guide for additional information."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2471,
+        "messageName" : "FORM-4506-T-TAX-RETURN-REQUEST",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Employment and Income Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "DU did not receive report data from the vendor(s) shown below."
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Borrower "
+          }, {
+            "value" : " Vendor and Rep Type "
+          }, {
+            "value" : " Rep ID "
+          }, {
+            "value" : " Reason"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "Blanca Lopez"
+          }, {
+            "value" : "The Work Number (VOI/VOE)"
+          }, {
+            "value" : "7004093019"
+          }, {
+            "value" : "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor."
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "ERIC Popst"
+          }, {
+            "value" : "The Work Number (VOI/VOE)"
+          }, {
+            "value" : "7004093019"
+          }, {
+            "value" : "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor."
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "Blanca Lopez",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "The Work Number (VOI/VOE)",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "7004093019",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor.",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "ERIC Popst",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "The Work Number (VOI/VOE)",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "7004093019",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor.",
+          "parameterName" : ""
+        } ],
+        "messageID" : 3303,
+        "messageName" : "DVS-REPORT-NOT-RECEIVED",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Employment and Income Messages",
+        "messageSubType2" : "Day1Certainty",
+        "messageStructure" : "List"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "DU could not validate borrower employment shown below for the reason provided."
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Borrower "
+          }, {
+            "value" : " DU Employer "
+          }, {
+            "value" : " Vendor and Rep Type "
+          }, {
+            "value" : " Rep ID "
+          }, {
+            "value" : " Vendor Match "
+          }, {
+            "value" : " Reason"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "ERIC Popst"
+          }, {
+            "value" : "Owens-Brockway Glass Container"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "No VOI/VOE report"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "Blanca Lopez"
+          }, {
+            "value" : "Lupitas Auto Sales"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "No VOI/VOE report"
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "ERIC Popst",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "Owens-Brockway Glass Container",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 5,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 6,
+          "parameterValue" : "No VOI/VOE report",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "Blanca Lopez",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "Lupitas Auto Sales",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 5,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 6,
+          "parameterValue" : "No VOI/VOE report",
+          "parameterName" : ""
+        } ],
+        "messageID" : 3307,
+        "messageName" : "DVS-EMPLOYMENT-NOT-VALIDATED",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Employment and Income Messages",
+        "messageSubType2" : "Day1Certainty",
+        "messageStructure" : "List"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "DU could not validate borrower income shown below for the reason provided."
+        },
+        "lenderMessageTableRow" : [ {
+          "column" : [ {
+            "value" : "Borrower "
+          }, {
+            "value" : " DU Income Type "
+          }, {
+            "value" : " Vendor and Rep Type "
+          }, {
+            "value" : " Rep ID "
+          }, {
+            "value" : " Vendor Match "
+          }, {
+            "value" : " DU Reported Amount "
+          }, {
+            "value" : " Reason"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "ERIC Popst"
+          }, {
+            "value" : "Base Employment Income"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "$4,171.36"
+          }, {
+            "value" : "No report received by DU that validates this income type"
+          } ]
+        }, {
+          "column" : [ {
+            "value" : "Blanca Lopez"
+          }, {
+            "value" : "Base Employment Income"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "Missing"
+          }, {
+            "value" : "$3,500.00"
+          }, {
+            "value" : "No report received by DU that validates this income type"
+          } ]
+        } ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "ERIC Popst",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "Base Employment Income",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 5,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 6,
+          "parameterValue" : "$4,171.36",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 7,
+          "parameterValue" : "No report received by DU that validates this income type",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 1,
+          "parameterValue" : "Blanca Lopez",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "Base Employment Income",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 5,
+          "parameterValue" : "Missing",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 6,
+          "parameterValue" : "$3,500.00",
+          "parameterName" : ""
+        }, {
+          "parameterNumber" : 7,
+          "parameterValue" : "No report received by DU that validates this income type",
+          "parameterName" : ""
+        } ],
+        "messageID" : 3313,
+        "messageName" : "DVS-INCOME-NOT-VALIDATED",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Employment and Income Messages",
+        "messageSubType2" : "Day1Certainty",
+        "messageStructure" : "List"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Other credits have been entered in Section VII, line L of the loan application, but DU is unable to determine the type(s) of other credits entered. All credits applied in this section must be eligible and documented according to the requirements of the Selling Guide. Verify that the borrower has made the minimum required contribution, if applicable, and that contributions by others do not exceed the limits permitted in the Selling Guide."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 977,
+        "messageName" : "UNKNOWN-OTHER-CREDITS",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Asset Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "DU returned the following standardized address and census tract for the subject property:  4040 TIMAHOE DR, MODESTO, CA 95356-9424, 000503.  This is the address that DU used in its property valuation and fieldwork recommendation.  Regardless of the property fieldwork required by DU, if this address is not valid for the subject property, an appraisal based on an interior and exterior property inspection reported on Form 1004 is required for this transaction.  If the subject property is located in a condominium project, the appraisal must be reported on Form 1073."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 1,
+          "parameterValue" : "4040 TIMAHOE DR",
+          "parameterName" : "PropertyStreetAddress"
+        }, {
+          "parameterNumber" : 2,
+          "parameterValue" : "MODESTO",
+          "parameterName" : "PropertyCity"
+        }, {
+          "parameterNumber" : 3,
+          "parameterValue" : "CA",
+          "parameterName" : "PropertyState"
+        }, {
+          "parameterNumber" : 4,
+          "parameterValue" : "95356-9424",
+          "parameterName" : "PropertyZipCode"
+        }, {
+          "parameterNumber" : 5,
+          "parameterValue" : "000503",
+          "parameterName" : "CensusTract"
+        } ],
+        "messageID" : 1873,
+        "messageName" : "STANDARDIZED-ADDRESS",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Property and Appraisal Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Parametric"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "DU accepts the value submitted as the market value for this subject property. This loan is eligible for delivery to Fannie Mae without an appraisal and is eligible for representation and warranty relief on the value, condition, and marketability of the subject property if the appraisal waiver is exercised by the lender at the time of loan delivery by including Special Feature Code 801 and the Casefile ID in the loan delivery file. If the waiver is not exercised, an appraisal based on an interior and exterior property inspection is required for this transaction. If an appraisal is obtained for this transaction, or the Selling Guide states that the transaction is not eligible for an appraisal waiver, the appraisal waiver may not be exercised and the loan cannot be delivered with Special Feature Code 801. Note that DU is not able to identify all transactions that are ineligible for an appraisal waiver, including community land trusts or properties with resale restrictions, and Texas Section 50(a)(6) mortgages."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 2167,
+        "messageName" : "FIELDWORK-WAIVER-L1",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Property and Appraisal Messages",
+        "messageSubType2" : "Day1Certainty",
+        "messageStructure" : "Fixed"
+      }, {
+        "lenderMessageLine" : {
+          "text" : "Based on the data provided to DU, this loan casefile is eligible for Value Verify and will likely require Data & Appraisal. After the property data has been collected and submitted to Fannie Mae's Property Data API by an eligible vendor on the lender's behalf, the loan casefile must be resubmitted to DU for a final determination of the minimum collateral validation requirement."
+        },
+        "lenderMessageTableRow" : [ ],
+        "lenderParameter" : [ {
+          "parameterNumber" : 0,
+          "parameterValue" : "no value",
+          "parameterName" : ""
+        } ],
+        "messageID" : 3401,
+        "messageName" : "VALUE-VERIFY-ELIGIBLE-APPRAISAL-REQUIRED",
+        "messageType" : "VerificationApprovalConditions",
+        "messageSubType1" : "Property and Appraisal Messages",
+        "messageSubType2" : "",
+        "messageStructure" : "Fixed"
+      } ]
+    },
+    "documentationCodesList" : [ {
+      "documentationTypeCode" : "03 - Employment Income Documentation Level",
+      "documentationLevel" : "Form 4506-T   ",
+      "borrowerName" : "Blanca Lopez",
+      "applicantID" : "1045967530"
+    }, {
+      "documentationTypeCode" : "03 - Employment Income Documentation Level",
+      "documentationLevel" : "Form 4506-T   ",
+      "borrowerName" : "ERIC Popst",
+      "applicantID" : "1045967500"
+    }, {
+      "documentationTypeCode" : "03 - Employment Income Documentation Level",
+      "documentationLevel" : "Paystub and W-2   ",
+      "borrowerName" : "Blanca Lopez",
+      "applicantID" : "1045967530"
+    }, {
+      "documentationTypeCode" : "03 - Employment Income Documentation Level",
+      "documentationLevel" : "Paystub and W-2   ",
+      "borrowerName" : "ERIC Popst",
+      "applicantID" : "1045967500"
+    }, {
+      "documentationTypeCode" : "03 - Employment Income Documentation Level",
+      "documentationLevel" : "Verbal verification   ",
+      "borrowerName" : "ERIC Popst",
+      "applicantID" : "1045967500"
+    }, {
+      "documentationTypeCode" : "03 - Employment Income Documentation Level",
+      "documentationLevel" : "Verbal verification   ",
+      "borrowerName" : "Blanca Lopez",
+      "applicantID" : "1045967530"
+    }, {
+      "documentationTypeCode" : "01 - Property Fieldwork",
+      "documentationLevel" : "",
+      "borrowerName" : "",
+      "applicantID" : "0"
+    }, {
+      "documentationTypeCode" : "01 - Property Fieldwork",
+      "documentationLevel" : "Property Inspection Waiver (PIW)  ",
+      "borrowerName" : "",
+      "applicantID" : "0"
+    } ]
+  },
+  "serviceMessages" : [ "API Version: 1.1" ]
+}

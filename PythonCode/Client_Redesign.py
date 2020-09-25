@@ -1,5 +1,6 @@
 import json
 from dateutil.parser import parse
+import datetime
 with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as filedata:
     data = json.load(filedata)
     DateOfFinancials = data.get('basicInfo',{}).get('businessInformation',{}).get('financialsLastUpdate',None)
@@ -16,21 +17,12 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
     ClientCity = data.get('basicInfo',{}).get('address',{}).get('city',None)
     ClientID =data.get('basicInfo',{}).get('orgId',None)
     ClientName =data.get('basicInfo',{}).get('organizationName',None)
-    ClientName_ID = ClientName.upper()+'_'+ClientID
+    ClientName_ID = str(ClientName).upper()+'_'+str(ClientID)
     ClientOriginalApprovalDate = data.get('basicInfo',{}).get('approvalStatus',{}).get('applicationDate',None)
     ClientState = data.get('basicInfo',{}).get('address',{}).get('state',None)
     ClientStatusDate = data.get('basicInfo',{}).get('approvalStatus',{}).get('currentStatusDate',None)
     ClientZip=data.get('basicInfo',{}).get('address',{}).get('zip',None)
     CompPh = data.get('basicInfo',{}).get('phoneNumber',None)
-    if data.get('commitments',{}).get('deliveryTypes',[]):
-        for i in data.get('commitments',{}).get('deliveryTypes',[]):
-            if i['deliveryType']=='Bulk':
-                DelMethBulkInd = 'Y'
-            else:
-                DelMethBulkInd = 'N'     
-    else:
-       DelMethBulkInd = 'N'
-
     #Newly added
 
     del_LoanList=(data.get('loanCriteria',{}).get('correspondent',{}).get('correspondentDelegated',{}).get('loanTypes',[]))
@@ -84,7 +76,7 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
         FHAApproved='N'
     else:
         FHAApproved='Y'
-    YrsinBusiness=data.get('basicInfo',{}).get('businessInformation').get('yearsInBusiness',None)
+    YrsinBusiness=data.get('basicInfo',{}).get('businessInformation',{}).get('yearsInBusiness',None)
     #print(YrsinBusiness)
     BillingZip=data.get('basicInfo',{}).get('billingAddress',{}).get('zip',None)
     #print(BillingZip)
@@ -92,11 +84,13 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
     BillingCity=data.get('basicInfo',{}).get('billingAddress',{}).get('city',None)
     BillingAddress=data.get('basicInfo',{}).get('billingAddress',{}).get('street1',None)
     ID=data.get('basicInfo',{}).get('id',None)
-    MaxCommitmentAmount=data.get('commitments',{}).get('maxCommitmentAmount',None)
+
+    # MaxCommitmentAmountsDJnsjdata.get('commitments',{}).get('maxCommitmentAmount',None)
+
     #data.get('commitments',{}).get('deliveryTypes',[]):
 
 
-    
+    print(ClientName)
     # print(RuralApproved)
     # print(VAApproved)
     #VW_Authority should be added at the end because it has dependency on JumboUndwtyp
@@ -146,6 +140,11 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
     LockDays75=None
     RelockDays15=None
     RelockDays30=None
+    LockDays15=None
+    LockDays60=None
+    if 'test' in str(ClientName).lower() or ClientName== 'APPLE CORRESPONDENTS':
+        ClientStatusGroup = 'Test Client'
+
 
 
 
@@ -155,6 +154,8 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
         if customFields['fieldName'] == 'Secondary Status':
             ClientSecStatus = customFields.get('fieldValue',None).upper()
         if customFields['fieldName'] == 'Primary Status':
+            #print(customFields.get('fieldValue',None))
+            #print('Hi')
             if customFields.get('fieldValue',None) == 'Approved':
                 ClientStatus ='Approved'
                 StatusCd='APRV'
@@ -164,37 +165,35 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
             elif customFields.get('fieldValue',None) == 'Prospect':
                 ClientStatus ='Prospect'
                 StatusCd='PRPT'
-            elif customFields.get('fieldValue',None) == 'Suspend - Allow Loan submisssions for Active locks':
+            elif customFields.get('fieldValue',None) == 'Suspend - Allow Loan Submissions for Active locks':
                 ClientStatus ='SUSPEND-ALLOW LOAN SUBMISSIONS FOR ACTIVE LOCKS'
                 StatusCd='SUS1'
             elif customFields.get('fieldValue',None) == 'Suspend - Disallow New loan Submissions':
                 ClientStatus ='SUSPEND-DISALLOW NEW LOAN SUBMISSIONS'
                 StatusCd='SUS2'
-            elif customFields.get('fieldValue',None) == "Terminated with AR's":
+            elif customFields.get('fieldValue',None)=="TERMINATED WITH AR'S":
                 ClientStatus ="TERMINATED - WITH AR'S"
                 StatusCd='TEAR'
+                #print(ClientStatus)
             elif customFields.get('fieldValue',None) == "Terminate":
                 ClientStatus = 'Terminated'
                 StatusCd='TERM'
-            else:
-                ClientStatus =None
-                StatusCd=None
-            if 'Test' in ClientName or ClientName== 'APPLE CORRESPONDENTS':
+            #print('Hi')
+            if 'test' in str(ClientName).lower() or ClientName== 'APPLE CORRESPONDENTS':
+                #print('Hi')
                 ClientStatusGroup = 'Test Client'
             elif customFields.get('fieldValue',None) == "Approved":
                 ClientStatusGroup = 'ACTIVE' 
             elif customFields.get('fieldValue',None) == "Prospect":
                 ClientStatusGroup = 'Prospect'
-            else:
-                ClientStatusGroup = 'INACTIVE'
-            
+                
         if customFields['fieldName'] == 'Origination Method':
             if customFields['fieldValue']=='Correspondent' or customFields['fieldValue']=='Both':
                 CorrespondentInd ='Y'
                 ThirdPartyOrigination='Y'
             else:
                 CorrespondentInd ='N'
-            if customFields['fieldValue']=='Third Party Origination' or customFields['fieldValue']=='Both':
+            if customFields['fieldValue']=='Third Party Origination' or customFields['fieldValue']=='Both' or customFields['fieldValue']=='TPO':
                 ThirdPartyOrigination='Y'
             else:
                 ThirdPartyOrigination='N'
@@ -432,7 +431,199 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
             RelockDays15= customFields['fieldValue']
         if customFields['fieldName'] == 'Relock Days - 30':
             RelockDays30 = customFields['fieldValue']
+        if customFields['fieldName'] == 'Lock Days - 15':
+            LockDays15= customFields['fieldValue']
+        if customFields['fieldName'] == 'Lock Days - 60':
+            LockDays60 =customFields['fieldValue']
+    
 
-    print(ID ,AppSource,RateSheetEmailDistribution ,RelockDays15 ,RelockDays30 ,RepurchaseClientContact_Name ,RqstTyp ,RuralApproved ,SecondaryStsCd ,SecurityReleaseRequirements ,ServiceEmail ,StateofIncorporation ,StatusCd ,StatusReasons ,TangibleNetWorth ,TaxID ,ThirdPartyOrganizationId ,ThirdPartyOrigination ,TrailingDoc_Assigned_Analyst_email ,USDAOTCApproved ,USDATiers ,USDAUndwType ,VAApprovalDate ,VAApproved ,VALenderCode ,VARenovation ,VASponsorCd ,VAStatus ,VATiers ,VAUndwType ,NMLSID ,NoLateWireInd ,OrgType ,OriginationMethod ,OtherTiers ,Priority ,ProdFeatureTexasInd)
-    # VW_Authority
-    #print(JUMBOUndwType)
+
+    # #Added by Baji
+
+    ExternalOrgId = data.get('basicInfo',{}).get('id',None)
+    ThirdPartyOrganizationId = data.get('basicInfo',{}).get('tpoId',None)
+    AsgnToId = data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('userId',None)
+    #check point
+    ClientTimeZone = data.get('basicInfo',{}).get('timeZone',None)    #Need to find if this field is there in any json file and Do we need to convert???
+    CoLegalName = data.get('basicInfo',{}).get('companyLegalName',None)
+    StateofIncorporation = data.get('basicInfo',{}).get('businessInformation',{}).get('stateOfIncorporation',None)
+    organizationType = data.get('basicInfo',{}).get('organizationType',None)
+    if organizationType == 'Company': organizationType = 'CORP'
+    elif organizationType == 'Limited Liability Company': organizationType = 'LLC'
+    elif organizationType == 'Partnership': organizationType = 'PSHP'
+    else: organizationType = None
+    OrgType=organizationType    
+    #print(organizationType)
+    LEI = data.get('basicInfo',{}).get('businessInformation',{}).get('lei',None)
+    FHASponsorCd = data.get('loanCriteria',{}).get('fhaSponsorId',None)
+    FHAStatus = data.get('loanCriteria',{}).get('fhaStatus',None)
+    FHADirectEndorsement = data.get('loanCriteria',{}).get('fhaDirectEndorsement',None)
+    if FHADirectEndorsement == 'Principal/Agent':
+        FHADirectEndorsement = 'AGEN'
+    #print(FHADirectEndorsement)
+    VASponsorCd = data.get('loanCriteria',{}).get('vaSponsorId',None)       
+    VAStatus = data.get('loanCriteria',{}).get('vaStatus',None)
+    FannieMaeID = data.get('loanCriteria',{}).get('fannieMaeId',None)       
+    FreddieMacID = data.get('loanCriteria',{}).get('freddieMacId',None)       
+    AUSMethod = data.get('loanCriteria',{}).get('ausMethod',None)
+    DailyVolumelimit = data.get('commitments',{}).get('bestEffortDailyVolumeLimit',None)
+    MaxCommitmentAmount = data.get('commitments',{}).get('maxCommitmentAmount',None)
+    if data.get('commitments',{}).get('deliveryTypes',[]):
+        for i in data.get('commitments',{}).get('deliveryTypes',[]):
+            if i['deliveryType']== 'CoIssue':
+                CoissueIndicator = 'Y'
+            else:
+                CoissueIndicator = 'N'
+    else:
+        CoissueIndicator = None
+    #VW_Authority
+
+#Komal Code
+
+    ExpiryDtm = data.get('basicInfo',{}).get('businessInformation',{}).get('dateOfIncorporation',None)
+    MERSID = data.get('basicInfo',{}).get('businessInformation',{}).get('mersOriginatingOrgId',None)
+    OfficeTypCd = data.get('basicInfo',{}).get('organizationType',None)
+    TrailingDoc_Assigned_Analyst_email = data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('email',None)
+    ServiceEmail = TrailingDoc_Assigned_Analyst_email.upper()
+    if data.get('basicInfo',{}).get('tpocSetup',{}).get('isTestAccount',None)==True:
+        Priority='TEST'
+    else:
+        Priority=None
+    if 'Correspondent' in data.get('basicInfo',{}).get('channelTypes',[]):
+        RqstTyp='CORR'
+    else:
+        RqstTyp=None
+    VALenderCode=data.get('loanCriteria',{}).get('vaId',None)
+    TangibleNetWorth = data.get('basicInfo',{}).get('businessInformation',{}).get('companyNetWorth',None)
+    AccountManager_Email = data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('email',None)
+    AccountManager_LocationCity = data.get('basicInfo',{}).get('address',{}).get('city',None)
+    if data.get('basicInfo',{}).get('canAcceptFirstPayments',None)==True:
+        AcptFstPmtInd='Y'
+    else:
+        AcptFstPmtInd='N'
+    if data.get('commitments',{}).get('bestEffort',None)==True:
+        BEApproved = 'Y'
+    elif data.get('commitments',{}).get('bestEffort',None)==False:
+        BEApproved = 'N'
+    else:
+        BEApproved = None
+    delTypeList=[]
+    for i in data.get('commitments',{}).get('deliveryTypes',[]):
+        delTypeList.append( i['deliveryType'])
+    #print(delTypeList)
+    if 'Bulk' in delTypeList:
+        DelMethBulkInd = 'Y'
+    else:
+        DelMethBulkInd = 'N'
+    if 'BulkAot' in delTypeList:
+        BulkAOTApproved='Y'
+    else:
+        BulkAOTApproved='N'  
+    if 'Aot' in delTypeList:
+        AOTApproved='Y'
+    else:
+        AOTApproved='N'
+    ClientFoundedDate = data.get('basicInfo',{}).get('businessInformation',{}).get('dateOfIncorporation',None)
+    ClientNMLSNum = data.get('basicInfo',{}).get('businessInformation',{}).get('nmlsId',None)
+    NMLSID = data.get('basicInfo',{}).get('businessInformation',{}).get('nmlsId',None)
+    if data.get('basicInfo',{}).get('noAfterHourWires',None)==True:
+        NoLateWireInd = 'Y'
+    else:
+        NoLateWireInd ='N'
+    ext_ID = data.get('basicInfo',{}).get('id',None)
+    #print(ext_ID)
+    if data.get('dba',{}).get('dbaDetails',[]):
+        extOrgIdList=[]
+        #print('DBS')
+        for i in data.get('dba',{}).get('dbaDetails',[]):
+            extOrgIdList.append(i['externalOrgId'])
+        if ext_ID in extOrgIdList:
+            for i in data.get('dba',{}).get('dbaDetails',[]):
+                #print(i['name'])
+                if ext_ID == i['externalOrgId']:
+                    DBA = i['name']
+        else:
+            DBA=None
+    else:
+        DBA = None
+    if data.get('basicInfo',{}).get('faxNumber',None)==None:
+        FaxNumber=None
+    else:
+        FaxNumber=data.get('basicInfo',{}).get('faxNumber',None).replace('-','')[0:10]
+    VAApprovalDate=data.get('loanCriteria',{}).get('vaApprovedDate',None)
+    if ClientTimeZone !=None:
+        if 'PacificTime' in ClientTimeZone:
+            ClientTimeZone='PST'
+        elif 'AlaskaTime' in ClientTimeZone:
+            ClientTimeZone='AKST'
+        elif 'AtlanticTime' in ClientTimeZone:
+            ClientTimeZone='AST'
+        elif 'CentralTime' in ClientTimeZone:
+            ClientTimeZone='CST'
+        elif 'MountainTime' in ClientTimeZone:
+            ClientTimeZone='MST'
+        elif 'EasternTime' in ClientTimeZone:
+            ClientTimeZone='EST'
+        elif 'HawaiiTime' in ClientTimeZone:
+            ClientTimeZone='HST'
+    FHAApprovalDate=data.get('loanCriteria',{}).get('fhaApprovedDate',None)
+    FHALenderID=data.get('loanCriteria',{}).get('fhaId',None)
+    if data.get('loanCriteria',{}).get('fhmlcApproved',None)==True:
+        FHLMCApproved='Y'
+    else:
+        FHLMCApproved='N'
+    currentdate = datetime.datetime.now()
+    LastRefreshDate = str(currentdate.strftime("%Y-%m-%d %H:%M:%S"))
+    if data.get('commitments',{}).get('mandatory',None)==True:
+        MandoApproved = 'Y'
+    else:
+        MandoApproved = 'N'
+    RepurchaseClientContact_Name=data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('name',None)
+    TaxID=data.get('basicInfo',{}).get('businessInformation',{}).get('taxId',None)
+    VAStatus=data.get('loanCriteria',{}).get('vaStatus',None)
+    AppSource='EM'
+    # print(AppSource)
+    # print(RateSheetEmailDistribution )
+    # print(RelockDays15 )
+    # print(RelockDays30 )
+    # print(RepurchaseClientContact_Name)
+    # print(RqstTyp                     )
+    # print(RuralApproved               )
+    # print(SecondaryStsCd              )
+    # print(SecurityReleaseRequirements )
+    # print(ServiceEmail                )
+    # print(StateofIncorporation        )
+    # print(StatusCd                    )
+    # print(StatusReasons               )
+    # print(TangibleNetWorth            )
+    # print(TaxID                       )
+    # print(ThirdPartyOrganizationId    )
+    # print(ThirdPartyOrigination       )
+    # print(TrailingDoc_Assigned_Analyst_email                            )
+    # print(USDAOTCApproved             )
+    # print(USDATiers                   )
+    # print(USDAUndwType                )
+    # print(VAApprovalDate              )
+    # print(VAApproved                  )
+    # print(VALenderCode                )
+    # print(VARenovation                )
+    # print(VASponsorCd                 )
+    # print(VAStatus                    )
+    # print(VATiers                     )
+    # print(VAUndwType                  )
+    # print(NMLSID                      )
+    # print(NoLateWireInd               )
+    # print(OrgType                     )
+    # print(OriginationMethod           )
+    # print(OtherTiers                  )
+    # print(Priority                    )
+    # print(ProdFeatureTexasInd)
+    # print(ThirdPartyOrigination)
+    # print(OnboardingDate)
+    # print(ClientStatus)
+    # print(ClientName)
+    # print(ClientStatusGroup)
+    # print(DBA)
+    print(RepurchaseClientContact_Name)
+    print(HomeStyleIND)
+    print(RqstTyp)

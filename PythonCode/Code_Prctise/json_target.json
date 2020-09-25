@@ -1,0 +1,21 @@
+{
+   "EmployeeId":"111",
+   "State":"Netherlands",
+   "Country":"Europe",
+   "JobFamily":"Marketing",
+   "JobProfile":"Marketing Manager",
+   "EmployeeToMarket":[
+      {
+         "Division":"America",
+         "Region":"AM-Latin",
+         "SubRegion":"US",
+         "Market":""
+      },
+      {
+         "Division":"Europe",
+         "Region":"EU-EuropeCentral",
+         "SubRegion":"Czech",
+         "Market":"Czech"
+      }
+   ]
+}

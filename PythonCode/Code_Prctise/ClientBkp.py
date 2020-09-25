@@ -1,9 +1,8 @@
 import json
 from dateutil.parser import parse
-with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as filedata:
+with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_4.JSON') as filedata:
     data = json.load(filedata)
     DateOfFinancials = data.get('basicInfo',{}).get('businessInformation',{}).get('financialsLastUpdate',None)
-    print(DateOfFinancials)
     ClientApprovalDate = data.get('basicInfo',{}).get('approvalStatus',{}).get('approvedDate',None)
     AccountManager  = data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('name',None)
     AccountManagerEffectiveDate = data.get('basicInfo',{}).get('primarySalesRepAe',{}).get('assignedDate',None)
@@ -14,93 +13,34 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
         ActiveStatus = 'N'
     ClientAddress1=data.get('basicInfo',{}).get('address',{}).get('street1',None)
     ClientCity = data.get('basicInfo',{}).get('address',{}).get('city',None)
+    #print(ClientCity)
     ClientID =data.get('basicInfo',{}).get('orgId',None)
+    #print(ClientID)
     ClientName =data.get('basicInfo',{}).get('organizationName',None)
+    #print(ClientName)
     ClientName_ID = ClientName.upper()+'_'+ClientID
+    #print(ClientName_ID)
     ClientOriginalApprovalDate = data.get('basicInfo',{}).get('approvalStatus',{}).get('applicationDate',None)
+    #print(ClientOriginalApprovalDate)
     ClientState = data.get('basicInfo',{}).get('address',{}).get('state',None)
+    #print(ClientState)
     ClientStatusDate = data.get('basicInfo',{}).get('approvalStatus',{}).get('currentStatusDate',None)
+    #print(ClientStatusDate)
     ClientZip=data.get('basicInfo',{}).get('address',{}).get('zip',None)
+    #print(ClientZip)
     CompPh = data.get('basicInfo',{}).get('phoneNumber',None)
+    #print(CompPh)
     if data.get('commitments',{}).get('deliveryTypes',[]):
         for i in data.get('commitments',{}).get('deliveryTypes',[]):
             if i['deliveryType']=='Bulk':
                 DelMethBulkInd = 'Y'
             else:
-                DelMethBulkInd = 'N'     
+                DelMethBulkInd = None
     else:
-       DelMethBulkInd = 'N'
+       DelMethBulkInd = None
 
-    #Newly added
+    #Assigning default values to custom fields 
 
-    del_LoanList=(data.get('loanCriteria',{}).get('correspondent',{}).get('correspondentDelegated',{}).get('loanTypes',[]))
-    non_del_LoanList =(data.get('loanCriteria',{}).get('correspondent',{}).get('correspondentNonDelegated',{}).get('loanTypes',[]))
-    if 'Fha' in del_LoanList and 'Fha' in non_del_LoanList:
-        FHAUndwType='BOTH'
-    elif 'Fha' in del_LoanList:
-        FHAUndwType='DELT'
-    elif 'Fha' in non_del_LoanList:
-        FHAUndwType='NDLT'
-    else: 
-        FHAUndwType=None
-    if 'Conventional' in del_LoanList and 'Conventional' in non_del_LoanList:
-        CONVUndwType='BOTH'
-    elif 'Conventional' in del_LoanList:
-        CONVUndwType='DELT'
-    elif 'Conventional' in non_del_LoanList:
-        CONVUndwType='NDLT'
-    else: 
-        CONVUndwType=None
-    if 'Va' in del_LoanList and 'Va' in non_del_LoanList:
-        VAUndwType='BOTH'
-    elif 'Va' in del_LoanList:
-        VAUndwType='DELT'
-    elif 'Va' in non_del_LoanList:
-        VAUndwType='NDLT'
-    else: 
-        VAUndwType=None
-    USDAUndwType=str(None)+'Usda'
-    if 'Usda' in del_LoanList and 'Usda' in non_del_LoanList:
-        USDAUndwType='BOTH'
-    elif 'Usda' in del_LoanList:
-        USDAUndwType='DELT'
-    elif 'Usda' in non_del_LoanList:
-        USDAUndwType='NDLT'
-    else: 
-        USDAUndwType=None
-    if USDAUndwType==None:
-        RuralApproved='N'
-    else:
-        RuralApproved='Y'
-    if VAUndwType==None:
-        VAApproved='N'
-    else:
-        VAApproved='Y'
-    if CONVUndwType==None:
-        ConventionalApproved='N'
-    else:
-        ConventionalApproved='Y'
-    if FHAUndwType==None:
-        FHAApproved='N'
-    else:
-        FHAApproved='Y'
-    YrsinBusiness=data.get('basicInfo',{}).get('businessInformation').get('yearsInBusiness',None)
-    #print(YrsinBusiness)
-    BillingZip=data.get('basicInfo',{}).get('billingAddress',{}).get('zip',None)
-    #print(BillingZip)
-    BillingState=data.get('basicInfo',{}).get('billingAddress',{}).get('state',None)
-    BillingCity=data.get('basicInfo',{}).get('billingAddress',{}).get('city',None)
-    BillingAddress=data.get('basicInfo',{}).get('billingAddress',{}).get('street1',None)
-    ID=data.get('basicInfo',{}).get('id',None)
-    MaxCommitmentAmount=data.get('commitments',{}).get('maxCommitmentAmount',None)
-    #data.get('commitments',{}).get('deliveryTypes',[]):
-
-
-    
-    # print(RuralApproved)
-    # print(VAApproved)
-    #VW_Authority should be added at the end because it has dependency on JumboUndwtyp
-        #Assigning default values to custom fields 
     ClientStatus=None
     ClientSecStatus=None
     ClientStatusGroup='INACTIVE'
@@ -122,63 +62,30 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
     SecurityReleaseRequirements=None
     OriginationMethod=None
     client_203K=None
-    HomeStyle =None
-    VARenovation=None
-    ConventionalTiers=None
-    FHATier=None
-    StatusCd=None
-    VATiers=None
-    USDATiers=None
-    JumboTiers=None
-    OtherTiers=None
-    RateSheetEmailDistribution=None
-    AllowedLockExtensionsCount=None
-    MaxLockExtensionDays=None				
-    MaxAggregateLockExtensionDays=None
-    MaxDaysAfterLockExpiration=None
-    MaxDaysAfterLockExpirationForConv=None
-    MaxDaysAfterLockExpirationForFHA=None
-    MaxDaysAfterLockExpirationForJumbo=None
-    MaxDaysAfterLockExpirationForUSDA=None
-    MaxDaysAfterLockExpirationForVA=None
-    LockDays30=None
-    LockDays45=None
-    LockDays75=None
-    RelockDays15=None
-    RelockDays30=None
 
 
 
-
-        #starting custom fields
+    #starting custom fields
     for customFields in data.get('customFields',{}).get('fields',{}):
         if customFields['fieldName'] == 'Secondary Status':
             ClientSecStatus = customFields.get('fieldValue',None).upper()
         if customFields['fieldName'] == 'Primary Status':
             if customFields.get('fieldValue',None) == 'Approved':
                 ClientStatus ='Approved'
-                StatusCd='APRV'
             elif customFields.get('fieldValue',None) == 'Not Approved':
                 ClientStatus ='Not Approved'
-                StatusCd='NAPR'
             elif customFields.get('fieldValue',None) == 'Prospect':
                 ClientStatus ='Prospect'
-                StatusCd='PRPT'
             elif customFields.get('fieldValue',None) == 'Suspend - Allow Loan submisssions for Active locks':
                 ClientStatus ='SUSPEND-ALLOW LOAN SUBMISSIONS FOR ACTIVE LOCKS'
-                StatusCd='SUS1'
             elif customFields.get('fieldValue',None) == 'Suspend - Disallow New loan Submissions':
                 ClientStatus ='SUSPEND-DISALLOW NEW LOAN SUBMISSIONS'
-                StatusCd='SUS2'
             elif customFields.get('fieldValue',None) == "Terminated with AR's":
                 ClientStatus ="TERMINATED - WITH AR'S"
-                StatusCd='TEAR'
             elif customFields.get('fieldValue',None) == "Terminate":
                 ClientStatus = 'Terminated'
-                StatusCd='TERM'
             else:
                 ClientStatus =None
-                StatusCd=None
             if 'Test' in ClientName or ClientName== 'APPLE CORRESPONDENTS':
                 ClientStatusGroup = 'Test Client'
             elif customFields.get('fieldValue',None) == "Approved":
@@ -251,19 +158,19 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
             else:
                 SecondaryStsCd=None
         if customFields['fieldName'] == '203K':
-            if customFields['fieldValue']==None  or len(customFields['fieldValue'])==0:
+            if len(customFields['fieldValue'])==0:
                 FHA203KApproved='N'
             else:
                 FHA203KApproved='Y'
         #HomeStyleIND
         if customFields['fieldName'] == 'HomeStyle':
-            if customFields['fieldValue']==None or len(customFields['fieldValue'])==0 :
+            if len(customFields['fieldValue'])==0:
                 HomeStyleIND='N'
             else:
                 HomeStyleIND='Y'
         #JumboApproved
         if customFields['fieldName'] == 'Jumbo':
-            if customFields['fieldValue']==None  or len(customFields['fieldValue'])==0:
+            if len(customFields['fieldValue'])==0:
                 JumboApproved='N'
                 JUMBOUndwType=None
             else:
@@ -315,124 +222,45 @@ with open ('C:\\Users\\dell\\Desktop\\PD\\Client\\getAllEntities_2.JSON') as fil
                 SecurityReleaseRequirements='NSUP'
             else:
                 SecurityReleaseRequirements=None
+    #print(SecurityReleaseRequirements)
+    #OriginationMethod
+        if customFields['fieldName'] == 'Origination Method':
+            #print(customFields['fieldValue'])
+            
+        #client_203K
         if customFields['fieldName'] == '203K':
             #print(customFields['fieldValue'])
-            if customFields['fieldValue'] == 'Investor Services':
-                client_203K='INVS'
-            elif customFields['fieldValue'] == 'Admin Services':
-                client_203K='ADMS'
-            elif customFields['fieldValue'] == 'Admin Services Plus':
-                client_203K='ADSP'
+            if customFields['fieldValue'] == 'TPO':
+                client_203K='Third Party Origination'
+            elif customFields['fieldValue'] == 'Correspondent':
+                client_203K='Correspondent'
+            elif customFields['fieldValue'] == 'Both':
+                client_203K='Both'
             else:
-                client_203K=None
-        if customFields['fieldName'] == 'HomeStyle':
-            #print(customFields['fieldValue'])
-            if customFields['fieldValue'] == 'Investor Services':
-                HomeStyle='INVS'
-            elif customFields['fieldValue'] == 'Admin Services':
-                HomeStyle='ADMS'
-            else:
-                HomeStyle=None
-        #VA Renovation
-        if customFields['fieldName'] == 'VA Renovation':
-            VARenovation =customFields['fieldValue'] 
-    #ConventionalTiers
-        if customFields['fieldName'] == 'Conventional Tiers':
-            #print(customFields['fieldValue'])
-            if customFields['fieldValue'] == 'Conv Tier 1':
-                ConventionalTiers='1'
-            elif customFields['fieldValue'] == 'Conv Tier 2':
-                ConventionalTiers='2'
-            elif customFields['fieldValue'] == 'Conv Tier 3':
-                ConventionalTiers='3'
-            else:
-                ConventionalTiers=None
-        #FHATier
-        if customFields['fieldName'] == 'FHA Tiers':
-            #print(customFields['fieldValue'])
-            if customFields['fieldValue'] == 'FHA Tier 1':
-                FHATier='1'
-            elif customFields['fieldValue'] == 'FHA Tier 2':
-                FHATier='2'
-            elif customFields['fieldValue'] == 'FHA Tier 3':
-                FHATier='3'
-            else:
-                FHATier=None       
-        if customFields['fieldName'] == 'VA Tiers':
-            #print(customFields['fieldValue'])
-            if customFields['fieldValue'] == 'VA Tier 1':
-                VATiers='1'
-            elif customFields['fieldValue'] == 'VA Tier 2':
-                VATiers='2'
-            elif customFields['fieldValue'] == 'VA Tier 3':
-                VATiers='3'
-            else:
-                VATiers=None  
-    #USDATiers\
-        if customFields['fieldName'] == 'USDA Tiers':
-            #print(customFields['fieldValue'])
-            if customFields['fieldValue'] == 'USDA Tier 1':
-                USDATiers='1'
-            elif customFields['fieldValue'] == 'USDA Tier 2':
-                USDATiers='2'
-            elif customFields['fieldValue'] == 'USDA Tier 3':
-                USDATiers='3'
-            else:
-                USDATiers=None  
-        if customFields['fieldName'] == 'Jumbo Tiers':
-            #print(customFields['fieldValue'])
-            if customFields['fieldValue'] == 'Jumbo Tier 1':
-                JumboTiers='1'
-            elif customFields['fieldValue'] == 'Jumbo Tier 2':
-                JumboTiers='2'
-            elif customFields['fieldValue'] == 'Jumbo Tier 3':
-                JumboTiers='3'
-            else:
-                JumboTiers=None
-        if customFields['fieldName'] == 'Other Tiers':
-            #print(customFields['fieldValue'])
-            if customFields['fieldValue'] == 'Other Tier 1':
-                OtherTiers='1'
-            elif customFields['fieldValue'] == 'Other Tier 2':
-                OtherTiers='2'
-            elif customFields['fieldValue'] == 'Other Tier 3':
-                OtherTiers='3'
-            else:
-                OtherTiers=None
-        if customFields['fieldName'] == 'Rate Sheet Email Distribution':
-            RateSheetEmailDistribution= customFields['fieldValue']
-        #AllowedLockExtensionsCount
-        if customFields['fieldName'] == 'Allowed Lock Extensions Count':
-            AllowedLockExtensionsCount= customFields['fieldValue']
-        if customFields['fieldName'] == 'Max Lock Extension Days':
-            MaxLockExtensionDays = customFields['fieldValue']
-        if customFields['fieldName'] == 'Max Aggregate Lock Extension Days':
-            MaxAggregateLockExtensionDays = customFields['fieldValue']
-        if customFields['fieldName'] == 'Max Days After Lock Expiration':
-            MaxDaysAfterLockExpiration = customFields['fieldValue']
-        if customFields['fieldName'] == 'Max Days After Lock Expiration For Conv':
-            MaxDaysAfterLockExpirationForConv = customFields['fieldValue']
-        if customFields['fieldName'] == 'Max Days After Lock Expiration For FHA':
-            MaxDaysAfterLockExpirationForFHA = customFields['fieldValue']
-        if customFields['fieldName'] == 'Max Days After Lock Expiration For Jumbo':
-            MaxDaysAfterLockExpirationForJumbo = customFields['fieldValue']
-        if customFields['fieldName'] == 'Max Days After Lock Expiration For USDA':
-            MaxDaysAfterLockExpirationForUSDA = customFields['fieldValue']
-        if customFields['fieldName'] == 'Max Days After Lock Expiration For VA':
-            MaxDaysAfterLockExpirationForVA = customFields['fieldValue']
-        #LockDays30
-        #Lock Days - 30
-        if customFields['fieldName'] == 'Lock Days - 30':
-            LockDays30 = customFields['fieldValue']
-        if customFields['fieldName'] == 'Lock Days - 45':
-            LockDays45 = customFields['fieldValue']
-        if customFields['fieldName'] == 'Lock Days - 75':
-            LockDays75 = customFields['fieldValue']
-        if customFields['fieldName'] == 'Relock Days - 15':
-            RelockDays15= customFields['fieldValue']
-        if customFields['fieldName'] == 'Relock Days - 30':
-            RelockDays30 = customFields['fieldValue']
+                OriginationMethod=None
 
-    print(ID ,AppSource,RateSheetEmailDistribution ,RelockDays15 ,RelockDays30 ,RepurchaseClientContact_Name ,RqstTyp ,RuralApproved ,SecondaryStsCd ,SecurityReleaseRequirements ,ServiceEmail ,StateofIncorporation ,StatusCd ,StatusReasons ,TangibleNetWorth ,TaxID ,ThirdPartyOrganizationId ,ThirdPartyOrigination ,TrailingDoc_Assigned_Analyst_email ,USDAOTCApproved ,USDATiers ,USDAUndwType ,VAApprovalDate ,VAApproved ,VALenderCode ,VARenovation ,VASponsorCd ,VAStatus ,VATiers ,VAUndwType ,NMLSID ,NoLateWireInd ,OrgType ,OriginationMethod ,OtherTiers ,Priority ,ProdFeatureTexasInd)
-    # VW_Authority
-    #print(JUMBOUndwType)
+        
+
+            
+
+        
+        
+        
+
+            
+
+    
+            
+                    
+
+
+
+            
+    
+
+            
+        
+        
+            
+
+            

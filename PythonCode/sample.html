@@ -1,0 +1,71 @@
+<font face="Courier New" size="2">
+<font color = "blue">SELECT</font>&nbsp;<font color = "maroon">batchid</font><font color = "silver">,</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">jsonfilename</font><font color = "silver">,</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">json_processing_status</font><font color = "silver">,</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">iics_processing_status</font><font color = "silver">,</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">startdatetime</font><font color = "silver">,</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">enddatetime</font><font color = "silver">,</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">comments</font>
+<br/><font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_json_sourcefile</font>&nbsp;<font color = "maroon">List</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">UPDATE</font>&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_json_sourcefilelist</font>
+<br/><font color = "blue">SET</font>&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">iics_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'COMPLETED'</font><font color = "silver">,</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">enddatetime</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "blue">CURRENT_TIMESTAMP</font><font color = "silver">,</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "maroon">comments</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'IICS&nbsp;Load&nbsp;Successful'</font>
+<br/><font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">json_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'COMPLETED'</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">AND</font>&nbsp;<font color = "maroon">iics_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'OPEN'</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_documents</font>
+<br/><font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">batchid</font>&nbsp;<font color = "blue">IN</font>&nbsp;<font color = "maroon">(</font><font color = "blue">SELECT</font>&nbsp;<font color = "maroon">batchid</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_json_sourcefilelist</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">json_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'COMPLETED'</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">AND</font>&nbsp;<font color = "maroon">iics_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'OPEN'</font><font color = "maroon">)</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_borrower</font>
+<br/><font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">batchid</font>&nbsp;<font color = "blue">IN</font>&nbsp;<font color = "maroon">(</font><font color = "blue">SELECT</font>&nbsp;<font color = "maroon">batchid</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_json_sourcefilelist</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">json_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'COMPLETED'</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">AND</font>&nbsp;<font color = "maroon">iics_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'OPEN'</font><font color = "maroon">)</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_message_data</font>
+<br/><font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">batchid</font>&nbsp;<font color = "blue">IN</font>&nbsp;<font color = "maroon">(</font><font color = "blue">SELECT</font>&nbsp;<font color = "maroon">batchid</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_json_sourcefilelist</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">json_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'COMPLETED'</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">AND</font>&nbsp;<font color = "maroon">iics_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'OPEN'</font><font color = "maroon">)</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_messages</font>
+<br/><font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">batchid</font>&nbsp;<font color = "blue">IN</font>&nbsp;<font color = "maroon">(</font><font color = "blue">SELECT</font>&nbsp;<font color = "maroon">batchid</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">clg_reporting</font><font color = "silver">.</font><font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_json_sourcefilelist</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">WHERE</font>&nbsp;&nbsp;<font color = "maroon">json_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'COMPLETED'</font>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = "blue">AND</font>&nbsp;<font color = "maroon">iics_processing_status</font>&nbsp;<font color = "silver">=</font>&nbsp;<font color = "red">'OPEN'</font><font color = "maroon">)</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_borrower_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_messages_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_message_data_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_documents_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_loandata_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">DELETE</font>&nbsp;<font color = "blue">FROM</font>&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_json_sourcefilelist</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">SELECT</font>&nbsp;<font color = "silver">*</font>
+<br/><font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_borrower_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">SELECT</font>&nbsp;<font color = "silver">*</font>
+<br/><font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_messages_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">SELECT</font>&nbsp;<font color = "silver">*</font>
+<br/><font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_message_data_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">SELECT</font>&nbsp;<font color = "silver">*</font>
+<br/><font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_documents_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">SELECT</font>&nbsp;<font color = "silver">*</font>
+<br/><font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_loandata_stg</font><font color = "silver">;</font>
+<br/>
+<br/><font color = "blue">SELECT</font>&nbsp;<font color = "silver">*</font>
+<br/><font color = "blue">FROM</font>&nbsp;&nbsp;&nbsp;<font color = "maroon">los_pcg</font><font color = "silver">.</font><font color = "maroon">du_json_sourcefilelist</font><font color = "silver">;</font>&nbsp;
+</font>

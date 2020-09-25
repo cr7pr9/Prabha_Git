@@ -1,0 +1,262 @@
+using System
+using System.Collections.Generic
+using System.Data
+using System.Linq
+using System.Text
+using ViewModels
+using NLog
+using ServiceDAL
+using System.Web.Script.Serialization
+using System.Globalization
+
+namespace ServiceDAL
+    def class DuMessageParseDAL : IDuMessageParseDAL
+        def static Logger logger = LogManager.GetCurrentClassLogger():
+        def FNMA_DU_Entities fnmaDuEntities
+        # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+        def DuMessageParseDAL():
+            self.fnmaDuEntities = new FNMA_DU_Entities(); 
+        # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+        def ParseDuMessage(DuMessageModel duMessageModel, requestResponseId):
+            try:
+                DU_LoanData dbLoanMsgMdl = GenDU_LoanData(duMessageModel, requestResponseId)
+                GenDU_Borrower(dbLoanMsgMdl, duMessageModel)
+                GenDU_Messages(dbLoanMsgMdl, duMessageModel)
+                GenDU_Documents(dbLoanMsgMdl, duMessageModel)
+                # ----------------------------------------------
+                fnmaDuEntities.DU_LoanData.Add(dbLoanMsgMdl)
+                fnmaDuEntities.SaveChanges()
+            except Exception:
+                logger.Error(ex)
+                return
+
+        # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+        def DU_LoanData GenDU_LoanData(DuMessageModel duMessageModel, requestResponseId):
+            DateTime outDt
+            duMessageModel.duMessages.submissionDate = duMessageModel.duMessages.submissionDate.LastIndexOf(":") < 12 ?
+                    duMessageModel.duMessages.submissionDate.Insert(duMessageModel.duMessages.submissionDate.Length, ":00") : duMessageModel.duMessages.submissionDate
+            DU_LoanData dbLoanMsgMdl = new DU_LoanData()
+                caseFileId = duMessageModel.duMessages.caseFileId,
+                RequestResponseId = requestResponseId,
+                lenderLoanNumber = duMessageModel.duMessages.lenderLoanNumber,
+                submissionDate = DateTime.TryParseExact(outDt if duMessageModel.duMessages.submissionDate, "yyyyMMdd hh:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out outDt  outDt : DateTime else mmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out outDt  outDt  (DateTime)null,
+                submissionNumber = duMessageModel.duMessages.submissionNumber,
+                submittedBy = duMessageModel.duMessages.submittedBy,
+                resultsDateTime = DateTime.TryParseExact(outDt if duMessageModel.duMessages.resultsDateTime, "yyyyMMdd hh:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out outDt  outDt : DateTime else mmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out outDt  outDt  (DateTime)null,
+                paymentShock = duMessageModel.duMessages.analysis.paymentShock,
+                reserves = duMessageModel.duMessages.analysis.reserves,
+                reserveMonths = duMessageModel.duMessages.analysis.reserveMonths,
+                shortage = duMessageModel.duMessages.analysis.shortage,
+                netCashBack = duMessageModel.duMessages.analysis.netCashBack,
+                cashFromBorrower = duMessageModel.duMessages.analysis.cashFromBorrower,
+                housingExpenseRatio = duMessageModel.duMessages.analysis.housingExpenseRatio,
+                totalExpenseRatio = duMessageModel.duMessages.analysis.totalExpenseRatio,
+                totalExpenseRatioLT10Mos = duMessageModel.duMessages.analysis.totalExpenseRatioLT10Mos,
+                totalExpenseRatioUndisclosed = duMessageModel.duMessages.analysis.totalExpenseRatioUndisclosed,
+                ltv = duMessageModel.duMessages.analysis.ltv,
+                cltv = duMessageModel.duMessages.analysis.cltv,
+                qualifyingInterestRate = duMessageModel.duMessages.analysis.qualifyingInterestRate,
+                fullyIndexedQualifyingInterestRate = duMessageModel.duMessages.analysis.fullyIndexedQualifyingInterestRate,
+                qualifyingPandI = duMessageModel.duMessages.analysis.qualifyingPandI,
+                qualifyingRatePaymentShock = duMessageModel.duMessages.analysis.qualifyingRatePaymentShock,
+                assetsToVerify = duMessageModel.duMessages.analysis.assetsToVerify,
+                reservesToVerify = duMessageModel.duMessages.analysis.reservesToVerify,
+                percentSellerContribution = duMessageModel.duMessages.analysis.percentSellerContribution,
+                amountSellerContribution = duMessageModel.duMessages.analysis.amountSellerContribution,
+                percentBorrowerContribution = duMessageModel.duMessages.analysis.percentBorrowerContribution,
+                amountBorrowerContribution = duMessageModel.duMessages.analysis.amountBorrowerContribution,
+                undrawnHELOCAmount = duMessageModel.duMessages.analysis.undrawnHELOCAmount,
+                closingCostsPaidBySeller = duMessageModel.duMessages.analysis.closingCostsPaidBySeller,
+                borrowerFundsPercentToSalesPrice = duMessageModel.duMessages.analysis.borrowerFundsPercentToSalesPrice,
+                refinanceAmount = duMessageModel.duMessages.analysis.refinanceAmount,
+                cashOnHandRemaining = duMessageModel.duMessages.analysis.cashOnHandRemaining,
+                ltvnoFinancedMI = duMessageModel.duMessages.analysis.ltvnoFinancedMI,
+                cltvnoFinancedMI = duMessageModel.duMessages.analysis.cltvnoFinancedMI,
+                pmimipfundingFee = duMessageModel.duMessages.analysis.pmimipfundingFee,
+                combinedLoanAmount = duMessageModel.duMessages.loanDetail.combinedLoanAmount,
+                loanTypeCode = duMessageModel.duMessages.loanDetail.loanTypeCode,
+                amortizationType = duMessageModel.duMessages.loanDetail.amortizationType,
+                amortizationTerm = duMessageModel.duMessages.loanDetail.amortizationTerm,
+                purposeofLoan = duMessageModel.duMessages.loanDetail.purposeofLoan,
+                purposeofRefi = duMessageModel.duMessages.loanDetail.purposeofRefi,
+                interestRate = duMessageModel.duMessages.loanDetail.interestRate,
+                subjectPropertyTypeCode = duMessageModel.duMessages.property.subjectPropertyTypeCode,
+                propertyStreetAddress = duMessageModel.duMessages.property.propertyStreetAddress,
+                propertyCity = duMessageModel.duMessages.property.propertyCity,
+                propertyState = duMessageModel.duMessages.property.propertyState,
+                propertyZipCode = duMessageModel.duMessages.property.propertyZipCode,
+                propertyAppraisedValue = duMessageModel.duMessages.property.propertyAppraisedValue,
+                propertyWillBe = duMessageModel.duMessages.property.propertyWillBe,
+                numberUnits = duMessageModel.duMessages.property.numberUnits,
+                salesPrice = duMessageModel.duMessages.property.salesPrice,
+                totalHousingPayment = duMessageModel.duMessages.incomeExpenses.totalHousingPayment,
+                totalExpensePayment = duMessageModel.duMessages.incomeExpenses.totalExpensePayment,
+                presentHousingExpense = duMessageModel.duMessages.incomeExpenses.presentHousingExpense
+            }
+            return dbLoanMsgMdl
+
+        # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+        def GenDU_Borrower(DU_LoanData dbLoanMsgMdl, DuMessageModel duMessageModel):
+### CHECK NEXT LINE for type declarations !!!
+            for Borrower duBorrower in duMessageModel.duMessages.borrowers:
+                borrowerCreditScore1 borrCrdtScr = duMessageModel.duMessages.borrowerCreditScore.Where(p => p.applicantID == duBorrower.applicantID).FirstOrDefault()
+                if borrCrdtScr is None) borrCrdtScr = new borrowerCreditScore1(:
+                # -------------------------------------------
+                DU_Borrower duBorrowerMdl = new DU_Borrower()
+                    applicantID = duBorrower.applicantID,
+                    borrowerName = duBorrower.borrowerName,
+                    lastName = duBorrower.lastName,
+                    TransUnionScore = borrCrdtScr.creditData.TransUnion,
+                    ExperianScore = borrCrdtScr.creditData.Experian,
+                    EquifaxScore = borrCrdtScr.creditData.Equifax
+                }
+                dbLoanMsgMdl.DU_Borrower.Add(duBorrowerMdl)
+
+
+        # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+        def GenDU_Documents(DU_LoanData dbLoanMsgMdl, DuMessageModel duMessageModel):
+### CHECK NEXT LINE for type declarations !!!
+            for Documentationcodeslist Documentationcodes in duMessageModel.duMessages.documentationCodesList:
+                DU_Documents DU_Docs = new DU_Documents()
+                    documentationTypeCode = Documentationcodes.documentationTypeCode,
+                    documentationLevel = Documentationcodes.documentationLevel,
+                    borrowerName = Documentationcodes.borrowerName,
+                    applicantID = Documentationcodes.applicantID
+                }
+                dbLoanMsgMdl.DU_Documents.Add(DU_Docs)
+
+
+        # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+        def GenDU_Messages(DU_LoanData dbLoanMsgMdl, DuMessageModel duMessageModel):
+            if duMessageModel.duMessages is None or duMessageModel.duMessages.messages is None) retur:
+            # --------------------------------------------
+            if duMessageModel.duMessages.messages.LoanStrengthsWeaknesses is not None:
+### CHECK NEXT LINE for type declarations !!!
+                for LoanStrengthsWeaknesses msgType in duMessageModel.duMessages.messages.LoanStrengthsWeaknesses:
+                    DU_Messages DuMessage = new DU_Messages()
+                        lenderMessageLineText = msgType.lenderMessageLine.text,
+                        MsgTypeName = "LoanStrengthsWeaknesses",
+                        messageID = msgType.messageID,
+                        messageName = msgType.messageName,
+                        messageSubType1 = msgType.messageSubType1,
+                        messageSubType2 = msgType.messageSubType2,
+                        messageStructure = msgType.messageStructure
+                    }
+                    GenDU_MessageData(DuMessage, msgType.lenderParameter, msgType.lenderMessageTableRow, msgType.messageStructure)
+                    dbLoanMsgMdl.DU_Messages.Add(DuMessage)
+            # --------------------------------------------------
+            if duMessageModel.duMessages.messages.Observations is not None:
+### CHECK NEXT LINE for type declarations !!!
+                for Observation msgType in duMessageModel.duMessages.messages.Observations:
+                    DU_Messages DuMessage = new DU_Messages()
+                        lenderMessageLineText = msgType.lenderMessageLine.text,
+                        MsgTypeName = "Observation",
+                        messageID = msgType.messageID,
+                        messageName = msgType.messageName,
+                        messageSubType1 = msgType.messageSubType1,
+                        messageSubType2 = msgType.messageSubType2,
+                        messageStructure = msgType.messageStructure
+                    }
+                    GenDU_MessageData(DuMessage, msgType.lenderParameter, msgType.lenderMessageTableRow, msgType.messageStructure)
+                    dbLoanMsgMdl.DU_Messages.Add(DuMessage)
+            # --------------------------------------------------
+            if duMessageModel.duMessages.messages.RiskEligibility is not None:
+### CHECK NEXT LINE for type declarations !!!
+                for RiskEligibility msgType in duMessageModel.duMessages.messages.RiskEligibility:
+                    DU_Messages DuMessage = new DU_Messages()
+                        lenderMessageLineText = msgType.lenderMessageLine.text,
+                        MsgTypeName = "RiskEligibility",
+                        messageID = msgType.messageID,
+                        messageName = msgType.messageName,
+                        messageSubType1 = msgType.messageSubType1,
+                        messageSubType2 = msgType.messageSubType2,
+                        messageStructure = msgType.messageStructure
+                    }
+                    GenDU_MessageData(DuMessage, msgType.lenderParameter, msgType.lenderMessageTableRow, msgType.messageStructure)
+                    dbLoanMsgMdl.DU_Messages.Add(DuMessage)
+            # --------------------------------------------------
+            if duMessageModel.duMessages.messages.VerificationApprovalConditions is not None:
+### CHECK NEXT LINE for type declarations !!!
+                for VerificationApprovalConditions msgType in duMessageModel.duMessages.messages.VerificationApprovalConditions:
+                    DU_Messages DuMessage = new DU_Messages()
+                        lenderMessageLineText = msgType.lenderMessageLine.text,
+                        MsgTypeName = "VerificationApprovalConditions",
+                        messageID = msgType.messageID,
+                        messageName = msgType.messageName,
+                        messageSubType1 = msgType.messageSubType1,
+                        messageSubType2 = msgType.messageSubType2,
+                        messageStructure = msgType.messageStructure
+                    }
+                    GenDU_MessageData(DuMessage, msgType.lenderParameter, msgType.lenderMessageTableRow, msgType.messageStructure)
+                    dbLoanMsgMdl.DU_Messages.Add(DuMessage)
+            # --------------------------------------------------
+            if duMessageModel.duMessages.messages.CollateralUnderwriter is not None:
+### CHECK NEXT LINE for type declarations !!!
+                for CollateralUnderwriter msgType in duMessageModel.duMessages.messages.CollateralUnderwriter:
+                    DU_Messages DuMessage = new DU_Messages()
+                        lenderMessageLineText = msgType.lenderMessageLine.text,
+                        MsgTypeName = "CollateralUnderwriter",
+                        messageID = msgType.messageID,
+                        messageName = msgType.messageName,
+                        messageSubType1 = msgType.messageSubType1,
+                        messageSubType2 = msgType.messageSubType2,
+                        messageStructure = msgType.messageStructure
+                    }
+                    GenDU_MessageData(DuMessage, msgType.lenderParameter, msgType.lenderMessageTableRow, msgType.messageStructure)
+                    dbLoanMsgMdl.DU_Messages.Add(DuMessage)
+            # --------------------------------------------------
+            if duMessageModel.duMessages.messages.LenderGuidanceforApplicants is not None:
+### CHECK NEXT LINE for type declarations !!!
+                for LenderGuidanceforApplicants msgType in duMessageModel.duMessages.messages.LenderGuidanceforApplicants:
+                    DU_Messages DuMessage = new DU_Messages()
+                        lenderMessageLineText = msgType.lenderMessageLine.text,
+                        MsgTypeName = "LenderGuidanceforApplicants",
+                        messageID = msgType.messageID,
+                        messageName = msgType.messageName,
+                        messageSubType1 = msgType.messageSubType1,
+                        messageSubType2 = msgType.messageSubType2,
+                        messageStructure = msgType.messageStructure
+                    }
+                    GenDU_MessageData(DuMessage, msgType.lenderParameter, msgType.lenderMessageTableRow, msgType.messageStructure)
+                    dbLoanMsgMdl.DU_Messages.Add(DuMessage)
+            # --------------------------------------------------
+            if duMessageModel.duMessages.messages.PotentialRedFlags is not None:
+### CHECK NEXT LINE for type declarations !!!
+                for PotentialRedFlags msgType in duMessageModel.duMessages.messages.PotentialRedFlags:
+                    DU_Messages DuMessage = new DU_Messages()
+                        lenderMessageLineText = msgType.lenderMessageLine.text,
+                        MsgTypeName = "PotentialRedFlags",
+                        messageID = msgType.messageID,
+                        messageName = msgType.messageName,
+                        messageSubType1 = msgType.messageSubType1,
+                        messageSubType2 = msgType.messageSubType2,
+                        messageStructure = msgType.messageStructure
+                    }
+                    GenDU_MessageData(DuMessage, msgType.lenderParameter, msgType.lenderMessageTableRow, msgType.messageStructure)
+                    dbLoanMsgMdl.DU_Messages.Add(DuMessage)
+
+        # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+        def GenDU_MessageData(DU_Messages DuMessage, Lenderparameter[] LndrParamCol, Lendermessagetablerow[] LndrMsgRowCol, msgStructure):
+            if msgStructure == "Fixed") retur:
+            # ---------------------------
+            DU_Message_Data DU_MsgData
+            List<string> headerLst = new List<string>()
+            isMsgStrusctList = msgStructure == "List" ? true : false
+            # ---------------------------
+            # Get the 1st columnCol and use as param names
+            if isMsgStrusctList and LndrMsgRowCol.Count() > 0 and LndrMsgRowCol[0] is not None and LndrMsgRowCol[0].column.Count() > 0:
+### CHECK NEXT LINE for type declarations !!!
+                for Column col in LndrMsgRowCol[0].column:
+                    headerLst.Add(col.value)
+            # -------------------------------------------------"Parametric"
+### CHECK NEXT LINE for type declarations !!!
+            for Lenderparameter LndrParam in LndrParamCol:
+                if LndrParam.parameterNumber == 0) continu:
+                # -------------------------------------------
+                DU_MsgData = new DU_Message_Data()
+                    parameterNumber = LndrParam.parameterNumber,
+                    parameterName = LndrParam.parameterName is None && isMsgStrusctList && headerLst.Count() > 0 ? 
+                                    headerLst[LndrParam.parameterNumber - 1] : LndrParam.parameterName,
+                    parameterValue = LndrParam.parameterValue
+                }
+                DuMessage.DU_Message_Data.Add(DU_MsgData)

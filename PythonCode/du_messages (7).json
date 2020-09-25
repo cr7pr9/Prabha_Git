@@ -1,0 +1,2372 @@
+{
+	"duMessages": {
+		"engineVersion": "10.3",
+		"caseFileId": "1997120101",
+		"recommendation": "APPROVE-ELIGIBLE",
+		"engineResultsStatusCode": "3",
+		"lenderLoanNumber": "DavidsCase",
+		"submissionDate": "20200325 09:19",
+		"submissionNumber": "1",
+		"resultsDateTime": "20200325 09:19:00",
+		"analysis": {
+			"paymentShock": 99999.0,
+			"reserves": 117500.0,
+			"reserveMonths": 108,
+			"shortage": 0.0,
+			"netCashBack": 1400.0,
+			"cashFromBorrower": 0.0,
+			"housingExpenseRatio": 13.86,
+			"totalExpenseRatio": 31.47,
+			"totalExpenseRatioLT10Mos": 33.02,
+			"totalExpenseRatioUndisclosed": 31.47,
+			"ltv": 42,
+			"cltv": 42,
+			"qualifyingInterestRate": 7.6,
+			"fullyIndexedQualifyingInterestRate": 7.6,
+			"qualifyingPandI": 865.55,
+			"qualifyingRatePaymentShock": 99999.0,
+			"assetsToVerify": 6513.3,
+			"reservesToVerify": 0.0,
+			"percentSellerContribution": 0.0,
+			"amountSellerContribution": 0.0,
+			"percentBorrowerContribution": 0.0,
+			"amountBorrowerContribution": 100.0,
+			"undrawnHELOCAmount": 0.0,
+			"closingCostsPaidBySeller": 0.0,
+			"borrowerFundsPercentToSalesPrice": 0.0,
+			"refinanceAmount": 92000.0,
+			"cashOnHandRemaining": 0.0,
+			"ltvnoFinancedMI": 42,
+			"cltvnoFinancedMI": 42,
+			"pmimipfundingFee": 0.0
+		},
+		"loanDetail": {
+			"combinedLoanAmount": 92800.0,
+			"loanTypeCode": "01",
+			"amortizationType": "05",
+			"amortizationTerm": 180,
+			"purposeofLoan": "05",
+			"purposeofRefi": "04",
+			"interestRate": 7.6
+		},
+		"property": {
+			"subjectPropertyTypeCode": "04",
+			"propertyStreetAddress": "4420 E. Douglas Ave.",
+			"propertyCity": "Higley",
+			"propertyState": "AZ",
+			"propertyZipCode": "85236",
+			"salesPrice": 0.0,
+			"propertyAppraisedValue": 225000.0,
+			"propertyWillBe": "1",
+			"numberUnits": "2"
+		},
+		"borrowers": [
+			{
+				"applicantID": 518317278,
+				"borrowerName": "Homer L Loanseeker",
+				"lastName": "Loanseeker"
+			},
+			{
+				"applicantID": 518317279,
+				"borrowerName": "Ken K Customer",
+				"lastName": "Customer"
+			}
+		],
+		"borrowerCreditScore": [],
+		"incomeExpenses": {
+			"totalHousingPayment": "1085.55",
+			"totalExpensePayment": "2465.80",
+			"presentHousingExpense": "1112.00"
+		},
+		"messages": {
+			"Loan Strengths/Weaknesses": [
+				{
+					"lenderMessageLine": {
+						"text": "The following risk factors represent strengths in the borrower's loan application:"
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Combined Loan-to-Value Ratio"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Number of Borrowers"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Debt-to-Income Ratio"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Combined Loan-to-Value Ratio",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Number of Borrowers",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Debt-to-Income Ratio",
+							"parameterName": null
+						}
+					],
+					"messageID": 1437,
+					"messageName": "REASON-STRENGTHS-RISK-FACTORS",
+					"messageType": "Loan Strengths/Weaknesses",
+					"messageSubType1": "Risk Assessment Messages",
+					"messageSubType2": null,
+					"messageStructure": "List"
+				}
+			],
+			"Observations": [
+				{
+					"lenderMessageLine": {
+						"text": "This case was submitted to Desktop Underwriter version 10.3 by Development Branch Test 2.  The following information is associated with this loan:  Casefile ID is 1997120101 and Submission number is 1.  If the loan is delivered to Fannie Mae, the Casefile ID must be provided at delivery."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "10.3",
+							"parameterName": "DUVersion"
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Development Branch Test 2",
+							"parameterName": "Insitution"
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "1997120101",
+							"parameterName": "CasefileID"
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "1",
+							"parameterName": "SubmissionNumber"
+						}
+					],
+					"messageID": 943,
+					"messageName": "KB-VERSION-CASEID-OBSERVATION",
+					"messageType": "Observations",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "The following list of special feature codes is provided to assist you in determining which codes may be associated with this loan. Other codes may be required. Refer to the Special Feature Codes list on fanniemae.com for a comprehensive list."
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Special Feature Code"
+								},
+								{
+									"value": "Description"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "127"
+								},
+								{
+									"value": "DU Loan"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "003"
+								},
+								{
+									"value": "Cash-out Refinance"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "127",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "DU Loan",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "003",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Cash-out Refinance",
+							"parameterName": null
+						}
+					],
+					"messageID": 1387,
+					"messageName": "SFC-LIST",
+					"messageType": "Observations",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "The following Credit Report is associated with this submission:"
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower Name"
+								},
+								{
+									"value": "Credit Agency"
+								},
+								{
+									"value": "Credit Report ID"
+								},
+								{
+									"value": " Credit Report Date"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "200-TEST CREDIT AGENCY"
+								},
+								{
+									"value": "5004559"
+								},
+								{
+									"value": "03/01/2020"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "200-TEST CREDIT AGENCY"
+								},
+								{
+									"value": "500454"
+								},
+								{
+									"value": "03/01/2020"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "200-TEST CREDIT AGENCY",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "5004559",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "03/01/2020",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "200-TEST CREDIT AGENCY",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "500454",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "03/01/2020",
+							"parameterName": null
+						}
+					],
+					"messageID": 2113,
+					"messageName": "CREDIT-REPORT-OBSERVATION",
+					"messageType": "Observations",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "The following credit scores are included in the credit report:"
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower"
+								},
+								{
+									"value": "Credit Score(s)"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "620 639 650"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "620 636 640"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "620 639 650",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "620 636 640",
+							"parameterName": null
+						}
+					],
+					"messageID": 1132,
+					"messageName": "CREDIT-SCORE-OBSERVATION",
+					"messageType": "Observations",
+					"messageSubType1": "Credit and Liability Messages",
+					"messageSubType2": null,
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "The following sources of income were used in the underwriting analysis:"
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower"
+								},
+								{
+									"value": "Income Type"
+								},
+								{
+									"value": "Amount"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Trust income"
+								},
+								{
+									"value": "55.00"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Dividends interest"
+								},
+								{
+									"value": "220.00"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Base employment income"
+								},
+								{
+									"value": "4378.25"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Social Security income"
+								},
+								{
+									"value": "150.00"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Commissions"
+								},
+								{
+									"value": "200.00"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Bonuses"
+								},
+								{
+									"value": "35.00"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Base employment income"
+								},
+								{
+									"value": "2797.00"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Trust income",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "55.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Dividends interest",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "220.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Base employment income",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "4378.25",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Social Security income",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "150.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Commissions",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "200.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Bonuses",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "35.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Base employment income",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "2797.00",
+							"parameterName": null
+						}
+					],
+					"messageID": 153,
+					"messageName": "LIST-INCOME-USED",
+					"messageType": "Observations",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "The following assets were counted towards available funds.  With the exception of cash on hand, all available funds greater than the amount required to close have been added to cash reserves."
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower"
+								},
+								{
+									"value": "Asset Type"
+								},
+								{
+									"value": "Institution Name"
+								},
+								{
+									"value": "Amount"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Savings Account"
+								},
+								{
+									"value": "ABC Savings Bank"
+								},
+								{
+									"value": "55000.00"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Checking Account"
+								},
+								{
+									"value": "ABC Savings Bank"
+								},
+								{
+									"value": "7500.00"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Life insurance"
+								},
+								{
+									"value": ""
+								},
+								{
+									"value": "50000.00"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Checking Account"
+								},
+								{
+									"value": "ABC Savings Bank"
+								},
+								{
+									"value": "5000.00"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Savings Account",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "ABC Savings Bank",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "55000.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Checking Account",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "ABC Savings Bank",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "7500.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Life insurance",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "No Value",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "50000.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Checking Account",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "ABC Savings Bank",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "5000.00",
+							"parameterName": null
+						}
+					],
+					"messageID": 59,
+					"messageName": "LIST-ASSETS-USED-FOR-AVAILABLE",
+					"messageType": "Observations",
+					"messageSubType1": "Asset Messages",
+					"messageSubType2": null,
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Liabilities that have been marked \"paid by close\" in the application have not been added to required funds. For cash-out refinance transactions, all debts to be paid off using proceeds from the transaction must be included in Section VII, Details of Transaction - line D. Verify and document the funds needed to pay off accounts marked \"paid by close.\""
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 108,
+					"messageName": "PAID-BY-CLOSING-NOT-ADDED-TO-REQUIRED-FUNDS",
+					"messageType": "Observations",
+					"messageSubType1": "Asset Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Desktop Underwriter does not include cash back received from the transaction in the borrower's cash reserves calculation.  Therefore, the amount of cash back, $1400.00, has not been included in cash reserves."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "1400.00",
+							"parameterName": "CashBack"
+						}
+					],
+					"messageID": 119,
+					"messageName": "CASH-BACK-TO-BORROWER",
+					"messageType": "Observations",
+					"messageSubType1": "Asset Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				}
+			],
+			"Risk/Eligibility": [
+				{
+					"lenderMessageLine": {
+						"text": "The risk profile of this loan casefile appears to meet Fannie Mae's guidelines."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 8,
+					"messageName": "APPROVE-ELIGIBLE-ADVICE",
+					"messageType": "Risk/Eligibility",
+					"messageSubType1": "Risk Assessment Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "This loan casefile appears to meet Fannie Mae's eligibility requirements."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 9,
+					"messageName": "ELIGIBLE-ADVICE",
+					"messageType": "Risk/Eligibility",
+					"messageSubType1": "Risk Assessment Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "This loan casefile has been underwritten as a cash-out refinance.  This loan casefile is ineligible as a cash-out if the property was purchased (or acquired) by the borrower within the six months preceding the disbursement date of the new mortgage loan (unless eligible under the delayed financing exception), or the property is currently listed for sale.  Refer to the Selling Guide for additional information."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 2373,
+					"messageName": "CASH-OUT-REFINANCE-TRANSACTIONS",
+					"messageType": "Risk/Eligibility",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "The following liabilities were not included in the debt-to-income ratio because there are 10 payments or less remaining."
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower"
+								},
+								{
+									"value": "Creditor"
+								},
+								{
+									"value": "Remaining Months"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "CEDAR FINANCE"
+								},
+								{
+									"value": "4"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "CEDAR FINANCE",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "4",
+							"parameterName": null
+						}
+					],
+					"messageID": 3153,
+					"messageName": "INSTALLMENT-10-OR-LESS",
+					"messageType": "Risk/Eligibility",
+					"messageSubType1": "Credit and Liability Messages",
+					"messageSubType2": null,
+					"messageStructure": "List"
+				}
+			],
+			"Verification/Approval Conditions": [
+				{
+					"lenderMessageLine": {
+						"text": "According to the Social Security Administration (SSA), based on the approximate issuance date of the Social Security number (SSN) and the borrower age on the application, the SSN entered for Ken K Customer appears to have been issued prior to the borrower's date of birth.  The SSN accuracy must be confirmed, and if incorrect, it must be updated and the loan casefile resubmitted to DU.  If the SSN is determined to be correct, it must be validated directly with the SSA (direct validation by a third party is acceptable), and the loan must be delivered with SFC 162.  If the SSN cannot be validated with the SSA, the loan is not eligible for delivery to Fannie Mae."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 12,
+					"messageName": "SSN-YEAR-OF-ISSUANCE",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "This loan is subject to all lender specified conditions and must comply with all applicable federal, state, and local laws and regulations."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 278,
+					"messageName": "LENDER-CONDITIONS-VERIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Based on the credit report obtained through DU, this loan casefile must close on or before 07/01/2020.  All credit documents must be no more than four months old on the note date. Refer to the Selling Guide for guidelines on the age of the appraisal or property inspection report."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "07/01/2020",
+							"parameterName": "CloseByDate"
+						}
+					],
+					"messageID": 420,
+					"messageName": "DOCUMENT-EXPIRATION-NOTIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "A Lender Credit has been entered in the Details of Transaction.  The lender must review the transaction as lender credits may not be used to fund any portion of the down payment.  If the lender credit is the result of premium pricing, or a lender funded contribution, the amount of the Lender Credit should not exceed the amount of borrower paid closing costs, discount points, and prepaids.  If the lender is affiliated with an interested party to the transaction, verify that the lender credits plus the seller contributions do not exceed the interested-party contribution limits specified in the Selling Guide.  If the lender credit plus the seller credits exceed the IPC limits, the property's sales price must be adjusted downward to reflect the amount of contribution that exceeds the maximum IPC; recalculate the LTV/CLTV ratios using the lower of the reduced sales price or the appraised value, and ensure LTV/CLTV complies with Selling Guide limits."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 824,
+					"messageName": "LENDER-CREDIT-VERIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "If there is a home equity line of credit secured against the subject property the maximum allowable HCLTV is 75 percent, verify the terms of the home equity line of credit for compliance with the Selling Guide, and calculate the HCLTV using the maximum credit limit of the equity line."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "75",
+							"parameterName": "MaximumHCLTV"
+						}
+					],
+					"messageID": 1802,
+					"messageName": "HELOC-CLTV-LIMIT",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Loan Level Price Adjustments may be applied when this loan is delivered to Fannie Mae.  Refer to the Selling Guide and Loan-level Price Adjustment (LLPA) Matrix on fanniemae.com for specific details."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 2343,
+					"messageName": "ADVERSE-DELIVERY-MARKET-CHARGE",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "According to the Social Security Administration (SSA), the Social Security Number (SSN) entered for Ken K Customer may not be associated with him/her.  The SSN accuracy must be confirmed, and if incorrect, it must be updated and the loan casefile resubmitted to DU.  If the SSN is determined to be correct, it must be validated directly with the SSA (direct validation by a third party is acceptable), and the loan must be delivered with SFC 162.  If the SSN cannot be validated with the SSA, the loan is not eligible for delivery to Fannie Mae."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 2741,
+					"messageName": "SSN-NOT-ASSOCIATED",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Include evidence of payoff of the following debts (other than 30 day accounts) in the loan file:"
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower"
+								},
+								{
+									"value": "Creditor"
+								},
+								{
+									"value": "Account Number"
+								},
+								{
+									"value": "Balance"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "WESTAR LOAN SERV"
+								},
+								{
+									"value": "******0058"
+								},
+								{
+									"value": "92000.00"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "WESTAR LOAN SERV",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "******0058",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "92000.00",
+							"parameterName": null
+						}
+					],
+					"messageID": 225,
+					"messageName": "PAID-BY-CLOSING-VERIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Credit and Liability Messages",
+					"messageSubType2": null,
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "The amount, frequency, and duration of the trust income for Homer L Loanseeker must be verified by the Trust Agreement or by the trustee's statement confirming the amount, frequency, and duration of payments.  This income cannot be used for qualifying unless it will continue for at least three years."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 181,
+					"messageName": "TRUST-INCOME-VERIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Interest and dividend income for Homer L Loanseeker must be verified by 2 years tax returns and all supporting schedules, or account statements. It must have been received for the past two years and the asset generating the income must be verified. Any funds used for the down payment or closing costs must be subtracted before the interest and dividends are calculated.  Documentation of asset ownership must be in compliance with the Age of Documents Policy per the Selling Guide."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 185,
+					"messageName": "INTEREST/DIVIDEND-INCOME-VERIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "If the Social Security income for Ken K Customer is classified as retirement or disability income from the borrower's own Social Security Account, obtain either proof of current receipt, or the Social Security Administration's (SSA) award letter.  If the Social Security income is for Survivor Benefits, retirement, or disability for the benefit of another, verify  the income with all of the  following documents:  a copy of the SSA award letter, proof of current receipt, and any additional documentation required to confirm a three-year continuance.  Supplemental Security Income must be verified with a copy of the SSA award letter and proof of current receipt.  Refer to the Selling Guide for additional information."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 191,
+					"messageName": "SOCIAL-SECURITY-INCOME-VERIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Perform and document a verbal verification of employment for each borrower. For all borrowers who are not Self-Employed no more than 10 business days prior to the note date, or Self-Employed within 120 calendar days prior to the note date.  Direct verification by a third party employment verification vendor is acceptable if completed within the same timeframes, and the information is not more than 35 days old (120 days old if self employed) as of the note date.  If the borrower is in the military, obtain either a Military Leave and Earnings Statement within 31 calendar days prior to the note date or a verification of employment through the Defense Manpower Data Center (https://mla.dmdc.osd.mil/mla/#/home). Lenders also have the option of obtaining the verbal verification of employment after the note date (and prior to delivery of the loan to Fannie Mae), but when using this option must ensure compliance with the Selling Guide."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 2469,
+					"messageName": "VERBAL-VOE",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Obtain a completed and signed Form 4506-T for each borrower whose income is used to qualify for the loan at or before closing. If all of a borrower's income has been validated through the DU validation service, a completed and signed Form 4506-T is not required for that borrower. Form 4506, Form 4506T-EZ, or Form 8821 may be used in lieu of Form 4506-T. Refer to the Selling Guide for additional information."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 2471,
+					"messageName": "FORM-4506-T-TAX-RETURN-REQUEST",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Calculate and document the net cash flow on the subject property according to the Fannie Mae Selling Guide. If the borrower is being qualified with the entire payment without benefit of rental income, rental income documentation for the subject property is not required for qualifying purposes.  However, the lender must report the monthly rent at delivery.  Refer to the Fannie Mae Selling Guide for permissible sources for obtaining monthly rent for reporting purposes. For loan casefiles created on or after December 7, 2019, rental income may not be provided on the DU loan application and used in qualifying if the borrower does not own a principle residence or have primary housing expense."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 2543,
+					"messageName": "SUBJECT-NET-CASH-FLOW",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Ken K Customer's income, including commission income, must be supported by a paystub and W-2s covering the most recent two-year period, or by a standard Verification of Employment (1005).  The paystub must be dated no earlier than 30 days prior to the initial loan application date and it must include all year-to-date earnings. Additionally, the paystub must include sufficient information to appropriately calculate income; otherwise, additional documentation must be obtained. If a standard Verification of Employment (1005) will be obtained it must include all year-to-date earnings, as well as prior year earnings if a W-2 is not being provided.  For guidance on borrowers with less than a two-year history of receiving commission income, or for any additional information on the verification of commission income, refer to the Selling Guide. Direct verifications provided by a third party employment verification vendor are acceptable if completed in accordance with the Selling Guide."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 2629,
+					"messageName": "COMMISSION-LESS-THAN-25-PERCENT",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Ken K Customer's income, including bonus and/or overtime income must be supported by a paystub and W-2s that covers the most recent two-year period, or a fully completed standard Verification of Employment (1005).  When a paystub is obtained it must be dated no earlier than 30 days prior to the initial loan application date, include all year-to-date earnings, and include sufficient information to appropriately calculate income.  Otherwise, additional documentation must be obtained.  If a standard Verification of Employment (1005) is obtained it must include all year-to-date earnings, and all prior year earnings if a W-2 is not being provided.  Refer to the Selling Guide for guidance on borrowers with less than a two-year history of receiving bonus income, or for any additional information on the verification of bonus income.  Direct verifications provided by a third party employment verification vendor are acceptable if completed in accordance with the Selling Guide."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 2631,
+					"messageName": "BONUS-OVERTIME-VERIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "If Homer L Loanseeker's self-employed income is being used for qualifying purposes, the income may be supported by personal and business tax returns covering the most recent one-year period (including all tax schedules), provided the tax returns reflect at least 12 months of self-employment income and the Cash Flow Analysis (Form 1084) or equivalent has been completed.  Otherwise, lenders must obtain personal and business tax returns covering the most recent two-year period (including all tax schedules), though the requirement for business tax returns can be waived if personal returns covering the most recent two-year period are obtained, and (1) the borrower has been self-employed in the same business for at least five years, (2) the borrower's individual tax returns show an increase in self-employment income over the last two years, and (3) the borrower is paying the down payment and closing costs with his or her own funds, and is not using any funds from the business account to fund the transaction or satisfy applicable reserve requirements.  Refer to the Selling Guide for additional information."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 2913,
+					"messageName": "SELF-EMPL-INCOME-ONE-YEAR",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "DU did not receive report data from the vendor(s) shown below."
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower "
+								},
+								{
+									"value": " Vendor and Rep Type "
+								},
+								{
+									"value": " Rep ID "
+								},
+								{
+									"value": " Reason"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Equifax (Tax Transcript)"
+								},
+								{
+									"value": "DavidsCase"
+								},
+								{
+									"value": "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor."
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "The Work Number (VOI/VOE)"
+								},
+								{
+									"value": "DavidsCase"
+								},
+								{
+									"value": "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor."
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Equifax (Tax Transcript)"
+								},
+								{
+									"value": "DavidsCase"
+								},
+								{
+									"value": "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor."
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Equifax (Tax Transcript)",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "DavidsCase",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor.",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "The Work Number (VOI/VOE)",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "DavidsCase",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor.",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Equifax (Tax Transcript)",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "DavidsCase",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Report was not ordered, or vendor did not have report on the borrower, or report ID and borrower SSN do not match those provided to the vendor.",
+							"parameterName": null
+						}
+					],
+					"messageID": 3303,
+					"messageName": "DVS-REPORT-NOT-RECEIVED",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": "Day1Certainty",
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "DU could not validate borrower employment shown below for the reason provided."
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower "
+								},
+								{
+									"value": " DU Employer "
+								},
+								{
+									"value": " Vendor and Rep Type "
+								},
+								{
+									"value": " Rep ID "
+								},
+								{
+									"value": " Vendor Match "
+								},
+								{
+									"value": " Reason"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Master Carpentry"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Borrower is self-employed"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Ajax Hardware"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "No VOI/VOE report"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Master Carpentry",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "Borrower is self-employed",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Ajax Hardware",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "No VOI/VOE report",
+							"parameterName": null
+						}
+					],
+					"messageID": 3307,
+					"messageName": "DVS-EMPLOYMENT-NOT-VALIDATED",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": "Day1Certainty",
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "DU could not validate borrower income shown below for the reason provided."
+					},
+					"lenderMessageTableRow": [
+						{
+							"column": [
+								{
+									"value": "Borrower "
+								},
+								{
+									"value": " DU Income Type "
+								},
+								{
+									"value": " Vendor and Rep Type "
+								},
+								{
+									"value": " Rep ID "
+								},
+								{
+									"value": " Vendor Match "
+								},
+								{
+									"value": " DU Reported Amount "
+								},
+								{
+									"value": " Reason"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Base Employment Income"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "$4,378.25"
+								},
+								{
+									"value": "No report received by DU that validates this income type"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Dividends/Interest"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "$220.00"
+								},
+								{
+									"value": "Income type is not eligible for DU validation"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Subject Property Net Cash Flow"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "($298.25)"
+								},
+								{
+									"value": "Income type is not eligible for DU validation"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Homer L Loanseeker"
+								},
+								{
+									"value": "Trust Income"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "$55.00"
+								},
+								{
+									"value": "Income type is not eligible for DU validation"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Base Employment Income"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "$2,797.00"
+								},
+								{
+									"value": "No report received by DU that validates this income type"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Bonuses"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "$35.00"
+								},
+								{
+									"value": "No report received by DU that validates this income type"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Commissions"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "$200.00"
+								},
+								{
+									"value": "No report received by DU that validates this income type"
+								}
+							]
+						},
+						{
+							"column": [
+								{
+									"value": "Ken K Customer"
+								},
+								{
+									"value": "Social Security/Disability Income"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "Missing"
+								},
+								{
+									"value": "$150.00"
+								},
+								{
+									"value": "No report received by DU that validates this income type"
+								}
+							]
+						}
+					],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Base Employment Income",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "$4,378.25",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 7,
+							"parameterValue": "No report received by DU that validates this income type",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Dividends/Interest",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "$220.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 7,
+							"parameterValue": "Income type is not eligible for DU validation",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Subject Property Net Cash Flow",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "($298.25)",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 7,
+							"parameterValue": "Income type is not eligible for DU validation",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Trust Income",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "$55.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 7,
+							"parameterValue": "Income type is not eligible for DU validation",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Base Employment Income",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "$2,797.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 7,
+							"parameterValue": "No report received by DU that validates this income type",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Bonuses",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "$35.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 7,
+							"parameterValue": "No report received by DU that validates this income type",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Commissions",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "$200.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 7,
+							"parameterValue": "No report received by DU that validates this income type",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Ken K Customer",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 2,
+							"parameterValue": "Social Security/Disability Income",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 3,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 4,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 5,
+							"parameterValue": "Missing",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 6,
+							"parameterValue": "$150.00",
+							"parameterName": null
+						},
+						{
+							"parameterNumber": 7,
+							"parameterValue": "No report received by DU that validates this income type",
+							"parameterName": null
+						}
+					],
+					"messageID": 3313,
+					"messageName": "DVS-INCOME-NOT-VALIDATED",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Employment and Income Messages",
+					"messageSubType2": "Day1Certainty",
+					"messageStructure": "List"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Verify assets totaling $6513 from the liquid assets listed on the 1003.  Refer to the Selling Guide for additional information."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "6513",
+							"parameterName": "AssetAmount"
+						}
+					],
+					"messageID": 63,
+					"messageName": "UNVERIFIED-MODE-ASSETS-VERIFICATION-AMOUNT",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Asset Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Lease purchase funds for rent credits were entered as an Other Credit and were included in available funds.  The loan file must contain verification documents according to the Fannie Mae Selling Guide."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 93,
+					"messageName": "LEASE-PURCHASE",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Asset Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Employer-assisted housing and/or relocation funds are listed as a credit in the Section VII.  Document the terms of the assistance and receipt of the funds.  Verify that the assistance meets the requirements of the Selling Guide, including the borrower's minimum contribution requirement.  If the assistance is an unsecured loan that requires monthly payments, enter a corresponding debt in Section VI for inclusion in the debt-to-income ratio."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 981,
+					"messageName": "EAH-RELO-STANDARD",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Asset Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "If depository assets are needed to support the amount of funds required and reserves, verify these assets with a verification of deposit or bank statements covering a two-month period, refer to the Selling Guide for guidance on evaluating un-sourced large deposits, and direct verifications provided by a third party asset verification vendor are acceptable if completed in accordance with the Selling Guide."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 1880,
+					"messageName": "ASSETS-DOCUMENTS-TWO-MONTHS",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Asset Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "Life insurance funds are listed as an asset, and were included in available funds.  If the cash value entered is the cash value that will be liquidated to be used for down payment or closing costs, the cash value of the policy and receipt of the funds must be verified. If the cash value entered is the cash value to be used only for reserves, only the cash value must be verified."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 2735,
+					"messageName": "LIFE-INSURANCE-VERIFICATION",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Asset Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "An appraisal based on an interior and exterior property inspection reported on Form 1025 is required for this transaction."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 1404,
+					"messageName": "1025-FORM",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Property and Appraisal Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "This property is located in a PUD project. Determine that the PUD project meets the underwriting requirements of the applicable project classification.  Refer to the Selling Guide for more information."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 0,
+							"parameterValue": "no value",
+							"parameterName": null
+						}
+					],
+					"messageID": 2443,
+					"messageName": "PUD-PROJECT-REVIEW",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Property and Appraisal Messages",
+					"messageSubType2": null,
+					"messageStructure": "Fixed"
+				},
+				{
+					"lenderMessageLine": {
+						"text": "According to the Social Security Administration (SSA), the Social Security number (SSN) for Homer L Loanseeker either has not been issued, or was recently issued. The SSN accuracy must be confirmed, and if incorrect, the SSN must be updated and the loan casefile resubmitted to DU. Refer to the General Borrower Eligibility Requirements section of the Selling Guide for additional information."
+					},
+					"lenderMessageTableRow": [],
+					"lenderParameter": [
+						{
+							"parameterNumber": 1,
+							"parameterValue": "Homer L Loanseeker",
+							"parameterName": "Borrower"
+						}
+					],
+					"messageID": 11,
+					"messageName": "SSN-RESERVE-HIGH-GROUP",
+					"messageType": "Verification/Approval Conditions",
+					"messageSubType1": "Eligibility Messages",
+					"messageSubType2": null,
+					"messageStructure": "Parametric"
+				}
+			]
+		},
+		"documentationCodesList": [
+			{
+				"documentationTypeCode": "05 - Non-Employment Income Documentation",
+				"documentationLevel": "Subject Property Net Cash Flow",
+				"borrowerName": "Homer L Loanseeker",
+				"applicantID": "518317278"
+			},
+			{
+				"documentationTypeCode": "05 - Non-Employment Income Documentation",
+				"documentationLevel": "Subject Property Net Cash Flow",
+				"borrowerName": "Ken K Customer",
+				"applicantID": "518317279"
+			},
+			{
+				"documentationTypeCode": "01 - Property Fieldwork",
+				"documentationLevel": "1025 Appraisal",
+				"borrowerName": "",
+				"applicantID": "0"
+			},
+			{
+				"documentationTypeCode": "03 - Employment Income Documentation Level",
+				"documentationLevel": "One year personal and one year business tax returns",
+				"borrowerName": "Homer L Loanseeker",
+				"applicantID": "518317278"
+			},
+			{
+				"documentationTypeCode": "05 - Non-Employment Income Documentation",
+				"documentationLevel": "Dividends/Interest",
+				"borrowerName": "Homer L Loanseeker",
+				"applicantID": "518317278"
+			},
+			{
+				"documentationTypeCode": "05 - Non-Employment Income Documentation",
+				"documentationLevel": "Social Security/Disability Income",
+				"borrowerName": "Ken K Customer",
+				"applicantID": "518317279"
+			},
+			{
+				"documentationTypeCode": "05 - Non-Employment Income Documentation",
+				"documentationLevel": "Trust Income",
+				"borrowerName": "Homer L Loanseeker",
+				"applicantID": "518317278"
+			},
+			{
+				"documentationTypeCode": "03 - Employment Income Documentation Level",
+				"documentationLevel": "Form 4506-T",
+				"borrowerName": "Homer L Loanseeker",
+				"applicantID": "518317278"
+			},
+			{
+				"documentationTypeCode": "03 - Employment Income Documentation Level",
+				"documentationLevel": "Form 4506-T",
+				"borrowerName": "Ken K Customer",
+				"applicantID": "518317279"
+			},
+			{
+				"documentationTypeCode": "03 - Employment Income Documentation Level",
+				"documentationLevel": "Paystub and two years W-2s",
+				"borrowerName": "Ken K Customer",
+				"applicantID": "518317279"
+			},
+			{
+				"documentationTypeCode": "03 - Employment Income Documentation Level",
+				"documentationLevel": "Paystub and two years W-2s",
+				"borrowerName": "Ken K Customer",
+				"applicantID": "518317279"
+			},
+			{
+				"documentationTypeCode": "03 - Employment Income Documentation Level",
+				"documentationLevel": "Verbal verification",
+				"borrowerName": "Ken K Customer",
+				"applicantID": "518317279"
+			},
+			{
+				"documentationTypeCode": "03 - Employment Income Documentation Level",
+				"documentationLevel": "Verbal verification",
+				"borrowerName": "Homer L Loanseeker",
+				"applicantID": "518317278"
+			},
+			{
+				"documentationTypeCode": "02 - Depository Assets Documentation level",
+				"documentationLevel": "Two Months Bank Statements",
+				"borrowerName": "",
+				"applicantID": "0"
+			}
+		]
+	},
+	"serviceMessages": [
+		"API Version: 1.1"
+	]
+}
