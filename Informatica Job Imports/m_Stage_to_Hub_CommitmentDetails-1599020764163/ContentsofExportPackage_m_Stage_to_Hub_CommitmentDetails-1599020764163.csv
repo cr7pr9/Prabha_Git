@@ -1,0 +1,6 @@
+objectPath,objectName,objectType,id
+/SYS,conn_SSVR_EC2_clg_reporting_los_pcg,Connection,bJ0lodPSog7fPbBvvsdxWr
+/Explore,ED_CORR_PROD_TRADE_MANAGEMENT,Project,9jF5XiNQv0RiLIGcDRptCh
+/SYS,iics-sa-dw-windows-group,AgentGroup,81XSalIvyz7kD9kvOu87gH
+/Explore/ED_CORR_PROD_TRADE_MANAGEMENT,Mappings,Folder,aATH3dyyovze6tbjDDMbk6
+/Explore/ED_CORR_PROD_TRADE_MANAGEMENT/Mappings,m_Stage_to_Hub_CommitmentDetails,DTEMPLATE,lukKXu9ghUvlJ011CDmASL

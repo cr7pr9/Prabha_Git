@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+              xmlns:das="http://schemas.active-endpoints.com/data-access/2010/04/data-access.xsd"
+              xmlns:ext1="http://www.activebpel.org/2009/06/bpel/extension/links"
+              xmlns:avosAutomatedStep="http://schemas.active-endpoints.com/wsdl/screenFlow/2010/10/avosAutomatedStep.wsdl"
+              xmlns:data-access="http://docs.active-endpoints/wsdl/data-access/2010/04/data-access.wsdl"
+              xmlns:avosGuideEventing="http://wsdl.active-endpoints.com/appmodules/screenflow/2013/03/avosGuideEventing.wsdl"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsd1="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+              xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+              xmlns:ext="http://www.activebpel.org/2006/09/bpel/extension/query_handling"
+              xmlns:aei="http://www.activebpel.org/2009/02/bpel/extension/ignorable"
+              aei:editStyle="BPMN"
+              ext1:linksAreTransitions="yes"
+              ext:createTargetXPath="yes"
+              ext:disableSelectionFailure="yes"
+              name="InfaDASExecSQLAuto"
+              suppressJoinFailure="yes"
+              targetNamespace="http://InfaDASExecSQLAuto">
+   <bpmndi:BPMNDiagram xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                       xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                       aei:bpelDigest=""
+                       aei:editStyle="BPMN"
+                       aei:layoutNeeded="false"
+                       aei:modelVersion="5"
+                       aei:objectId="153588784610202289"
+                       aei:processInitiatorSim=""
+                       isHorizontal="true">
+      <bpmndi:BPMNPlane>
+         <bpmndi:BPMNShape aei:backgroundImageLocation="icons/bpmn/activity/ActivityBlock.png"
+                           aei:objectId="153588787133102761"
+                           aei:type="PARTNER_LINK"
+                           aei:visible="false,false,false,false,false,"
+                           bpmnElement="153588787133102761"/>
+         <bpmndi:BPMNShape aei:backgroundImageLocation="icons/bpmn/activity/ActivityBlock.png"
+                           aei:objectId="153588839552205543"
+                           aei:type="PARTNER_LINK"
+                           aei:visible="false,false,false,false,false,"
+                           bpmnElement="153588839552205543"/>
+         <bpmndi:BPMNShape aei:absoluteLocation="LOC {15,15}"
+                           aei:absoluteSize="DIM {335,80}"
+                           aei:objectId="153588791160202785"
+                           aei:type="SEQUENCE"
+                           bpmnElement="153588791160202785"
+                           isHorizontal="true">
+            <dc:Bounds height="85" width="340" x="5" y="5"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape aei:absoluteLocation="LOC {25,25}"
+                           aei:absoluteSize="DIM {70,60}"
+                           aei:attachments=""
+                           aei:name="ExexSQLRequest"
+                           aei:objectId="153588791158502781"
+                           aei:principal=""
+                           aei:text="automatedStep"
+                           aei:type="RECEIVE"
+                           bpmnElement="153588791158502781">
+            <dc:Bounds height="60" width="70" x="0" y="0"/>
+            <bpmndi:BPMNLabel aei:absoluteLocation="LOC {17,76}"
+                              aei:absoluteSize="DIM {83,13}"
+                              aei:anchor.location="1"
+                              aei:anchor.objectId="153588791158502781"
+                              aei:backgroundColor="RGB {255,255,255}"
+                              aei:objectId="153588791160302787"
+                              aei:relative.location="LOC {-53,41}"
+                              aei:text="ExexSQLRequest"
+                              bpmnElement="153588791158502781label">
+               <dc:Bounds height="13" width="83" x="0" y="0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape aei:absoluteLocation="LOC {120,29}"
+                           aei:absoluteSize="DIM {125,53}"
+                           aei:attachments=""
+                           aei:name="DataAccessServiceExecSQL"
+                           aei:objectId="153588840910405603"
+                           aei:subprocessPath=""
+                           aei:text="execSQL"
+                           aei:type="INVOKE"
+                           bpmnElement="153588840910405603">
+            <dc:Bounds height="53" width="125" x="376" y="190"/>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape aei:absoluteLocation="LOC {270,25}"
+                           aei:absoluteSize="DIM {70,60}"
+                           aei:name="ExecSQLReply"
+                           aei:objectId="153588791160102783"
+                           aei:text="automatedStep-Reply"
+                           aei:type="REPLY"
+                           bpmnElement="153588791160102783">
+            <dc:Bounds height="60" width="70" x="0" y="0"/>
+            <bpmndi:BPMNLabel aei:absoluteLocation="LOC {240,76}"
+                              aei:absoluteSize="DIM {69,13}"
+                              aei:anchor.location="1"
+                              aei:anchor.objectId="153588791160102783"
+                              aei:backgroundColor="RGB {255,255,255}"
+                              aei:objectId="153588791160302789"
+                              aei:relative.location="LOC {-75,41}"
+                              aei:text="ExecSQLReply"
+                              bpmnElement="153588791160102783label">
+               <dc:Bounds height="13" width="69" x="0" y="0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+   <bpel:extensions>
+      <bpel:extension mustUnderstand="no"
+                      namespace="http://www.activebpel.org/2009/02/bpel/extension/ignorable"/>
+      <bpel:extension mustUnderstand="no"
+                      namespace="http://www.omg.org/spec/BPMN/20100524/DI"/>
+      <bpel:extension mustUnderstand="yes"
+                      namespace="http://www.activebpel.org/2006/09/bpel/extension/query_handling"/>
+      <bpel:extension mustUnderstand="yes"
+                      namespace="http://www.activebpel.org/2009/06/bpel/extension/links"/>
+   </bpel:extensions>
+   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/"
+                namespace="http://wsdl.active-endpoints.com/appmodules/screenflow/2013/03/avosGuideEventing.wsdl"/>
+   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/"
+                namespace="http://schemas.active-endpoints.com/wsdl/screenFlow/2010/10/avosAutomatedStep.wsdl"/>
+   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/"
+                namespace="http://docs.active-endpoints/wsdl/data-access/2010/04/data-access.wsdl"/>
+   <bpel:partnerLinks>
+      <bpel:partnerLink aei:id="153588787133102761"
+                        myRole="Provider"
+                        name="Process_Consumer"
+                        partnerLinkType="avosAutomatedStep:AutomatedStepOperationsPLT"/>
+      <bpel:partnerLink aei:id="153588839552205543"
+                        name="Provider"
+                        partnerLinkType="data-access:dataAccessPLT"
+                        partnerRole="sender"/>
+   </bpel:partnerLinks>
+   <bpel:variables>
+      <bpel:variable element="xsd1:automatedStepRequest" name="ExecSQLRequest"/>
+      <bpel:variable element="das:dataAccessResponse" name="dataAccessResponse"/>
+   </bpel:variables>
+   <bpel:sequence aei:id="153588791160202785">
+      <bpel:receive aei:id="153588791158502781"
+                    createInstance="yes"
+                    name="ExexSQLRequest"
+                    operation="automatedStep"
+                    partnerLink="Process_Consumer"
+                    variable="ExecSQLRequest"/>
+      <bpel:scope aei:implicit="true" name="DataAccessServiceExecSQL">
+         <bpel:variables>
+            <bpel:variable messageType="data-access:dataAccessMessage" name="parameters"/>
+         </bpel:variables>
+         <bpel:sequence>
+            <bpel:assign aei:assignType="XQUERY" aei:id="153588846591905953">
+               <bpel:copy>
+                  <bpel:from expressionLanguage="urn:active-endpoints:expression-language:xquery1.0">&lt;ns:dataAccessRequest xmlns:ns="http://schemas.active-endpoints.com/data-access/2010/04/data-access.xsd"&gt;
+   &lt;ns:sqlStatement columnCase="lowercase"
+                    hasResultSet="true"
+                    includeMetadata="false"
+                    maxRows="0"
+                    maxWaitSeconds="30"
+                    statementId="string"&gt;
+&lt;ns:statement&gt; {$ExecSQLRequest/xsd1:parameters/xsd1:parameter[@name="SQLStatement"]/text()} &lt;/ns:statement&gt;
+    &lt;/ns:sqlStatement&gt;
+&lt;/ns:dataAccessRequest&gt;</bpel:from>
+                  <bpel:to part="dataAccessPart" variable="parameters"/>
+               </bpel:copy>
+            </bpel:assign>
+            <bpel:invoke aei:id="153588840910405603"
+                         inputVariable="parameters"
+                         name="DataAccessServiceExecSQL"
+                         operation="execSQL"
+                         outputVariable="dataAccessResponse"
+                         partnerLink="Provider"/>
+         </bpel:sequence>
+      </bpel:scope>
+      <bpel:scope aei:implicit="true" name="ExecSQLReply">
+         <bpel:variables>
+            <bpel:variable messageType="avosAutomatedStep:automatedStepResponse" name="parameters"/>
+         </bpel:variables>
+         <bpel:sequence>
+            <bpel:assign aei:assignType="XQUERY" aei:id="153588801356802837">
+               <bpel:copy>
+                  <bpel:from expressionLanguage="urn:active-endpoints:expression-language:xquery1.0">&lt;xsd1:automatedStepResponse xmlns:xsd1="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"&gt;
+&lt;xsd1:fields&gt;
+     &lt;xsd1:field name="Response"&gt; {$dataAccessResponse} &lt;/xsd1:field&gt; 
+&lt;/xsd1:fields&gt;
+  &lt;/xsd1:automatedStepResponse&gt;</bpel:from>
+                  <bpel:to part="automatedStepResponse" variable="parameters"/>
+               </bpel:copy>
+            </bpel:assign>
+            <bpel:reply aei:id="153588791160102783"
+                        name="ExecSQLReply"
+                        operation="automatedStep"
+                        partnerLink="Process_Consumer"
+                        variable="parameters"/>
+         </bpel:sequence>
+      </bpel:scope>
+   </bpel:sequence>
+</bpel:process>

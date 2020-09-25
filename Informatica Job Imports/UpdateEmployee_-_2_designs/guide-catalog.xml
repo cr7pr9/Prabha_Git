@@ -1,0 +1,1 @@
+<cat:guideCatalog xmlns:cat="http://schemas.active-endpoints.com/guides/2012/09/guides.xsd" overwrite="true"><cat:guide name="UpdateEmployee" publish="true"/><cat:guide name="WrapperUpdateEmployee" publish="true"/></cat:guideCatalog>

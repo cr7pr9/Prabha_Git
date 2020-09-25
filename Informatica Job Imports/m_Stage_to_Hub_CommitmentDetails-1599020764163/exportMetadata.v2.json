@@ -1,0 +1,116 @@
+{
+  "name" : "m_Stage_to_Hub_CommitmentDetails-1599020764163",
+  "sourceOrgId" : "f1Lt3JengEPi7JFvkUE6wS",
+  "sourceOrgName" : "Pennymac (DEV)",
+  "exportedObjects" : [ {
+    "objectGuid" : "bJ0lodPSog7fPbBvvsdxWr",
+    "objectName" : "conn_SSVR_EC2_clg_reporting_los_pcg",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010TR10B000000000068"
+      },
+      "objectRefs" : [ "81XSalIvyz7kD9kvOu87gH" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "9jF5XiNQv0RiLIGcDRptCh",
+    "objectName" : "ED_CORR_PROD_TRADE_MANAGEMENT",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "81XSalIvyz7kD9kvOu87gH",
+    "objectName" : "iics-sa-dw-windows-group",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010TR12500000000001Q"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "aATH3dyyovze6tbjDDMbk6",
+    "objectName" : "Mappings",
+    "objectType" : "Folder",
+    "path" : "/Explore/ED_CORR_PROD_TRADE_MANAGEMENT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "lukKXu9ghUvlJ011CDmASL",
+    "objectName" : "m_Stage_to_Hub_CommitmentDetails",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/ED_CORR_PROD_TRADE_MANAGEMENT/Mappings",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010TR11700000000076T"
+      },
+      "objectRefs" : [ "bJ0lodPSog7fPbBvvsdxWr" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "This mapping has a post SQL command to update the TESTLOANFLAG to Y or N looking up with LOS_PCG.TESTCLIENT Table.\n\n",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  } ]
+}

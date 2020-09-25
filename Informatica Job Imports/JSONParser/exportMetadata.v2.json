@@ -1,0 +1,46 @@
+{
+  "name" : "JSONParser",
+  "sourceOrgId" : "acFA0OeMV61jS9wenksuiL",
+  "sourceOrgName" : "Prakash Jain",
+  "exportedObjects" : [ {
+    "objectGuid" : "53yOdPzS6KegSeu6PXc8an",
+    "objectName" : "JSONParser",
+    "objectType" : "AI_SERVICE_CONNECTOR",
+    "path" : "/Explore/AmazonS3",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "eD3eIsoZduD2L5S-gt-36531598-2019-04-04T05:46:15.068Z::svc.xml"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "ljx5uG3n7EZj13kyySM9ml",
+    "objectName" : "AmazonS3",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  } ]
+}

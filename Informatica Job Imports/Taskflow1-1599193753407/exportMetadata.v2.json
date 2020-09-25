@@ -1,0 +1,73 @@
+{
+  "name" : "Taskflow1-1599193753407",
+  "sourceOrgId" : "4xbWvXLldSAgMqO0Fsraom",
+  "sourceOrgName" : "Pennymac[QA]",
+  "exportedObjects" : [ {
+    "objectGuid" : "eB5JKah1N0cc05WbkWUwoW",
+    "objectName" : "iics-sa-dw-windows-group",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010V7Q25000000000003"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "48PtriC4c3EiDCHsYus0GL",
+    "objectName" : "Taskflow1",
+    "objectType" : "TASKFLOW",
+    "path" : "/Explore/Default",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jE7pppppppppppp-gt-21407651-2020-08-28T09:19:39.158Z::tf.xml"
+      },
+      "objectRefs" : [ "eB5JKah1N0cc05WbkWUwoW" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "9NSEESgpZKjc7P9jXuxGWM",
+    "objectName" : "Default",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "IS_DEF_LOC",
+        "value" : "true"
+      } ],
+      "additionalInfo" : {
+        "description" : "Auto-generated Default Project",
+        "contentType" : null,
+        "documentState" : "COMPLETE"
+      }
+    }
+  } ]
+}

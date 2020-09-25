@@ -1,0 +1,31 @@
+
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [FulfilledOn] [datetime] NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [AVMRunDate] [datetime] NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [AgencyCaseAssignmentDate] [datetime] NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [CumulativeExtensionDays] [int] NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [OriginalCreatorFlag] [varchar](4) NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [TexasA6Ind] [char](1) NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [AppraisalWaiverInd] [char](1) NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [CustomMiniMI] [varchar](4) NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [AVMFSD] [float] NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [HELOCActualBalance] [float] NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [HELOCCreditLimit] [float] NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [SingleClose_OTCInd] [varchar](4) NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[los_pcg_lockdetails] add [VARenovationInd] [varchar](4) NULL
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table [clg_reporting].[los_pcg_onprem].[LOS_PCG_lockDetails] Add Recommendation char(30)
+/*EXECUTE 1 BY 1 IN ORDER */
+alter table clg_reporting.los_pcg_onprem.LOS_PCG_LockDetails	alter column	 LockPropType varchar(25)

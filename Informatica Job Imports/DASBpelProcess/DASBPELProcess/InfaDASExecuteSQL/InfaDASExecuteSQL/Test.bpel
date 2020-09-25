@@ -1,0 +1,382 @@
+<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+              xmlns:date="urn:activevos:spi:functions:date"
+              xmlns:ipaeh="urn:org:activebpel:rt:b4p:server:storage:invoke:IAePeopleActivityEventHandler"
+              xmlns:request="urn:activevos:spi:functions:request:context"
+              xmlns:dsig="urn:activevos:spi:functions:signature"
+              xmlns:aei="http://www.activebpel.org/2009/02/bpel/extension/ignorable"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:type="http://schemas.informatica.com/spi/types/2013/12/spi-interface/"
+              xmlns:b4ptcn="http://schemas.active-endpoints.com/b4p/wshumantask/2007/12/aeb4p-task-custom-notification.xsd"
+              xmlns:iomap="urn:activevos:spi:lightning:mappings"
+              xmlns:infa="urn:informatica.com:socrates:infa:functions"
+              xmlns:random="http://exslt.org/random"
+              xmlns:sf="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+              xmlns:hostType="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+              xmlns:host="http://wsdl.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.wsdl"
+              xmlns:htd="http://www.example.org/WS-HT"
+              xmlns:ipd="urn:activevos:spi:functions:ipd"
+              xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+              xmlns:sffunc="urn:activevos.com:socrates:screenflow:functions"
+              xmlns:ext2="http://www.activebpel.org/2011/08/bpel/extension/script"
+              xmlns:ext1="http://www.activebpel.org/2009/06/bpel/extension/links"
+              xmlns:b4p="http://www.example.org/BPEL4People"
+              xmlns:ext="http://www.activebpel.org/2006/09/bpel/extension/query_handling"
+              xmlns:avsft="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenFlowType.xsd"
+              xmlns:os="urn:informatica.com:screenflow:object-support"
+              xmlns:hts="http://schemas.active-endpoints.com/wsdl/screenFlow/2010/10/avosScreenflowHTService.wsdl"
+              xmlns:ifc="http://services.informatica.com/spi/2013/12/spi-process/"
+              xmlns:dbg="urn:activevos:repository:debugging"
+              xmlns:list="urn:activevos:spi:list:functions"
+              xmlns:as="http://schemas.active-endpoints.com/wsdl/screenFlow/2010/10/avosAutomatedStep.wsdl"
+              xmlns:sff="urn:activevos:spi:functions"
+              xmlns:task="urn:activevos:spi:usertask:functions"
+              xmlns:util="urn:activevos:spi:functions:utilities"
+              xmlns:avcf="http://schemas.active-endpoints.com/avc/2009/07/avoscentral-forms.xsd"
+              xmlns:abx="http://www.activebpel.org/bpel/extension"
+              xmlns:spio="urn:activevos:spi:lightning:io"
+              xmlns:sfl="urn:activevos:spi:list:functions"
+              xmlns:aeext="http://www.activebpel.org/2006/09/bpel/extension/activity"
+              xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:tnw="http://schemas.active-endpoints.com/b4p/wshumantask/2007/12/aeb4p-task-notifications-wsdl.xsd"
+              xmlns:hash="urn:activevos:spi:functions:hash"
+              xmlns:notspec="http://www.informatica.com/2015/07/bpel/extension/runtime-hints"
+              expressionLanguage="urn:active-endpoints:expression-language:xquery1.0"
+              ext1:linksAreTransitions="yes"
+              ext:createTargetXPath="yes"
+              ext:disableSelectionFailure="yes"
+              name="p_headerRemove"
+              suppressJoinFailure="yes"
+              targetNamespace="urn:screenflow:process:p_headerRemove">
+   <bpel:extensions>
+      <bpel:extension mustUnderstand="no"
+                      namespace="http://www.activebpel.org/2009/02/bpel/extension/ignorable"/>
+      <bpel:extension mustUnderstand="yes"
+                      namespace="http://www.activebpel.org/2006/09/bpel/extension/activity"/>
+      <bpel:extension mustUnderstand="no"
+                      namespace="http://www.informatica.com/2015/07/bpel/extension/runtime-hints"/>
+      <bpel:extension mustUnderstand="yes"
+                      namespace="http://www.activebpel.org/2006/09/bpel/extension/query_handling"/>
+      <bpel:extension mustUnderstand="yes"
+                      namespace="http://www.activebpel.org/2009/06/bpel/extension/links"/>
+      <bpel:extension mustUnderstand="yes"
+                      namespace="http://www.activebpel.org/2011/08/bpel/extension/script"/>
+   </bpel:extensions>
+   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/"
+                location="../wsdl/bolt/spi-interface.wsdl"
+                namespace="http://services.informatica.com/spi/2013/12/spi-process/"/>
+   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/"
+                namespace="http://wsdl.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.wsdl"/>
+   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/"
+                namespace="http://schemas.active-endpoints.com/wsdl/screenFlow/2010/10/avosAutomatedStep.wsdl"/>
+   <bpel:import importType="http://www.w3.org/2001/XMLSchema"
+                namespace="http://schemas.informatica.com/spi/types/2013/12/spi-interface/"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-functions.xq"
+                namespace="urn:activevos:spi:functions"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-list-functions.xq"
+                namespace="urn:activevos:spi:list:functions"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-date-functions.xq"
+                namespace="urn:activevos:spi:functions:date"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-util-functions.xq"
+                namespace="urn:activevos:spi:functions:utilities"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-mappings.xq"
+                namespace="urn:activevos:spi:lightning:mappings"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-hash-functions.xq"
+                namespace="urn:activevos:spi:functions:hash"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-signature-functions.xq"
+                namespace="urn:activevos:spi:functions:signature"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/debug.xq"
+                namespace="urn:activevos:repository:debugging"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/object-support.xq"
+                namespace="urn:informatica.com:screenflow:object-support"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-ipd-functions.xq"
+                namespace="urn:activevos:spi:functions:ipd"/>
+   <bpel:import importType="http://modules.active-endpoints.com/2009/07/xquery"
+                location="project:/com.activevos.socrates.repository.services/xquery/bolt/runtime/spi-request-context-functions.xq"
+                namespace="urn:activevos:spi:functions:request:context"/>
+   <bpel:partnerLinks>
+      <bpel:partnerLink name="HostProvider"
+                        partnerLinkType="host:avHostEnvironmentRuntimeAccessPLT"
+                        partnerRole="HostRuntimeProvider"/>
+      <bpel:partnerLink myRole="Consumer"
+                        name="ProcessConsumer"
+                        partnerLinkType="ifc:spiPartnerLinkType"/>
+   </bpel:partnerLinks>
+   <bpel:variables>
+      <bpel:variable name="hasReplied" type="xs:boolean">
+         <bpel:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">false()</bpel:from>
+      </bpel:variable>
+      <bpel:variable name="IMA_Stack" type="xs:string">
+         <bpel:from>
+            <bpel:literal></bpel:literal>
+         </bpel:from>
+      </bpel:variable>
+      <bpel:variable element="type:input" name="input">
+         <bpel:from>&lt;sf:input xmlns:sf="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"&gt;
+   &lt;sf:parameter name="Current User"&gt;{ abx:getProcessInitiator() }&lt;/sf:parameter&gt;
+   &lt;sf:parameter name="Process Title"&gt;{ abx:setProcessTitle("p_headerRemove") }&lt;/sf:parameter&gt;
+&lt;/sf:input&gt;</bpel:from>
+      </bpel:variable>
+      <bpel:variable element="type:output" name="output">
+         <bpel:from>
+            <bpel:literal>
+               <sf:output>
+                  <sf:field name="p_headerRemove" objectType="$po:$any"/>
+               </sf:output>
+            </bpel:literal>
+         </bpel:from>
+      </bpel:variable>
+      <bpel:variable element="type:output" name="temp">
+         <bpel:from>
+            <bpel:literal>
+               <sf:output/>
+            </bpel:literal>
+         </bpel:from>
+      </bpel:variable>
+      <bpel:variable name="initiate" type="type:requestType"/>
+      <bpel:variable name="httpStatus" type="xs:string"/>
+   </bpel:variables>
+   <bpel:faultHandlers>
+      <bpel:catch faultName="bpel:subLanguageExecutionFault">
+         <bpel:scope>
+            <bpel:variables>
+               <bpel:variable messageType="ifc:RuntimeFault" name="parameters"/>
+            </bpel:variables>
+            <bpel:sequence>
+               <bpel:assign>
+                  <bpel:copy>
+                     <bpel:from>let $reasonPrefix:=" Reason: "
+                            let $errorString := abx:getFaultString()
+                            let $reason := if(contains($errorString,$reasonPrefix)) 
+                                       then 
+                                          substring-after($errorString, $reasonPrefix)
+                                       else $errorString
+                            
+                            return
+                                &lt;type:faultResponse xmlns:sf="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd" 
+                                                       xmlns:type="http://schemas.informatica.com/spi/types/2013/12/spi-interface/"&gt;
+                                   &lt;sf:reason&gt;{ $reason }&lt;/sf:reason&gt;
+                                &lt;/type:faultResponse&gt;
+                         </bpel:from>
+                     <bpel:to part="fault" variable="parameters"/>
+                  </bpel:copy>
+               </bpel:assign>
+               <bpel:reply faultName="ifc:fault"
+                           operation="Initiate"
+                           partnerLink="ProcessConsumer"
+                           variable="parameters"/>
+               <bpel:rethrow name="Rethrow"/>
+            </bpel:sequence>
+         </bpel:scope>
+      </bpel:catch>
+      <bpel:catch faultName="terminate">
+         <bpel:empty name="Finish_interrupting_event_scope"/>
+      </bpel:catch>
+   </bpel:faultHandlers>
+   <bpel:eventHandlers>
+      <aeext:onSignal signalName="replyTo_IMA">
+         <bpel:scope>
+            <bpel:sequence>
+               <bpel:if>
+                  <bpel:condition>string-length($IMA_Stack) &gt; 0</bpel:condition>
+                  <bpel:empty/>
+                  <bpel:else>
+                     <bpel:if>
+                        <bpel:condition>not($hasReplied)</bpel:condition>
+                        <bpel:scope>
+                           <bpel:variables>
+                              <bpel:variable messageType="ifc:InitiateResponse" name="parameters"/>
+                           </bpel:variables>
+                           <bpel:sequence>
+                              <bpel:assign>
+                                 <bpel:copy>
+                                    <bpel:from>&lt;type:initiateResponse xmlns:type="http://schemas.informatica.com/spi/types/2013/12/spi-interface/"&gt;
+   &lt;sf:hostContext xmlns:sf="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"&gt;{ 
+                         $initiate/sf:hostContext/sf:arg[@name=('ObjectId','ObjectType')],
+                         element { QName('http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd', 'sf:arg') } {
+                            attribute name { 'X-InstanceId' },
+                            abx:getProcessId()
+                         }
+                      }
+                      
+                      {
+                          if(exists($httpStatus) and string-length($httpStatus) != 0) then 
+                              element { QName('http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd', 'sf:arg') } {
+                                    attribute name { 'X-HTTP-Status' },
+                                    $httpStatus
+                              }
+                          else ()
+                      }
+                      &lt;/sf:hostContext&gt;
+   &lt;type:output&gt;{ 
+                           for $f in $output/sf:field[@name = ('p_headerRemove')]
+                           return
+                              &lt;sf:field xmlns:sf="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"&gt;{ $f/@name, $f/node() }&lt;/sf:field&gt; 
+                       }&lt;/type:output&gt;
+                      { iomap:copyModifiedInputDataOut($input) }
+                                          &lt;type:addRunIdToResponse&gt;false&lt;/type:addRunIdToResponse&gt;
+&lt;/type:initiateResponse&gt;</bpel:from>
+                                    <bpel:to part="response" variable="parameters"/>
+                                 </bpel:copy>
+                              </bpel:assign>
+                              <bpel:reply operation="Initiate"
+                                          partnerLink="ProcessConsumer"
+                                          variable="parameters"/>
+                              <bpel:assign>
+                                 <bpel:copy>
+                                    <bpel:from>true()</bpel:from>
+                                    <bpel:to variable="hasReplied"/>
+                                 </bpel:copy>
+                              </bpel:assign>
+                           </bpel:sequence>
+                        </bpel:scope>
+                        <bpel:else>
+                           <bpel:empty/>
+                        </bpel:else>
+                     </bpel:if>
+                  </bpel:else>
+               </bpel:if>
+               <bpel:extensionActivity>
+                  <aeext:signalSend signalName="returnToFlow"/>
+               </bpel:extensionActivity>
+            </bpel:sequence>
+         </bpel:scope>
+      </aeext:onSignal>
+   </bpel:eventHandlers>
+   <bpel:flow>
+      <bpel:links>
+         <bpel:link name="kdlu8n0z"/>
+         <bpel:link name="kdlu8n10"/>
+      </bpel:links>
+      <bpel:scope aei:stepId="b" name="b">
+         <bpel:sources>
+            <bpel:source linkName="kdlu8n0z"/>
+         </bpel:sources>
+         <bpel:variables>
+            <bpel:variable messageType="ifc:InitiateRequest" name="createMessage"/>
+         </bpel:variables>
+         <bpel:sequence>
+            <bpel:receive aei:stepId="b"
+                          createInstance="yes"
+                          name="b"
+                          operation="Initiate"
+                          partnerLink="ProcessConsumer"
+                          variable="createMessage"/>
+            <bpel:assign>
+               <bpel:copy>
+                  <bpel:from>
+                  let $designGuid := "0l3WAmrqKcGkhkpSJrw20M"
+                  let $appliesTo  := ""
+                  return
+                     element { node-name($createMessage.request) } {
+                        $createMessage.request/@*,
+                        $createMessage.request/element()[local-name() != 'hostContext'],
+                        &lt;sf:hostContext xmlns:sf="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"&gt;{
+                           $createMessage.request/sf:hostContext/sf:arg[not(@name = ('ObjectType', 'INFA_DESIGN_GUID'))]
+                        ,                           
+                        &lt;sf:arg name="INFA_DESIGN_GUID"&gt;{ $designGuid }&lt;/sf:arg&gt;
+                        ,  
+                        if(string-length(normalize-space($appliesTo)) &gt; 0) then
+                           &lt;sf:arg name="ObjectType"&gt;{
+                              $createMessage.request/sf:hostContext/sf:arg[@name = 'ObjectType']/@*[local-name()!='name'],
+                              $appliesTo
+                           }
+                           &lt;/sf:arg&gt;
+                        else
+                            $createMessage.request/sf:hostContext/sf:arg[@name = 'ObjectType']
+                         }
+                        &lt;/sf:hostContext&gt;
+                      }
+               </bpel:from>
+                  <bpel:to part="request" variable="createMessage"/>
+               </bpel:copy>
+            </bpel:assign>
+            <bpel:assign>
+               <bpel:copy>
+                  <bpel:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$createMessage.request</bpel:from>
+                  <bpel:to variable="initiate"/>
+               </bpel:copy>
+               <bpel:extensionAssignOperation>
+                  <ext2:script xmlns:scr="http://www.activebpel.org/2011/08/bpel/extension/script">abx:copyAllAttachments("createMessage","initiate")</ext2:script>
+               </bpel:extensionAssignOperation>
+               <bpel:copy>
+                  <bpel:from>
+              let $fieldToObjectMap := map:new(
+                                            ()
+                                         )
+              let $providedInputs := $initiate/type:input/sf:parameter
+              return
+                 &lt;type:input&gt;{
+                    (: add the objectType attribute to the parameters for input if the type is a reference or objectlist :)
+                    (for $p in $providedInputs
+                    return
+                       element {node-name($p)} {
+                          $p/@*,
+                          if (map:contains($fieldToObjectMap, $p/@name/string())) then
+                             attribute objectType { map:get($fieldToObjectMap, $p/@name/string()) }
+                          else (),
+                          $p/node()
+                       },
+                       (: Re-add any initialized parameters that weren't provided by the caller of the service via inputs. :)
+                       $input/sf:parameter[not(@name = $providedInputs/@name)]
+                     )
+                 }&lt;/type:input&gt;
+              </bpel:from>
+                  <bpel:to variable="input"/>
+               </bpel:copy>
+            </bpel:assign>
+         </bpel:sequence>
+      </bpel:scope>
+      <bpel:assign aei:stepId="kdlu8n0y" name="Assignment_to_p_headerRemove">
+         <bpel:targets>
+            <bpel:target linkName="kdlu8n0z"/>
+         </bpel:targets>
+         <bpel:sources>
+            <bpel:source linkName="kdlu8n10"/>
+         </bpel:sources>
+         <bpel:copy>
+            <bpel:from>let $newValue := (parse-xml(unparsed-text('file:///C:/Users/dell/Desktop/PD/Sam.xml'))) return iomap:replaceProcessData($output, 'p_headerRemove', $newValue)</bpel:from>
+            <bpel:to variable="output"/>
+         </bpel:copy>
+      </bpel:assign>
+      <bpel:scope aei:stepId="c" isolated="yes" name="c">
+         <bpel:targets>
+            <bpel:target linkName="kdlu8n10"/>
+         </bpel:targets>
+         <bpel:sequence>
+            <bpel:assign>
+               <bpel:copy>
+                  <bpel:from>
+                     <bpel:literal></bpel:literal>
+                  </bpel:from>
+                  <bpel:to variable="httpStatus"/>
+               </bpel:copy>
+            </bpel:assign>
+            <bpel:forEach counterName="counter" parallel="no">
+               <bpel:startCounterValue>1</bpel:startCounterValue>
+               <bpel:finalCounterValue>count(tokenize($IMA_Stack, ";")) + 1</bpel:finalCounterValue>
+               <bpel:scope>
+                  <bpel:sequence>
+                     <bpel:extensionActivity>
+                        <aeext:signalSend signalName="replyTo_IMA"/>
+                     </bpel:extensionActivity>
+                     <bpel:extensionActivity>
+                        <aeext:signalReceive signalName="returnToFlow"/>
+                     </bpel:extensionActivity>
+                  </bpel:sequence>
+               </bpel:scope>
+            </bpel:forEach>
+         </bpel:sequence>
+      </bpel:scope>
+   </bpel:flow>
+</bpel:process>

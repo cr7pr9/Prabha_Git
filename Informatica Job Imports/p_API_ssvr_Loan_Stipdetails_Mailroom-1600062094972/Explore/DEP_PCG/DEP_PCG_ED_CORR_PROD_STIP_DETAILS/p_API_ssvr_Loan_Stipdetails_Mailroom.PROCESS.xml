@@ -1,0 +1,565 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>GKrclvAhrswVYx8-gt-2597001-2020-07-16T23:35:39.525Z::pd.xml</types1:EntryId>
+      <types1:Name>p_API_ssvr_Loan_Stipdetails_Mailroom</types1:Name>
+      <types1:ParentFlowIds>8rWLU6S6fPAreFR-gt-34771481-2020-08-28T12:54:38.95Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>shaer.ahmed</types1:CreatedBy>
+      <types1:CreationDate>2020-07-16T23:35:40Z</types1:CreationDate>
+      <types1:ModifiedBy>prabhakar.boddapati@pnmac.com.saml.dev</types1:ModifiedBy>
+      <types1:ModificationDate>2020-09-14T05:40:37Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>prabhakar.boddapati@pnmac.com.saml.dev</types1:PublishedBy>
+      <types1:PublicationDate>2020-09-10T14:17:42Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.p_API_ssvr_Loan_Stipdetails_Mailroom/p_API_ssvr_Loan_Stipdetails_Mailroom.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="p_API_ssvr_Loan_Stipdetails_Mailroom"
+                  name="p_API_ssvr_Loan_Stipdetails_Mailroom"
+                  overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="LoanGuid" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="filetype" type="reference">
+                  <options>
+                     <option name="referenceTo">ac-get-stipdetails-output-2:FileWriteTask</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">47nyorscluydrOAGPdAf84</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_getResource" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_proc_title" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_status" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_decision" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_retryCounter" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">0</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_filename" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_email_decision" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedGroups>
+                     <group>PNMAC Service Consumer</group>
+                  </allowedGroups>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kdttft39" targetId="kdttft38"/>
+               </start>
+               <assignment id="kdttft38">
+                  <title>Assign resource file</title>
+                  <operation source="formula" to="temp.tmp_getResource">
+                     <expression language="XQuery">util:simplifyXml(util:getCatalogResource('project:/getEverestAPITokenParameterization/deploy/getEverestAPITokenParameterization.xml'))</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmp_filename">
+                     <expression language="XQuery">let $timestamp := replace(replace(xs:string(current-dateTime())
+,'([^A-Za-z0-9])',''),'([A-Z])','')
+
+return 
+'getstipdetails_'|| $input.LoanGuid ||'_'||$timestamp||'.json'</expression>
+                  </operation>
+                  <link id="kdttft5s" targetId="kdttft4o"/>
+               </assignment>
+               <assignment id="kdttfu0x">
+                  <title>SetProcessTitle</title>
+                  <operation source="formula" to="temp.tmp_proc_title">
+                     <expression language="XQuery">ipd:setProcessTitle('Loan_Guid : '||$input.LoanGuid||'  Status :'||$temp.tmp_status )</expression>
+                  </operation>
+                  <link id="kevkqcpa" targetId="kevkqcp9"/>
+               </assignment>
+               <eventContainer id="kdttft4o">
+                  <service id="kdttft59">
+                     <title>Get_Token</title>
+                     <serviceName>ac-Loan-stipdetails-2:Get_Everest_Api_Token</serviceName>
+                     <serviceGUID>3zwzSTdyWkkhM6m0LGn6iy</serviceGUID>
+                     <serviceInput>
+                        <parameter name="pnmacKey" source="formula">
+                           <expression language="XQuery">$temp.tmp_getResource//pnmacKey </expression>
+                        </parameter>
+                        <parameter name="password" source="formula">
+                           <expression language="XQuery">$temp.tmp_getResource//password </expression>
+                        </parameter>
+                        <parameter name="env" source="formula">
+                           <expression language="XQuery">$temp.tmp_getResource//env </expression>
+                        </parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="kdttft4p">
+                     <eventContainer id="kdttft4q">
+                        <service id="kdttft56">
+                           <title>loan_stipdetails</title>
+                           <serviceName>ac-Loan-stipdetails-2:Get_Everest_Condition_conditiontemplates</serviceName>
+                           <serviceGUID>3zwzSTdyWkkhM6m0LGn6iy</serviceGUID>
+                           <serviceInput>
+                              <parameter name="AccessToken" source="field" updatable="true">output.AccessToken</parameter>
+                              <parameter name="env" source="formula">
+                                 <expression language="XQuery">$temp.tmp_getResource//env</expression>
+                              </parameter>
+                              <parameter name="LoanGuid" source="formula">
+                                 <expression language="XQuery">$input.LoanGuid </expression>
+                              </parameter>
+                           </serviceInput>
+                        </service>
+                        <flow id="kdttft4r">
+                           <assignment id="kdttft4s">
+                              <title>Assign File Content</title>
+                              <operation source="formula" to="temp.filetype[1]/fileName">
+                                 <expression language="XQuery">$temp.tmp_filename </expression>
+                              </operation>
+                              <operation source="formula" to="temp.filetype[1]/content">
+                                 <expression language="XQuery">$output.template_op </expression>
+                              </operation>
+                              <link id="kdttft5g" targetId="kdttft4t"/>
+                           </assignment>
+                           <eventContainer id="kdttft4t">
+                              <service id="kdttft53">
+                                 <title>Write response</title>
+                                 <serviceName>ac-get-stipdetails-output-2:FileWriter-test</serviceName>
+                                 <serviceGUID>47nyorscluydrOAGPdAf84</serviceGUID>
+                                 <serviceInput>
+                                    <parameter name="fileWriteTask" source="field" updatable="true">temp.filetype</parameter>
+                                 </serviceInput>
+                              </service>
+                              <flow id="kdttft4u">
+                                 <assignment id="kes5jkgd">
+                                    <title>Assign Success Details</title>
+                                    <operation source="constant" to="temp.tmp_status">Success</operation>
+                                 </assignment>
+                                 <link id="kdttft5j" targetId="kdttft4t" type="containerLink"/>
+                              </flow>
+                              <flow id="kdttft51">
+                                 <container id="kee2trie" type="exclusive">
+                                    <title>tmp_retryCounter</title>
+                                    <flow id="kee2trih">
+                                       <assignment id="kee2trna">
+                                          <title>Increment retry counter</title>
+                                          <operation source="formula" to="temp.tmp_retryCounter">
+                                             <expression language="XQuery">$temp.tmp_retryCounter + 1 </expression>
+                                          </operation>
+                                          <link id="kee2trxq" targetId="kee2trxo"/>
+                                       </assignment>
+                                       <jumpTo id="kee2trxo">
+                                          <link id="kee2trxp" targetId="kdttft4t"/>
+                                       </jumpTo>
+                                    </flow>
+                                    <flow id="kee2trik">
+                                       <assignment id="kev90bl7">
+                                          <title>Email_assgnment</title>
+                                          <operation source="formula" to="temp.tmp_email_decision">
+                                             <expression language="XQuery">if(contains($output.faultInfo_Write_response[1]/detail,'handshake' ) or 
+contains($output.faultInfo_Write_response[1]/detail,'TimeoutException' ) or 
+contains($output.faultInfo_Write_response[1]/detail,'SSLHandshakeExceptionRemote' ) or 
+contains($output.faultInfo_Write_response[1]/detail,'refused' ) or 
+contains($output.faultInfo_Write_response[1]/reason,'handshake' ) or 
+contains($output.faultInfo_Write_response[1]/reason,'TimeoutException' ) or 
+contains($output.faultInfo_Write_response[1]/reason,'SSLHandshakeExceptionRemote' ) or 
+contains($output.faultInfo_Write_response[1]/reason,'refused' )) then 'N'
+else 'Y'</expression>
+                                          </operation>
+                                          <link id="kev90bp6" targetId="kev90bp5"/>
+                                       </assignment>
+                                       <assignment id="kes5jkc0">
+                                          <title>Assign Error Details</title>
+                                          <operation source="constant" to="temp.tmp_status">Failed</operation>
+                                       </assignment>
+                                       <container id="kev90bp5" type="exclusive">
+                                          <title>Send Email?</title>
+                                          <flow id="kev90bp9">
+                                             <subflow id="kev90bth">
+                                                <title>SP_FaultEmail</title>
+                                                <subflowGUID>giwQOa6qSEwctHA4oyFz21</subflowGUID>
+                                                <subflowPath>p_email_routine-2</subflowPath>
+                                                <runForEach>false</runForEach>
+                                                <input>
+                                                   <parameter name="in_ProcessName" source="formula" updatable="true">
+                                                      <expression language="XQuery">'p_API_ssvr_Loan_Stipdetails'</expression>
+                                                   </parameter>
+                                                   <parameter name="in_ProcessId" source="formula" updatable="true">
+                                                      <expression language="XQuery">util:getProcessId()</expression>
+                                                   </parameter>
+                                                   <parameter name="in_StepName" source="formula" updatable="true">
+                                                      <expression language="XQuery">'Write_response'</expression>
+                                                   </parameter>
+                                                   <parameter name="in_FaultCode" source="formula" updatable="true">
+                                                      <expression language="XQuery">$output.faultInfo_Write_response[1]/code </expression>
+                                                   </parameter>
+                                                   <parameter name="in_FaultReason" source="formula" updatable="true">
+                                                      <expression language="XQuery">$output.faultInfo_Write_response[1]/reason</expression>
+                                                   </parameter>
+                                                   <parameter name="in_Detail" source="formula" updatable="true">
+                                                      <expression language="XQuery">$output.faultInfo_Write_response[1]/detail</expression>
+                                                   </parameter>
+                                                   <parameter name="in_env" source="formula" updatable="true">
+                                                      <expression language="XQuery">$temp.tmp_getResource//env </expression>
+                                                   </parameter>
+                                                </input>
+                                                <outputDef/>
+                                             </subflow>
+                                             <link id="kev90bpa" targetId="kev90bp5" type="containerLink"/>
+                                          </flow>
+                                          <flow id="kev90bpc">
+                                             <link id="kev90bpd" targetId="kev90bp5" type="containerLink"/>
+                                          </flow>
+                                          <link id="kev90bp8" targetId="kev90bp9" type="containerLink">
+                                             <condition source="formula">
+                                                <function name="contains">
+                                                   <arg name="left">{$temp.tmp_email_decision}</arg>
+                                                   <arg name="right">Y</arg>
+                                                </function>
+                                             </condition>
+                                          </link>
+                                          <link id="kev90bpb" targetId="kev90bpc" type="containerLink"/>
+                                          <link id="kev90btg" targetId="kes5jkc0"/>
+                                       </container>
+                                       <link id="kee2tril" targetId="kee2trie" type="containerLink"/>
+                                    </flow>
+                                    <link id="kee2trig" targetId="kee2trih" type="containerLink">
+                                       <condition source="formula">
+                                          <function name="less-or-equals">
+                                             <arg name="left">{$temp.tmp_retryCounter}</arg>
+                                             <arg name="right">{3}</arg>
+                                          </function>
+                                       </condition>
+                                    </link>
+                                    <link id="kee2trij" targetId="kee2trik" type="containerLink"/>
+                                 </container>
+                                 <link id="kdttft5p" targetId="kdttft4t" type="containerLink"/>
+                              </flow>
+                              <link id="kdttft5h" targetId="kdttft4u" type="containerLink"/>
+                              <events>
+                                 <catch faultField="faultInfo_Write_response"
+                                        id="k84byk42"
+                                        interrupting="true">
+                                    <link id="kdttft5i" targetId="kdttft51" type="containerLink"/>
+                                 </catch>
+                              </events>
+                           </eventContainer>
+                           <link id="kdttft5f" targetId="kdttft4q" type="containerLink"/>
+                        </flow>
+                        <flow id="kdttft54">
+                           <container id="kee2tqxm" type="exclusive">
+                              <title>tmp_retryCounter</title>
+                              <flow id="kee2tqxp">
+                                 <assignment id="kee2tr5x">
+                                    <title>Increment retry counter</title>
+                                    <operation source="formula" to="temp.tmp_retryCounter">
+                                       <expression language="XQuery">$temp.tmp_retryCounter + 1 </expression>
+                                    </operation>
+                                    <link id="kee2trg4" targetId="kee2trg2"/>
+                                 </assignment>
+                                 <jumpTo id="kee2trg2">
+                                    <link id="kee2trg3" targetId="kdttft4q"/>
+                                 </jumpTo>
+                              </flow>
+                              <flow id="kee2tqxs">
+                                 <assignment id="kev90b1m">
+                                    <title>Email_assgnment</title>
+                                    <operation source="formula" to="temp.tmp_email_decision">
+                                       <expression language="XQuery">if(contains($output.faultInfo_loan_stipdetails[1]/detail,'handshake' ) or 
+contains($output.faultInfo_loan_stipdetails[1]/detail,'TimeoutException' ) or 
+contains($output.faultInfo_loan_stipdetails[1]/detail,'SSLHandshakeExceptionRemote' ) or 
+contains($output.faultInfo_loan_stipdetails[1]/detail,'refused' ) or 
+contains($output.faultInfo_loan_stipdetails[1]/reason,'handshake' ) or 
+contains($output.faultInfo_loan_stipdetails[1]/reason,'TimeoutException' ) or 
+contains($output.faultInfo_loan_stipdetails[1]/reason,'SSLHandshakeExceptionRemote' ) or 
+contains($output.faultInfo_loan_stipdetails[1]/reason,'refused' )) then 'N'
+else 'Y'</expression>
+                                    </operation>
+                                    <link id="kev90ba8" targetId="kev90ba7"/>
+                                 </assignment>
+                                 <assignment id="kes5jk6k">
+                                    <title>Assign Error Details</title>
+                                    <operation source="constant" to="temp.tmp_status">Failed</operation>
+                                 </assignment>
+                                 <container id="kev90ba7" type="exclusive">
+                                    <title>Send Email?</title>
+                                    <flow id="kev90bbo">
+                                       <subflow id="kev90bgk">
+                                          <title>SP_FaultEmail</title>
+                                          <subflowGUID>giwQOa6qSEwctHA4oyFz21</subflowGUID>
+                                          <subflowPath>p_email_routine-2</subflowPath>
+                                          <runForEach>false</runForEach>
+                                          <input>
+                                             <parameter name="in_ProcessName" source="formula" updatable="true">
+                                                <expression language="XQuery">'p_API_ssvr_Loan_Stipdetails'</expression>
+                                             </parameter>
+                                             <parameter name="in_ProcessId" source="formula" updatable="true">
+                                                <expression language="XQuery">util:getProcessId()</expression>
+                                             </parameter>
+                                             <parameter name="in_StepName" source="formula" updatable="true">
+                                                <expression language="XQuery">'loan_stipdetails'</expression>
+                                             </parameter>
+                                             <parameter name="in_FaultCode" source="formula" updatable="true">
+                                                <expression language="XQuery">$output.faultInfo_loan_stipdetails[1]/code</expression>
+                                             </parameter>
+                                             <parameter name="in_FaultReason" source="formula" updatable="true">
+                                                <expression language="XQuery">$output.faultInfo_loan_stipdetails[1]/reason </expression>
+                                             </parameter>
+                                             <parameter name="in_Detail" source="formula" updatable="true">
+                                                <expression language="XQuery">$output.faultInfo_loan_stipdetails[1]/detail </expression>
+                                             </parameter>
+                                             <parameter name="in_env" source="formula" updatable="true">
+                                                <expression language="XQuery">$temp.tmp_getResource//env</expression>
+                                             </parameter>
+                                          </input>
+                                          <outputDef/>
+                                       </subflow>
+                                       <link id="kev90bbp" targetId="kev90ba7" type="containerLink"/>
+                                    </flow>
+                                    <flow id="kev90bbq">
+                                       <link id="kev90bbr" targetId="kev90ba7" type="containerLink"/>
+                                    </flow>
+                                    <link id="kev90bbh" targetId="kev90bbo" type="containerLink">
+                                       <condition source="formula">
+                                          <function name="contains">
+                                             <arg name="left">{$temp.tmp_email_decision}</arg>
+                                             <arg name="right">Y</arg>
+                                          </function>
+                                       </condition>
+                                    </link>
+                                    <link id="kev90bbk" targetId="kev90bbq" type="containerLink"/>
+                                    <link id="kev90bgj" targetId="kes5jk6k"/>
+                                 </container>
+                                 <link id="kee2tqxt" targetId="kee2tqxm" type="containerLink"/>
+                              </flow>
+                              <link id="kee2tqxo" targetId="kee2tqxp" type="containerLink">
+                                 <condition source="formula">
+                                    <function name="less-or-equals">
+                                       <arg name="left">{$temp.tmp_retryCounter}</arg>
+                                       <arg name="right">{3}</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="kee2tqxr" targetId="kee2tqxs" type="containerLink"/>
+                           </container>
+                           <link id="kdttft5q" targetId="kdttft4q" type="containerLink"/>
+                        </flow>
+                        <link id="kdttft5d" targetId="kdttft4r" type="containerLink"/>
+                        <events>
+                           <catch faultField="faultInfo_loan_stipdetails"
+                                  id="k84byk5l"
+                                  interrupting="true">
+                              <link id="kdttft5e" targetId="kdttft54" type="containerLink"/>
+                           </catch>
+                        </events>
+                     </eventContainer>
+                     <link id="kdttft5c" targetId="kdttft4o" type="containerLink"/>
+                  </flow>
+                  <flow id="kdttft57">
+                     <container id="kee2tqb3" type="exclusive">
+                        <title>tmp_retryCounter</title>
+                        <flow id="kee2tqcl">
+                           <assignment id="kee2tqi7">
+                              <title>Increment retry counter</title>
+                              <operation source="formula" to="temp.tmp_retryCounter">
+                                 <expression language="XQuery">$temp.tmp_retryCounter + 1 </expression>
+                              </operation>
+                              <link id="kee2tqpz" targetId="kee2tqpx"/>
+                           </assignment>
+                           <jumpTo id="kee2tqpx">
+                              <link id="kee2tqpy" targetId="kdttft4o"/>
+                           </jumpTo>
+                        </flow>
+                        <flow id="kee2tqcn">
+                           <assignment id="kev90ajg">
+                              <title>Email_assgnment</title>
+                              <operation source="formula" to="temp.tmp_email_decision">
+                                 <expression language="XQuery">if(contains($output.faultInfo_Get_Token[1]/detail,'handshake' ) or 
+contains($output.faultInfo_Get_Token[1]/detail,'TimeoutException' ) or 
+contains($output.faultInfo_Get_Token[1]/detail,'SSLHandshakeExceptionRemote' ) or 
+contains($output.faultInfo_Get_Token[1]/detail,'refused' ) or 
+contains($output.faultInfo_Get_Token[1]/reason,'handshake' ) or 
+contains($output.faultInfo_Get_Token[1]/reason,'TimeoutException' ) or 
+contains($output.faultInfo_Get_Token[1]/reason,'SSLHandshakeExceptionRemote' ) or 
+contains($output.faultInfo_Get_Token[1]/reason,'refused' )) then 'N'
+else 'Y'</expression>
+                              </operation>
+                              <link id="kev90at5" targetId="kev90at4"/>
+                           </assignment>
+                           <assignment id="kee2tqsg">
+                              <title>Assign Error Details</title>
+                              <operation source="constant" to="temp.tmp_status">Failed</operation>
+                           </assignment>
+                           <container id="kev90at4" type="exclusive">
+                              <title>Send Email?</title>
+                              <flow id="kev90at8">
+                                 <subflow id="kev90av7">
+                                    <title>SP_FaultEmail</title>
+                                    <subflowGUID>giwQOa6qSEwctHA4oyFz21</subflowGUID>
+                                    <subflowPath>p_email_routine-2</subflowPath>
+                                    <runForEach>false</runForEach>
+                                    <input>
+                                       <parameter name="in_ProcessName" source="formula" updatable="true">
+                                          <expression language="XQuery">'p_API_ssvr_Loan_Stipdetails'</expression>
+                                       </parameter>
+                                       <parameter name="in_ProcessId" source="formula" updatable="true">
+                                          <expression language="XQuery">util:getProcessId()</expression>
+                                       </parameter>
+                                       <parameter name="in_StepName" source="formula" updatable="true">
+                                          <expression language="XQuery">'Get_Token'</expression>
+                                       </parameter>
+                                       <parameter name="in_FaultCode" source="formula" updatable="true">
+                                          <expression language="XQuery">$output.faultInfo_Get_Token[1]/code</expression>
+                                       </parameter>
+                                       <parameter name="in_FaultReason" source="formula" updatable="true">
+                                          <expression language="XQuery">$output.faultInfo_Get_Token[1]/reason</expression>
+                                       </parameter>
+                                       <parameter name="in_Detail" source="formula" updatable="true">
+                                          <expression language="XQuery">$output.faultInfo_Get_Token[1]/detail</expression>
+                                       </parameter>
+                                       <parameter name="in_env" source="formula" updatable="true">
+                                          <expression language="XQuery">$temp.tmp_getResource//env </expression>
+                                       </parameter>
+                                    </input>
+                                    <outputDef/>
+                                 </subflow>
+                                 <link id="kev90at9" targetId="kev90at4" type="containerLink"/>
+                              </flow>
+                              <flow id="kev90atb">
+                                 <link id="kev90atc" targetId="kev90at4" type="containerLink"/>
+                              </flow>
+                              <link id="kev90at7" targetId="kev90at8" type="containerLink">
+                                 <condition source="formula">
+                                    <function name="contains">
+                                       <arg name="left">{$temp.tmp_email_decision}</arg>
+                                       <arg name="right">Y</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="kev90ata" targetId="kev90atb" type="containerLink"/>
+                              <link id="kev90av6" targetId="kee2tqsg"/>
+                           </container>
+                           <link id="kee2tqco" targetId="kee2tqb3" type="containerLink"/>
+                        </flow>
+                        <link id="kee2tqce" targetId="kee2tqcl" type="containerLink">
+                           <condition source="formula">
+                              <function name="less-or-equals">
+                                 <arg name="left">{$temp.tmp_retryCounter}</arg>
+                                 <arg name="right">{3}</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="kee2tqch" targetId="kee2tqcn" type="containerLink"/>
+                     </container>
+                     <link id="kdttft5r" targetId="kdttft4o" type="containerLink"/>
+                  </flow>
+                  <link id="kdttft5a" targetId="kdttft4p" type="containerLink"/>
+                  <link id="kdttfu0y" targetId="kdttfu0x"/>
+                  <events>
+                     <catch faultField="faultInfo_Get_Token" id="k84byk42" interrupting="true">
+                        <link id="kdttft5b" targetId="kdttft57" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <container id="kevkqcp9" type="exclusive">
+                  <title>Error?</title>
+                  <flow id="kevkqcqy">
+                     <throw id="kevkqcwe">
+                        <title>Throw</title>
+                        <throwInput>
+                           <parameter name="code" source="formula" updatable="true">
+                              <expression language="XQuery">util:toJSON($output.Response )</expression>
+                           </parameter>
+                           <parameter name="detail" source="constant" updatable="true">xpath '{
+        "isSuccess": "False",
+        "errorMessage":"'||$output.Response[1]/errorMessage ||'",
+        "payLoad": "{"LoanGuid":"'||$input.LoanGuid ||'"}"
+    }'</parameter>
+                           <parameter name="reason" source="constant" updatable="true"/>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <flow id="kevkqcr0">
+                     <end id="kevkqd7q"/>
+                  </flow>
+                  <link id="kevkqcqr" targetId="kevkqcqy" type="containerLink">
+                     <condition source="formula">
+                        <function name="contains">
+                           <arg name="left">{$temp.tmp_status}</arg>
+                           <arg name="right">False</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="kevkqcqu" targetId="kevkqcr0" type="containerLink"/>
+               </container>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>61bd78b9-964b-45cc-8eb1-aea8b55f4639</ns1:Id>
+               <ns1:Name>Test</ns1:Name>
+               <ns1:CreatedBy>prabhakar.boddapati@pnmac.com.saml.dev</ns1:CreatedBy>
+               <ns1:CreationDate>2020-08-14T06:01:47Z</ns1:CreationDate>
+               <ns1:ModifiedBy>prabhakar.boddapati@pnmac.com.saml.dev</ns1:ModifiedBy>
+               <ns1:ModifiedDate>2020-08-28T10:29:25Z</ns1:ModifiedDate>
+               <ns1:Data format="json">{
+	 "LoanGuid": "2-9ea7-44ae-9921-dac8639c344b"
+}</ns1:Data>
+            </ns1:SampleData>
+            <ns1:SampleData>
+               <ns1:Id>5cca5b48-753a-4bc7-ac12-594f487bea91</ns1:Id>
+               <ns1:Name>Test_2</ns1:Name>
+               <ns1:CreatedBy>prabhakar.boddapati@pnmac.com.saml.dev</ns1:CreatedBy>
+               <ns1:CreationDate>2020-08-26T06:52:46Z</ns1:CreationDate>
+               <ns1:ModifiedBy>prabhakar.boddapati@pnmac.com.saml.dev</ns1:ModifiedBy>
+               <ns1:ModifiedDate>2020-08-26T06:52:54Z</ns1:ModifiedDate>
+               <ns1:Data format="json">{
+	 "LoanGuid": "000afb00-8173-4d17-99d1-c02237cd34aa"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>5GCLczCvYE0eW9P8vUSSGg</types1:GUID>
+      <types1:DisplayName>p_API_ssvr_Loan_Stipdetails_Mailroom</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2020-09-14T05:41:49.79Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

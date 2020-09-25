@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "e2c7b202-8d53-4120-abae-5294f91e4f2f",
+		"name": "Mailroom Jobs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client-Mailroom",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jjYaHo3eMOhV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "informatica-dev.dw@pnmac.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"orgId\":\"54\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://na1.ai.dm-us.informaticacloud.com/active-bpel/rt/p_ssvr_ClientConfig_Mailroom",
+					"protocol": "https",
+					"host": [
+						"na1",
+						"ai",
+						"dm-us",
+						"informaticacloud",
+						"com"
+					],
+					"path": [
+						"active-bpel",
+						"rt",
+						"p_ssvr_ClientConfig_Mailroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trade-Mailroom",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jjYaHo3eMOhV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "informatica-dev.dw@pnmac.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tradeId\":\"7\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://na1.ai.dm-us.informaticacloud.com/active-bpel/rt/p_API_SSVR_getTradeDetails_Mailroom",
+					"protocol": "https",
+					"host": [
+						"na1",
+						"ai",
+						"dm-us",
+						"informaticacloud",
+						"com"
+					],
+					"path": [
+						"active-bpel",
+						"rt",
+						"p_API_SSVR_getTradeDetails_Mailroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stip_Mailroom",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jjYaHo3eMOhV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "informatica-dev.dw@pnmac.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t \"LoanGuid\": \"00afb00-8173-4d17-99d1-c02237cd34aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://na1.ai.dm-us.informaticacloud.com/active-bpel/rt/p_API_ssvr_Loan_Stipdetails_Mailroom",
+					"protocol": "https",
+					"host": [
+						"na1",
+						"ai",
+						"dm-us",
+						"informaticacloud",
+						"com"
+					],
+					"path": [
+						"active-bpel",
+						"rt",
+						"p_API_ssvr_Loan_Stipdetails_Mailroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DU-Mailroom",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jjYaHo3eMOhV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "informatica-dev.dw@pnmac.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t \"loan_id\": \"00d1363e-edb7-4a2e-92f4-e192c0687cf9\",\r\n\t \"bucket\": \"kanan-tpi-object-store-dev\",\r\n\t \"json_key\": \"archive/00d1363e-edb7-4a2e-92f4-e192c0687cf9/du-messages/du_messages.json\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://na1.ai.dm-us.informaticacloud.com/active-bpel/rt/p_desktop_underwriter_mailroom",
+					"protocol": "https",
+					"host": [
+						"na1",
+						"ai",
+						"dm-us",
+						"informaticacloud",
+						"com"
+					],
+					"path": [
+						"active-bpel",
+						"rt",
+						"p_desktop_underwriter_mailroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoanLogics",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jjYaHo3eMOhV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "informatica-dev.dw@pnmac.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"loan_id\": \"3396757d-5f04-424b-8fea-a734bd62b1eb\" , \r\n\"bucket\": \"kanan-tpi-object-store\" , \r\n\"xml_key\": \"archive/3396757d-5f04-424b-8fea-a734bd62b1eb/loantools/8000083225_20190107130939948_Loandata.xml\" , \r\n\"xml_meta_key\": \"archive/3396757d-5f04-424b-8fea-a734bd62b1eb/loantools/8000083225_20190107130939948_LoanDocMetaData.xml\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://na1.ai.dm-us.informaticacloud.com/active-bpel/rt/p_loan_logics_mailroom",
+					"protocol": "https",
+					"host": [
+						"na1",
+						"ai",
+						"dm-us",
+						"informaticacloud",
+						"com"
+					],
+					"path": [
+						"active-bpel",
+						"rt",
+						"p_loan_logics_mailroom"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

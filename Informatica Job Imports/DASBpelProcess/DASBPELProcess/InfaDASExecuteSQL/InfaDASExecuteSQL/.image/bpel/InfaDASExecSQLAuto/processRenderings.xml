@@ -1,0 +1,132 @@
+<processRenderings modified="1568558085554">
+   <layout-segments>
+      <segment height="617"
+               id="process_0"
+               tile-cols="2"
+               tile-height="1000"
+               tile-rows="1"
+               tile-width="1000"
+               tiled="true"
+               width="1078">
+         <image col="1"
+                height="617"
+                name="process_0_R1C1.jpg"
+                row="1"
+                width="1000"/>
+         <image col="2"
+                height="617"
+                name="process_0_R1C2.jpg"
+                row="1"
+                width="78"/>
+      </segment>
+   </layout-segments>
+   <process>
+      <bpel locationId="1"
+            name="InfaDASExecSQLAuto"
+            path="/process"
+            segment="process_0"
+            sheight="617"
+            swidth="78"
+            sx="1000"
+            sy="0"
+            type="process">
+         <bpel locationId="11" path="/process/partnerLinks" type="partnerLinks">
+            <bpel locationId="12"
+                  name="Process_Consumer"
+                  path="/process/partnerLinks/partnerLink[@name='Process_Consumer']"
+                  type="partnerLink"/>
+            <bpel locationId="13"
+                  name="Provider"
+                  path="/process/partnerLinks/partnerLink[@name='Provider']"
+                  type="partnerLink"/>
+         </bpel>
+         <bpel locationId="15" path="/process/variables" type="variables">
+            <bpel locationId="16"
+                  name="ExecSQLRequest"
+                  path="/process/variables/variable[@name='ExecSQLRequest']"
+                  type="variable"/>
+            <bpel locationId="17"
+                  name="dataAccessResponse"
+                  path="/process/variables/variable[@name='dataAccessResponse']"
+                  type="variable"/>
+         </bpel>
+         <bpel height="10"
+               locationId="18"
+               name=""
+               path="/process/sequence"
+               type="sequence"
+               width="1"
+               x="182"
+               y="15">
+            <bpel height="60"
+                  locationId="19"
+                  name="ExexSQLRequest"
+                  path="/process/sequence/receive[@name='ExexSQLRequest']"
+                  type="receive"
+                  width="70"
+                  x="25"
+                  y="25"/>
+            <bpel height="53"
+                  locationId="20"
+                  name="DataAccessServiceExecSQL"
+                  path="/process/sequence/scope[@name='DataAccessServiceExecSQL']"
+                  type="scope"
+                  width="125"
+                  x="120"
+                  y="29">
+               <bpel locationId="21"
+                     path="/process/sequence/scope[@name='DataAccessServiceExecSQL']/variables"
+                     type="variables">
+                  <bpel locationId="22"
+                        name="parameters"
+                        path="/process/sequence/scope[@name='DataAccessServiceExecSQL']/variables/variable[@name='parameters']"
+                        type="variable"/>
+               </bpel>
+               <bpel locationId="23"
+                     name=""
+                     path="/process/sequence/scope[@name='DataAccessServiceExecSQL']/sequence"
+                     type="sequence">
+                  <bpel locationId="24"
+                        name=""
+                        path="/process/sequence/scope[@name='DataAccessServiceExecSQL']/sequence/assign"
+                        type="assign"/>
+                  <bpel locationId="28"
+                        name="DataAccessServiceExecSQL"
+                        path="/process/sequence/scope[@name='DataAccessServiceExecSQL']/sequence/invoke[@name='DataAccessServiceExecSQL']"
+                        type="invoke"/>
+               </bpel>
+            </bpel>
+            <bpel locationId="29"
+                  name="ExecSQLReply"
+                  path="/process/sequence/scope[@name='ExecSQLReply']"
+                  type="scope">
+               <bpel locationId="30"
+                     path="/process/sequence/scope[@name='ExecSQLReply']/variables"
+                     type="variables">
+                  <bpel locationId="31"
+                        name="parameters"
+                        path="/process/sequence/scope[@name='ExecSQLReply']/variables/variable[@name='parameters']"
+                        type="variable"/>
+               </bpel>
+               <bpel locationId="32"
+                     name=""
+                     path="/process/sequence/scope[@name='ExecSQLReply']/sequence"
+                     type="sequence">
+                  <bpel locationId="33"
+                        name=""
+                        path="/process/sequence/scope[@name='ExecSQLReply']/sequence/assign"
+                        type="assign"/>
+                  <bpel height="60"
+                        locationId="37"
+                        name="ExecSQLReply"
+                        path="/process/sequence/scope[@name='ExecSQLReply']/sequence/reply[@name='ExecSQLReply']"
+                        type="reply"
+                        width="70"
+                        x="270"
+                        y="25"/>
+               </bpel>
+            </bpel>
+         </bpel>
+      </bpel>
+   </process>
+</processRenderings>

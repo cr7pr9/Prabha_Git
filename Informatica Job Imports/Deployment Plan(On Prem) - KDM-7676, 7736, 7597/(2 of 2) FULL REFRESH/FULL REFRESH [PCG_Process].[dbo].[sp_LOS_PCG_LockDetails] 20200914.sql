@@ -1,0 +1,1 @@
+exec [PCG_Process].[dbo].[sp_LOS_PCG_LockDetails] 'ALL'

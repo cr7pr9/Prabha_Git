@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:screenflowContribution xmlns:tns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosServiceDiscovery.xsd">
+      <tns:service name="InfaDASAutoExecSQL">
+         <tns:displayName>Execute a SQL Statement</tns:displayName>
+         <tns:description>Automated step that executes the given SQLStatement.</tns:description>
+         <tns:input>
+            <tns:parameter name="SQLStatement" type="string" required="true"/>
+         </tns:input>
+         <tns:output>
+             <tns:field name="Response" type="string" />
+         </tns:output>
+      </tns:service> 
+</tns:screenflowContribution>

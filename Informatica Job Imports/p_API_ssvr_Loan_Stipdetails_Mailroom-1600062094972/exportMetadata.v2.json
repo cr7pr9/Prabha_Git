@@ -1,0 +1,166 @@
+{
+  "name" : "p_API_ssvr_Loan_Stipdetails_Mailroom-1600062094972",
+  "sourceOrgId" : "f1Lt3JengEPi7JFvkUE6wS",
+  "sourceOrgName" : "Pennymac (DEV)",
+  "exportedObjects" : [ {
+    "objectGuid" : "47nyorscluydrOAGPdAf84",
+    "objectName" : "ac-get-stipdetails-output",
+    "objectType" : "AI_CONNECTION",
+    "path" : "/Explore/DEP_PCG/DEP_PCG_ED_CONNECTORS_AND_CONNECTIONS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "WPZ8DfYLnzYLnzY-gt-1294657-2020-07-16T23:35:25.785Z::conn.xml"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "5GCLczCvYE0eW9P8vUSSGg",
+    "objectName" : "p_API_ssvr_Loan_Stipdetails_Mailroom",
+    "objectType" : "PROCESS",
+    "path" : "/Explore/DEP_PCG/DEP_PCG_ED_CORR_PROD_STIP_DETAILS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "GKrclvAhrswVYx8-gt-2597001-2020-07-16T23:35:39.525Z::pd.xml"
+      },
+      "objectRefs" : [ "47nyorscluydrOAGPdAf84", "giwQOa6qSEwctHA4oyFz21", "3zwzSTdyWkkhM6m0LGn6iy" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "giwQOa6qSEwctHA4oyFz21",
+    "objectName" : "p_email_routine",
+    "objectType" : "PROCESS",
+    "path" : "/Explore/DEP_PCG/DEP_PCG_ED_SHARED_ASSETS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0rpC18ypmaaa-gt-91529-2020-07-29T06:47:49.991Z::pd.xml"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "A generic process which can be used to send success/failure email notifications",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "lidW2FeKtiFiL7UaOgJy4a",
+    "objectName" : "DEP_PCG_ED_SHARED_ASSETS",
+    "objectType" : "Folder",
+    "path" : "/Explore/DEP_PCG",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "3zwzSTdyWkkhM6m0LGn6iy",
+    "objectName" : "ac-Loan-stipdetails",
+    "objectType" : "AI_CONNECTION",
+    "path" : "/Explore/DEP_PCG/DEP_PCG_ED_CONNECTORS_AND_CONNECTIONS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "1WLU6S6fPAreFRq-gt-2603029-2020-07-16T23:35:26.841Z::conn.xml"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "7OvoKgtbVkMf38oTv6GaAC",
+    "objectName" : "DEP_PCG",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "jIhqvjytykndjvZaEUEagz",
+    "objectName" : "DEP_PCG_ED_CORR_PROD_STIP_DETAILS",
+    "objectType" : "Folder",
+    "path" : "/Explore/DEP_PCG",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "6htHXnpKHcvbt0uTe1mvqb",
+    "objectName" : "DEP_PCG_ED_CONNECTORS_AND_CONNECTIONS",
+    "objectType" : "Folder",
+    "path" : "/Explore/DEP_PCG",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  } ]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pdd:process xmlns:bpelns="http://InfaDASExecSQLAuto" xmlns:pdd="http://schemas.active-endpoints.com/pdd/2006/08/pdd.xsd" location="bpel/InfaDASExecuteSQL/bpel/InfaDASExecSQLAuto.bpel" name="bpelns:InfaDASExecSQLAuto" persistenceType="brief" platform="enterprise">
+  <pdd:partnerLinks>
+    <pdd:partnerLink name="Process_Consumer">
+      <pdd:myRole allowedRoles="" binding="EXTERNAL" service="InfaDASAutoExecSQL"/>
+    </pdd:partnerLink>
+    <pdd:partnerLink name="Provider">
+      <pdd:partnerRole endpointReference="dynamic" invokeHandler="system:urn:database"/>
+    </pdd:partnerLink>
+  </pdd:partnerLinks>
+  <pdd:references>
+    <pdd:wsdl location="project:/com.activevos.socrates.repository.services/wsdl/avosAutomatedStep.wsdl" namespace="http://schemas.active-endpoints.com/wsdl/screenFlow/2010/10/avosAutomatedStep.wsdl"/>
+    <pdd:wsdl location="project:/com.activee.rt.data.access.services/wsdl/data-access.wsdl" namespace="http://docs.active-endpoints/wsdl/data-access/2010/04/data-access.wsdl"/>
+  </pdd:references>
+  <pdd:extensions>
+    <processLogging level="urn:ae:fault" xmlns="http://www.activebpel.org/logging/2008/06/logging/deployments"/>
+  </pdd:extensions>
+</pdd:process>
