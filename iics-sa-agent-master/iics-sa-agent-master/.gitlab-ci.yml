@@ -1,0 +1,6 @@
+# Gitlab-ci file Git pipeline.
+# This file defines the structure and order of the pipeline
+include:
+  - project: gitlab-ci/scripts/informatica/iics-gitlab-ci-yml
+    file: iics-gitlab-ci-iics-agent-multi-env.yml
+    tag: v1.0.0

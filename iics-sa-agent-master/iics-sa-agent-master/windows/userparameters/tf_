@@ -1,0 +1,2 @@
+$$s3_stage_data_download=aws s3 cp s3://pnmaciicswindowsagentstg/reltio-mdm/ C:\Users\informatica\lmp_support\staging\reltio-mdm\ --recursive --include "*.csv" --exclude "*/*"
+$$s3_stage_data_cleanup=aws s3 rm s3://pnmaciicswindowsagentstg/reltio-mdm

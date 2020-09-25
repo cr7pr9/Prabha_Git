@@ -1,0 +1,600 @@
+Status,Target,Operation,StatusID
+Dialer Outbound,POWERDIAL,UPDATE,42
+Power Dialer EXCL 1,POWERDIAL,UPDATE,161
+Power Dialer OB EXCL 1,POWERDIAL,UPDATE,166
+Power Dialer EXCL Call 1,POWERDIAL,UPDATE,171
+Purchase Dialer,POWERDIAL,UPDATE,193
+Predictive Dialer Call 1,POWERDIAL,UPDATE,291
+New: Inbound,POWERDIAL,ADD,1
+New: Outbound,POWERDIAL,ADD,26
+New: Email,POWERDIAL,ADD,40
+Contact Attempt 1,POWERDIAL,ADD,21
+Contact Attempt 2,POWERDIAL,ADD,2
+Contact Attempt 3,POWERDIAL,ADD,13
+Contact Attempt 4,POWERDIAL,ADD,14
+Contact Attempt 5,POWERDIAL,ADD,15
+RETIRED: Contact Attempt 6,POWERDIAL,ADD,
+RETIRED: Nurture,POWERDIAL,ADD,
+Dialer Contact Attempt 1,POWERDIAL,ADD,43
+Dialer Contact Attempt 2,POWERDIAL,ADD,44
+Dialer Contact Attempt 3,POWERDIAL,ADD,45
+Dialer Contact Attempt 4,POWERDIAL,ADD,46
+Dialer Contact Attempt 5,POWERDIAL,ADD,50
+Dialer Contact Attempt 6,POWERDIAL,ADD,51
+Dialer Contact Attempt 7,POWERDIAL,ADD,79
+Dialer Contact Attempt 8,POWERDIAL,ADD,80
+Dialer Contact Attempt 9,POWERDIAL,ADD,81
+Dialer Contact Attempt 10,POWERDIAL,ADD,149
+Dialer Contact Attempt 11,POWERDIAL,ADD,150
+Dialer Contact Attempt 12,POWERDIAL,ADD,151
+Dialer Contact Attempt 13,POWERDIAL,ADD,152
+Dialer Contact Attempt 14,POWERDIAL,ADD,153
+RETIRED: Dialer Nurture,POWERDIAL,ADD,
+Recycle Outbound,POWERDIAL,ADD,53
+Recycle Contact Attempt 1,POWERDIAL,ADD,54
+Recycle Contact Attempt 2,POWERDIAL,ADD,56
+Recycle Contact Attempt 3,POWERDIAL,ADD,57
+Recycle Contact Attempt 4,POWERDIAL,ADD,58
+Recycle Contact Attempt 5,POWERDIAL,ADD,181
+Recycle Contact Attempt 6,POWERDIAL,ADD,182
+Recycle Nurture,POWERDIAL,ADD,55
+Post Outbound,POWERDIAL,ADD,52
+Contacted - Call Back,POWERDIAL,ADD,9
+Call Back 1,POWERDIAL,ADD,73
+Call Back 2,POWERDIAL,ADD,74
+Call Back 3,POWERDIAL,ADD,75
+Initial Contact - Unresponsive,POWERDIAL,ADD,76
+Encompass Loan Started,POWERDIAL,ADD,39
+Pre-Application,POWERDIAL,ADD,30
+RETIRED: Purchase Pre-Approval Issued,POWERDIAL,ADD,
+Application,POWERDIAL,ADD,3
+Submitted,POWERDIAL,ADD,4
+Underwriting,POWERDIAL,ADD,59
+Approved,POWERDIAL,ADD,31
+Funded,POWERDIAL,ADD,6
+Lead Review,POWERDIAL,ADD,7
+No Rate Benefit,POWERDIAL,ADD,37
+No Sale,POWERDIAL,ADD,29
+NS - Competitor,POWERDIAL,ADD,67
+NS - Inquiry by Mistake,POWERDIAL,ADD,77
+NS - Not Interested,POWERDIAL,ADD,68
+NS - Product Not Offered,POWERDIAL,ADD,69
+NS - Non Mortgage Lead,POWERDIAL,ADD,147
+NS - Transition Script Completed,POWERDIAL,ADD,83
+RETIRED: Bad Lead - Return to Vendor,POWERDIAL,ADD,
+RETIRED: Does Not Qualify,POWERDIAL,ADD,
+RETIRED: DNQ - Credit,POWERDIAL,ADD,
+RETIRED: DNQ - Income,POWERDIAL,ADD,
+RETIRED: DNQ - Value,POWERDIAL,ADD,
+Do Not Call List,POWERDIAL,ADD,32
+Dormant,POWERDIAL,ADD,35
+Bad Phone Number,POWERDIAL,ADD,38
+Transfer,POWERDIAL,ADD,36
+Transfer to Servicing,POWERDIAL,ADD,41
+RETIRED: Closer,POWERDIAL,ADD,
+No Contact - Unresponsive,POWERDIAL,ADD,100
+No Calls - Email Only,POWERDIAL,ADD,102
+WI - Temp Status,POWERDIAL,ADD,101
+Planner,POWERDIAL,ADD,
+Planner Call Complete,POWERDIAL,ADD,
+Planner Contact Attempt 1,POWERDIAL,ADD,
+Planner Contact Attempt 2,POWERDIAL,ADD,
+Planner Contact Attempt 3,POWERDIAL,ADD,
+Planner Contact Attempt 4,POWERDIAL,ADD,
+Planner Contact Attempt 5,POWERDIAL,ADD,
+Planner Contact Attempt 6,POWERDIAL,ADD,
+Planner Contact Attempt 7,POWERDIAL,ADD,
+Planner Attempt 2 Complete,POWERDIAL,ADD,
+Planner Attempt 5 Complete,POWERDIAL,ADD,
+Shopper,POWERDIAL,ADD,
+Shopper Call Complete,POWERDIAL,ADD,
+Shopper Contact Attempt 1,POWERDIAL,ADD,
+Shopper Contact Attempt 2,POWERDIAL,ADD,
+Shopper Contact Attempt 3,POWERDIAL,ADD,
+Shopper Contact Attempt 4,POWERDIAL,ADD,
+Shopper Contact Attempt 5,POWERDIAL,ADD,
+Shopper Contact Attempt 6,POWERDIAL,ADD,
+Shopper Contact Attempt 7,POWERDIAL,ADD,
+Shopper Attempt 2 Complete,POWERDIAL,ADD,
+Shopper Attempt 5 Complete,POWERDIAL,ADD,
+Dormant - Encompass Inactive,POWERDIAL,ADD,127
+NS - Already Purchased,POWERDIAL,ADD,128
+Refi - Purchase Leads,POWERDIAL,ADD,131
+Follow Up Dialer Outbound,POWERDIAL,ADD,137
+Follow Up Dialer Attempt 1,POWERDIAL,ADD,138
+Follow Up Dialer Attempt 2,POWERDIAL,ADD,139
+Follow Up Dialer Attempt 3,POWERDIAL,ADD,140
+Follow Up Dialer Attempt 4,POWERDIAL,ADD,141
+LA - Temp Status,POWERDIAL,ADD,142
+Purchase - Docs Requested,POWERDIAL,ADD,145
+Shopper - Cert. Issued,POWERDIAL,ADD,157
+FL - Temp Status,POWERDIAL,ADD,146
+Phone Research - Holding Status,POWERDIAL,ADD,148
+Disaster Recovery,POWERDIAL,ADD,154
+Post Outbound Contacted Callback,POWERDIAL,ADD,156
+Suppression,POWERDIAL,ADD,158
+CDL Portal Initial,POWERDIAL,ADD,159
+CDL Portal Pending,POWERDIAL,ADD,160
+Power Dialer EXCL 2,POWERDIAL,ADD,162
+Power Dialer EXCL 3,POWERDIAL,ADD,163
+Power Dialer EXCL 4,POWERDIAL,ADD,164
+Power Dialer EXCL 5,POWERDIAL,ADD,165
+Power Dialer EXCL 6,POWERDIAL,ADD,176
+Power Dialer EXCL 7,POWERDIAL,ADD,185
+Power Dialer EXCL 8,POWERDIAL,ADD,282
+Power Dialer EXCL 9,POWERDIAL,ADD,283
+Power Dialer EXCL 10,POWERDIAL,ADD,284
+Power Dialer OB EXCL 2,POWERDIAL,ADD,167
+Power Dialer OB EXCL 3,POWERDIAL,ADD,168
+Power Dialer OB EXCL 4,POWERDIAL,ADD,169
+Power Dialer OB EXCL 5,POWERDIAL,ADD,170
+Power Dialer OB EXCL 6,POWERDIAL,ADD,177
+Power Dialer OB EXCL 8,POWERDIAL,ADD,
+Power Dialer OB EXCL 9,POWERDIAL,ADD,
+Power Dialer OB EXCL 10,POWERDIAL,ADD,
+Power Dialer EXCL Call 2,POWERDIAL,ADD,172
+Power Dialer EXCL Call 3,POWERDIAL,ADD,173
+Power Dialer EXCL Call 4,POWERDIAL,ADD,174
+Power Dialer EXCL Call 5,POWERDIAL,ADD,175
+Power Dialer EXCL Call 6,POWERDIAL,ADD,178
+Power Dialer EXCL Call 7,POWERDIAL,ADD,187
+Power Dialer EXCL Call 8,POWERDIAL,ADD,288
+Power Dialer EXCL Call 9,POWERDIAL,ADD,289
+Power Dialer EXCL Call 10,POWERDIAL,ADD,290
+External Outbound,POWERDIAL,ADD,179
+External Contacted Callback,POWERDIAL,ADD,180
+Archive Deletion,POWERDIAL,ADD,184
+Preview Recycle 1,POWERDIAL,ADD,188
+Preview Recycle 2,POWERDIAL,ADD,189
+Preview Recycle 3,POWERDIAL,ADD,190
+Preview Recycle 4,POWERDIAL,ADD,191
+Preview Recycle 5,POWERDIAL,ADD,192
+Purchase Dialer Attempt 1,POWERDIAL,ADD,194
+Purchase Dialer Attempt 2,POWERDIAL,ADD,195
+Purchase Dialer Attempt 3,POWERDIAL,ADD,196
+Purchase Dialer Attempt 4,POWERDIAL,ADD,197
+Purchase Dialer Attempt 5,POWERDIAL,ADD,198
+Purchase Dial Cycle 1 Complete,POWERDIAL,ADD,199
+Pitched: Submitting Offers – No PA Requested,POWERDIAL,ADD,200
+Pitched: PreApproval Requested,POWERDIAL,ADD,202
+Pitched: Hotlist,POWERDIAL,ADD,204
+Pitched: Under Contract,POWERDIAL,ADD,203
+Purchase Dialer Suspend,POWERDIAL,ADD,205
+Preview Dialer 1,POWERDIAL,ADD,206
+Preview Dialer 2,POWERDIAL,ADD,207
+Preview Dialer 3,POWERDIAL,ADD,208
+Preview Dialer 4,POWERDIAL,ADD,209
+Preview Dialer 5,POWERDIAL,ADD,210
+Port VA IRRRL Call 1,POWERDIAL,ADD,211
+Port VA IRRRL Call 2,POWERDIAL,ADD,212
+Port VA IRRRL Call 3,POWERDIAL,ADD,213
+Follow Up Call 1,POWERDIAL,ADD,214
+Follow Up Call 2,POWERDIAL,ADD,215
+Follow Up Call 3,POWERDIAL,ADD,216
+Follow Up Call 4,POWERDIAL,ADD,217
+Payoff Demand Call 1,POWERDIAL,ADD,218
+Payoff Demand Call 2,POWERDIAL,ADD,219
+Payoff Demand Call 3,POWERDIAL,ADD,220
+NS - Alternative Temporary Housing,POWERDIAL,ADD,
+NS - Closed on Home,POWERDIAL,ADD,
+NS - Not Buying,POWERDIAL,ADD,
+Ex Port HL Call 1,POWERDIAL,ADD,224
+Ex Port HL Call 2,POWERDIAL,ADD,225
+Ex Port HL Call 3,POWERDIAL,ADD,226
+Ex Port HL Call 4,POWERDIAL,ADD,227
+Ex Port HL Call 5,POWERDIAL,ADD,228
+Ex Port Trigger Call 1,POWERDIAL,ADD,229
+Ex Port Trigger Call 2,POWERDIAL,ADD,230
+Ex Port Trigger Call 3,POWERDIAL,ADD,231
+Ex Port Trigger Call 4,POWERDIAL,ADD,232
+Ex Port Trigger Call 5,POWERDIAL,ADD,233
+Jornaya Call 1,POWERDIAL,ADD,234
+Jornaya Call 2,POWERDIAL,ADD,235
+Jornaya Call 3,POWERDIAL,ADD,236
+Customer Captain Call 1,POWERDIAL,ADD,237
+Customer Captain Call 2,POWERDIAL,ADD,238
+Customer Captain Call 3,POWERDIAL,ADD,239
+Customer Captain Call 4,POWERDIAL,ADD,240
+Customer Captain Call 5,POWERDIAL,ADD,241
+Calendar Event Callback 1,POWERDIAL,ADD,
+Calendar Event Callback 2,POWERDIAL,ADD,
+Calendar Event Callback 3,POWERDIAL,ADD,
+Cashout Call 1,POWERDIAL,ADD,245
+Cashout Call 2,POWERDIAL,ADD,246
+Cashout Call 3,POWERDIAL,ADD,247
+Cashout Call 4,POWERDIAL,ADD,248
+Cashout Call 5,POWERDIAL,ADD,249
+USDA Call 1,POWERDIAL,ADD,250
+USDA Call 2,POWERDIAL,ADD,251
+USDA Call 3,POWERDIAL,ADD,252
+USDA Call 4,POWERDIAL,ADD,253
+USDA Call 5,POWERDIAL,ADD,254
+Jumbo Cashout Call 1,POWERDIAL,ADD,255
+Jumbo Cashout Call 2,POWERDIAL,ADD,256
+Jumbo Cashout Call 3,POWERDIAL,ADD,257
+Jumbo Cashout Call 4,POWERDIAL,ADD,258
+Jumbo Cashout Call 5,POWERDIAL,ADD,259
+Lower Rate Call 1,POWERDIAL,ADD,260
+Lower Rate Call 2,POWERDIAL,ADD,261
+Lower Rate Call 3,POWERDIAL,ADD,262
+FHA Streamline Call 1,POWERDIAL,ADD,263
+FHA Streamline Call 2,POWERDIAL,ADD,264
+FHA Streamline Call 3,POWERDIAL,ADD,265
+FHA to Conv Call 2,POWERDIAL,ADD,267
+FHA to Conv Call 1,POWERDIAL,ADD,266
+FHA to Conv Call 3,POWERDIAL,ADD,268
+Lower Rate - Prior Cashout Call 3,POWERDIAL,ADD,
+Lower Rate - Prior Cashout Call 2,POWERDIAL,ADD,
+Lower Rate - Prior Cashout Call 1,POWERDIAL,ADD,
+Payoff Prediction Model Call 1,POWERDIAL,ADD,272
+Payoff Prediction Model Call 2,POWERDIAL,ADD,273
+Payoff Prediction Model Call 3,POWERDIAL,ADD,274
+Payoff Prediction Model Call 4,POWERDIAL,ADD,275
+Payoff Prediction Model Call 5,POWERDIAL,ADD,276
+Purchase PreMover Call 1,POWERDIAL,ADD,277
+Purchase PreMover Call 2,POWERDIAL,ADD,278
+Purchase PreMover Call 4,POWERDIAL,ADD,280
+Purchase PreMover Call 3,POWERDIAL,ADD,279
+Purchase PreMover Call 5,POWERDIAL,ADD,281
+Predictive Dialer Call 1,POWERDIAL,ADD,291
+Predictive Dialer Call 2,POWERDIAL,ADD,292
+Predictive Dialer Call 3,POWERDIAL,ADD,293
+Predictive Dialer Call 4,POWERDIAL,ADD,294
+Predictive Dialer Call 5,POWERDIAL,ADD,295
+Predictive Dialer Call 6,POWERDIAL,ADD,296
+Predictive Dialer Call 7,POWERDIAL,ADD,297
+Predictive Dialer Call 8,POWERDIAL,ADD,298
+Predictive Dialer Call 9,POWERDIAL,ADD,299
+Predictive Dialer Call 10,POWERDIAL,ADD,300
+Predictive Dialer Call 11,POWERDIAL,ADD,301
+Predictive Dialer Call 12,POWERDIAL,ADD,302
+Predictive Dialer Call 13,POWERDIAL,ADD,303
+Predictive Dialer Call 14,POWERDIAL,ADD,304
+Predictive Dialer Call 15,POWERDIAL,ADD,305
+NCA Preview Dialer Call 1,POWERDIAL,ADD,306
+NCA Preview Dialer Call 2,POWERDIAL,ADD,307
+NCA Preview Dialer Call 3,POWERDIAL,ADD,308
+NCA Preview Dialer Call 4,POWERDIAL,ADD,309
+NCA Preview Dialer Call 5,POWERDIAL,ADD,310
+NCA Preview Dialer Call 6,POWERDIAL,ADD,311
+NCA Preview Dialer Call 7,POWERDIAL,ADD,312
+NCA Preview Dialer Call 8,POWERDIAL,ADD,313
+NCA Preview Dialer Call 9,POWERDIAL,ADD,314
+NCA Preview Dialer Call 10,POWERDIAL,ADD,315
+NCA Preview Dialer Call 11,POWERDIAL,ADD,316
+NCA Preview Dialer Call 12,POWERDIAL,ADD,317
+NCA Preview Dialer Call 13,POWERDIAL,ADD,318
+NCA Preview Dialer Call 14,POWERDIAL,ADD,319
+NCA Preview Dialer Call 15,POWERDIAL,ADD,320
+New: Inbound,PREVIEW,UPDATE,1
+New: Outbound,PREVIEW,UPDATE,26
+New: Email,PREVIEW,UPDATE,40
+Contact Attempt 1,PREVIEW,UPDATE,21
+Contact Attempt 2,PREVIEW,UPDATE,2
+Contact Attempt 3,PREVIEW,UPDATE,13
+Contact Attempt 4,PREVIEW,UPDATE,14
+Contact Attempt 5,PREVIEW,UPDATE,15
+RETIRED: Contact Attempt 6,PREVIEW,UPDATE,
+RETIRED: Nurture,PREVIEW,UPDATE,
+Dialer Contact Attempt 1,PREVIEW,UPDATE,43
+Dialer Contact Attempt 2,PREVIEW,UPDATE,44
+Dialer Contact Attempt 3,PREVIEW,UPDATE,45
+Dialer Contact Attempt 4,PREVIEW,UPDATE,46
+Dialer Contact Attempt 5,PREVIEW,UPDATE,50
+Dialer Contact Attempt 6,PREVIEW,UPDATE,51
+Dialer Contact Attempt 7,PREVIEW,UPDATE,79
+Dialer Contact Attempt 8,PREVIEW,UPDATE,80
+Dialer Contact Attempt 9,PREVIEW,UPDATE,81
+Dialer Contact Attempt 10,PREVIEW,UPDATE,149
+Dialer Contact Attempt 11,PREVIEW,UPDATE,150
+Dialer Contact Attempt 12,PREVIEW,UPDATE,151
+Dialer Contact Attempt 13,PREVIEW,UPDATE,152
+Dialer Contact Attempt 14,PREVIEW,UPDATE,153
+RETIRED: Dialer Nurture,PREVIEW,UPDATE,
+Recycle Outbound,PREVIEW,UPDATE,53
+Recycle Contact Attempt 1,PREVIEW,UPDATE,54
+Recycle Contact Attempt 2,PREVIEW,UPDATE,56
+Recycle Contact Attempt 3,PREVIEW,UPDATE,57
+Recycle Contact Attempt 4,PREVIEW,UPDATE,58
+Recycle Contact Attempt 5,PREVIEW,UPDATE,181
+Recycle Contact Attempt 6,PREVIEW,UPDATE,182
+Recycle Nurture,PREVIEW,UPDATE,55
+Post Outbound,PREVIEW,UPDATE,52
+Contacted - Call Back,PREVIEW,UPDATE,9
+Call Back 1,PREVIEW,UPDATE,73
+Call Back 2,PREVIEW,UPDATE,74
+Call Back 3,PREVIEW,UPDATE,75
+Initial Contact - Unresponsive,PREVIEW,UPDATE,76
+Encompass Loan Started,PREVIEW,UPDATE,39
+Pre-Application,PREVIEW,UPDATE,30
+RETIRED: Purchase Pre-Approval Issued,PREVIEW,UPDATE,
+Application,PREVIEW,UPDATE,3
+Submitted,PREVIEW,UPDATE,4
+Underwriting,PREVIEW,UPDATE,59
+Approved,PREVIEW,UPDATE,31
+Funded,PREVIEW,UPDATE,6
+Lead Review,PREVIEW,UPDATE,7
+No Rate Benefit,PREVIEW,UPDATE,37
+No Sale,PREVIEW,UPDATE,29
+NS - Competitor,PREVIEW,UPDATE,67
+NS - Inquiry by Mistake,PREVIEW,UPDATE,77
+NS - Not Interested,PREVIEW,UPDATE,68
+NS - Product Not Offered,PREVIEW,UPDATE,69
+NS - Non Mortgage Lead,PREVIEW,UPDATE,147
+NS - Transition Script Completed,PREVIEW,UPDATE,83
+RETIRED: Bad Lead - Return to Vendor,PREVIEW,UPDATE,
+RETIRED: Does Not Qualify,PREVIEW,UPDATE,
+RETIRED: DNQ - Credit,PREVIEW,UPDATE,
+RETIRED: DNQ - Income,PREVIEW,UPDATE,
+RETIRED: DNQ - Value,PREVIEW,UPDATE,
+Do Not Call List,PREVIEW,UPDATE,32
+Dormant,PREVIEW,UPDATE,35
+Bad Phone Number,PREVIEW,UPDATE,38
+Transfer,PREVIEW,UPDATE,36
+Transfer to Servicing,PREVIEW,UPDATE,41
+RETIRED: Closer,PREVIEW,UPDATE,
+No Contact - Unresponsive,PREVIEW,UPDATE,100
+No Calls - Email Only,PREVIEW,UPDATE,102
+WI - Temp Status,PREVIEW,UPDATE,101
+Planner,PREVIEW,UPDATE,
+Planner Call Complete,PREVIEW,UPDATE,
+Planner Contact Attempt 1,PREVIEW,UPDATE,
+Planner Contact Attempt 2,PREVIEW,UPDATE,
+Planner Contact Attempt 3,PREVIEW,UPDATE,
+Planner Contact Attempt 4,PREVIEW,UPDATE,
+Planner Contact Attempt 5,PREVIEW,UPDATE,
+Planner Contact Attempt 6,PREVIEW,UPDATE,
+Planner Contact Attempt 7,PREVIEW,UPDATE,
+Planner Attempt 2 Complete,PREVIEW,UPDATE,
+Planner Attempt 5 Complete,PREVIEW,UPDATE,
+Shopper,PREVIEW,UPDATE,
+Shopper Call Complete,PREVIEW,UPDATE,
+Shopper Contact Attempt 1,PREVIEW,UPDATE,
+Shopper Contact Attempt 2,PREVIEW,UPDATE,
+Shopper Contact Attempt 3,PREVIEW,UPDATE,
+Shopper Contact Attempt 4,PREVIEW,UPDATE,
+Shopper Contact Attempt 5,PREVIEW,UPDATE,
+Shopper Contact Attempt 6,PREVIEW,UPDATE,
+Shopper Contact Attempt 7,PREVIEW,UPDATE,
+Shopper Attempt 2 Complete,PREVIEW,UPDATE,
+Shopper Attempt 5 Complete,PREVIEW,UPDATE,
+Dormant - Encompass Inactive,PREVIEW,UPDATE,127
+NS - Already Purchased,PREVIEW,UPDATE,128
+Refi - Purchase Leads,PREVIEW,UPDATE,131
+Follow Up Dialer Outbound,PREVIEW,UPDATE,137
+Follow Up Dialer Attempt 1,PREVIEW,UPDATE,138
+Follow Up Dialer Attempt 2,PREVIEW,UPDATE,139
+Follow Up Dialer Attempt 3,PREVIEW,UPDATE,140
+Follow Up Dialer Attempt 4,PREVIEW,UPDATE,141
+LA - Temp Status,PREVIEW,UPDATE,142
+Purchase - Docs Requested,PREVIEW,UPDATE,145
+Shopper - Cert. Issued,PREVIEW,UPDATE,157
+FL - Temp Status,PREVIEW,UPDATE,146
+Phone Research - Holding Status,PREVIEW,UPDATE,148
+Disaster Recovery,PREVIEW,UPDATE,154
+Post Outbound Contacted Callback,PREVIEW,UPDATE,156
+Suppression,PREVIEW,UPDATE,158
+CDL Portal Initial,PREVIEW,UPDATE,159
+CDL Portal Pending,PREVIEW,UPDATE,160
+Power Dialer EXCL 1,PREVIEW,UPDATE,161
+Power Dialer EXCL 2,PREVIEW,UPDATE,162
+Power Dialer EXCL 3,PREVIEW,UPDATE,163
+Power Dialer EXCL 4,PREVIEW,UPDATE,164
+Power Dialer EXCL 5,PREVIEW,UPDATE,165
+Power Dialer EXCL 6,PREVIEW,UPDATE,176
+Power Dialer EXCL 7,PREVIEW,UPDATE,185
+Power Dialer EXCL 8,PREVIEW,UPDATE,282
+Power Dialer EXCL 9,PREVIEW,UPDATE,283
+Power Dialer EXCL 10,PREVIEW,UPDATE,284
+Power Dialer OB EXCL 1,PREVIEW,UPDATE,166
+Power Dialer OB EXCL 2,PREVIEW,UPDATE,167
+Power Dialer OB EXCL 3,PREVIEW,UPDATE,168
+Power Dialer OB EXCL 4,PREVIEW,UPDATE,169
+Power Dialer OB EXCL 5,PREVIEW,UPDATE,170
+Power Dialer OB EXCL 6,PREVIEW,UPDATE,177
+Power Dialer OB EXCL 8,PREVIEW,UPDATE,
+Power Dialer OB EXCL 9,PREVIEW,UPDATE,
+Power Dialer OB EXCL 10,PREVIEW,UPDATE,
+Power Dialer EXCL Call 1,PREVIEW,UPDATE,171
+Power Dialer EXCL Call 2,PREVIEW,UPDATE,172
+Power Dialer EXCL Call 3,PREVIEW,UPDATE,173
+Power Dialer EXCL Call 4,PREVIEW,UPDATE,174
+Power Dialer EXCL Call 5,PREVIEW,UPDATE,175
+Power Dialer EXCL Call 6,PREVIEW,UPDATE,178
+Power Dialer EXCL Call 7,PREVIEW,UPDATE,187
+Power Dialer EXCL Call 8,PREVIEW,UPDATE,288
+Power Dialer EXCL Call 9,PREVIEW,UPDATE,289
+Power Dialer EXCL Call 10,PREVIEW,UPDATE,290
+External Outbound,PREVIEW,UPDATE,179
+External Contacted Callback,PREVIEW,UPDATE,180
+Archive Deletion,PREVIEW,UPDATE,184
+Preview Recycle 1,PREVIEW,UPDATE,188
+Preview Recycle 2,PREVIEW,UPDATE,189
+Preview Recycle 3,PREVIEW,UPDATE,190
+Preview Recycle 4,PREVIEW,UPDATE,191
+Preview Recycle 5,PREVIEW,UPDATE,192
+Purchase Dialer Attempt 1,PREVIEW,UPDATE,194
+Purchase Dialer Attempt 2,PREVIEW,UPDATE,195
+Purchase Dialer Attempt 4,PREVIEW,UPDATE,197
+Purchase Dialer Attempt 5,PREVIEW,UPDATE,198
+Purchase Dial Cycle 1 Complete,PREVIEW,UPDATE,199
+Pitched: Submitting Offers – No PA Requested,PREVIEW,UPDATE,200
+Pitched: PreApproval Requested,PREVIEW,UPDATE,202
+Pitched: Hotlist,PREVIEW,UPDATE,204
+Pitched: Under Contract,PREVIEW,UPDATE,203
+Purchase Dialer Suspend,PREVIEW,UPDATE,205
+Preview Dialer 1,PREVIEW,UPDATE,206
+Preview Dialer 2,PREVIEW,UPDATE,207
+Preview Dialer 3,PREVIEW,UPDATE,208
+Preview Dialer 4,PREVIEW,UPDATE,209
+Preview Dialer 5,PREVIEW,UPDATE,210
+Port VA IRRRL Call 1,PREVIEW,UPDATE,211
+Port VA IRRRL Call 2,PREVIEW,UPDATE,212
+Port VA IRRRL Call 3,PREVIEW,UPDATE,213
+Follow Up Call 1,PREVIEW,UPDATE,214
+Follow Up Call 2,PREVIEW,UPDATE,215
+Follow Up Call 3,PREVIEW,UPDATE,216
+Follow Up Call 4,PREVIEW,UPDATE,217
+Payoff Demand Call 1,PREVIEW,UPDATE,218
+Payoff Demand Call 2,PREVIEW,UPDATE,219
+Payoff Demand Call 3,PREVIEW,UPDATE,220
+NS - Alternative Temporary Housing,PREVIEW,UPDATE,
+NS - Closed on Home,PREVIEW,UPDATE,
+NS - Not Buying,PREVIEW,UPDATE,
+Ex Port HL Call 1,PREVIEW,UPDATE,224
+Ex Port HL Call 2,PREVIEW,UPDATE,225
+Ex Port HL Call 3,PREVIEW,UPDATE,226
+Ex Port HL Call 4,PREVIEW,UPDATE,227
+Ex Port HL Call 5,PREVIEW,UPDATE,228
+Ex Port Trigger Call 1,PREVIEW,UPDATE,229
+Ex Port Trigger Call 2,PREVIEW,UPDATE,230
+Ex Port Trigger Call 3,PREVIEW,UPDATE,231
+Ex Port Trigger Call 4,PREVIEW,UPDATE,232
+Ex Port Trigger Call 5,PREVIEW,UPDATE,233
+Jornaya Call 1,PREVIEW,UPDATE,234
+Jornaya Call 2,PREVIEW,UPDATE,235
+Jornaya Call 3,PREVIEW,UPDATE,236
+Customer Captain Call 1,PREVIEW,UPDATE,237
+Customer Captain Call 2,PREVIEW,UPDATE,238
+Customer Captain Call 3,PREVIEW,UPDATE,239
+Customer Captain Call 4,PREVIEW,UPDATE,240
+Customer Captain Call 5,PREVIEW,UPDATE,241
+Calendar Event Callback 1,PREVIEW,UPDATE,
+Calendar Event Callback 2,PREVIEW,UPDATE,
+Calendar Event Callback 3,PREVIEW,UPDATE,
+Cashout Call 1,PREVIEW,UPDATE,245
+Cashout Call 2,PREVIEW,UPDATE,246
+Cashout Call 3,PREVIEW,UPDATE,247
+Cashout Call 4,PREVIEW,UPDATE,248
+Cashout Call 5,PREVIEW,UPDATE,249
+USDA Call 1,PREVIEW,UPDATE,250
+USDA Call 2,PREVIEW,UPDATE,251
+USDA Call 3,PREVIEW,UPDATE,252
+USDA Call 4,PREVIEW,UPDATE,253
+USDA Call 5,PREVIEW,UPDATE,254
+Jumbo Cashout Call 1,PREVIEW,UPDATE,255
+Jumbo Cashout Call 2,PREVIEW,UPDATE,256
+Jumbo Cashout Call 3,PREVIEW,UPDATE,257
+Jumbo Cashout Call 4,PREVIEW,UPDATE,258
+Jumbo Cashout Call 5,PREVIEW,UPDATE,259
+Lower Rate Call 1,PREVIEW,UPDATE,260
+Lower Rate Call 2,PREVIEW,UPDATE,261
+Lower Rate Call 3,PREVIEW,UPDATE,262
+FHA Streamline Call 1,PREVIEW,UPDATE,263
+FHA Streamline Call 2,PREVIEW,UPDATE,264
+FHA Streamline Call 3,PREVIEW,UPDATE,265
+FHA to Conv Call 2,PREVIEW,UPDATE,267
+FHA to Conv Call 1,PREVIEW,UPDATE,266
+FHA to Conv Call 3,PREVIEW,UPDATE,268
+Lower Rate - Prior Cashout Call 3,PREVIEW,UPDATE,
+Lower Rate - Prior Cashout Call 2,PREVIEW,UPDATE,
+Lower Rate - Prior Cashout Call 1,PREVIEW,UPDATE,
+Payoff Prediction Model Call 1,PREVIEW,UPDATE,272
+Payoff Prediction Model Call 2,PREVIEW,UPDATE,273
+Payoff Prediction Model Call 3,PREVIEW,UPDATE,274
+Payoff Prediction Model Call 4,PREVIEW,UPDATE,275
+Payoff Prediction Model Call 5,PREVIEW,UPDATE,276
+Purchase PreMover Call 1,PREVIEW,UPDATE,277
+Purchase PreMover Call 2,PREVIEW,UPDATE,278
+Purchase PreMover Call 4,PREVIEW,UPDATE,280
+Purchase PreMover Call 3,PREVIEW,UPDATE,279
+Purchase PreMover Call 5,PREVIEW,UPDATE,281
+Predictive Dialer Call 1,PREVIEW,UPDATE,291
+Predictive Dialer Call 2,PREVIEW,UPDATE,292
+Predictive Dialer Call 3,PREVIEW,UPDATE,293
+Predictive Dialer Call 4,PREVIEW,UPDATE,294
+Predictive Dialer Call 5,PREVIEW,UPDATE,295
+Predictive Dialer Call 6,PREVIEW,UPDATE,296
+Predictive Dialer Call 7,PREVIEW,UPDATE,297
+Predictive Dialer Call 8,PREVIEW,UPDATE,298
+Predictive Dialer Call 9,PREVIEW,UPDATE,299
+Predictive Dialer Call 10,PREVIEW,UPDATE,300
+Predictive Dialer Call 11,PREVIEW,UPDATE,301
+Predictive Dialer Call 12,PREVIEW,UPDATE,302
+Predictive Dialer Call 13,PREVIEW,UPDATE,303
+Predictive Dialer Call 14,PREVIEW,UPDATE,304
+Predictive Dialer Call 15,PREVIEW,UPDATE,305
+NCA Preview Dialer Call 1,PREVIEW,UPDATE,306
+NCA Preview Dialer Call 2,PREVIEW,UPDATE,307
+NCA Preview Dialer Call 3,PREVIEW,UPDATE,308
+NCA Preview Dialer Call 4,PREVIEW,UPDATE,309
+NCA Preview Dialer Call 5,PREVIEW,UPDATE,310
+NCA Preview Dialer Call 6,PREVIEW,UPDATE,311
+NCA Preview Dialer Call 7,PREVIEW,UPDATE,312
+NCA Preview Dialer Call 8,PREVIEW,UPDATE,313
+NCA Preview Dialer Call 9,PREVIEW,UPDATE,314
+NCA Preview Dialer Call 10,PREVIEW,UPDATE,315
+NCA Preview Dialer Call 11,PREVIEW,UPDATE,316
+NCA Preview Dialer Call 12,PREVIEW,UPDATE,317
+NCA Preview Dialer Call 13,PREVIEW,UPDATE,318
+NCA Preview Dialer Call 14,PREVIEW,UPDATE,319
+NCA Preview Dialer Call 15,PREVIEW,UPDATE,320
+Dialer Outbound,PREVIEW,ADD,42
+Recycle Outbound,PREVIEW,ADD,53
+Planner,PREVIEW,ADD,
+Planner Contact Attempt 1,PREVIEW,ADD,
+Planner Contact Attempt 2,PREVIEW,ADD,
+Planner Contact Attempt 3,PREVIEW,ADD,
+Planner Contact Attempt 4,PREVIEW,ADD,
+Planner Contact Attempt 5,PREVIEW,ADD,
+Planner Contact Attempt 6,PREVIEW,ADD,
+Planner Contact Attempt 7,PREVIEW,ADD,
+Shopper,PREVIEW,ADD,
+Shopper Contact Attempt 1,PREVIEW,ADD,
+Shopper Contact Attempt 2,PREVIEW,ADD,
+Shopper Contact Attempt 3,PREVIEW,ADD,
+Shopper Contact Attempt 4,PREVIEW,ADD,
+Shopper Contact Attempt 5,PREVIEW,ADD,
+Shopper Contact Attempt 6,PREVIEW,ADD,
+Shopper Contact Attempt 7,PREVIEW,ADD,
+Follow Up Dialer Outbound,PREVIEW,ADD,137
+Follow Up Dialer Attempt 1,PREVIEW,ADD,138
+Follow Up Dialer Attempt 2,PREVIEW,ADD,139
+Follow Up Dialer Attempt 3,PREVIEW,ADD,140
+Follow Up Dialer Attempt 4,PREVIEW,ADD,141
+Power Dialer EXCL 7,PREVIEW,ADD,185
+Power Dialer OB EXCL 8,PREVIEW,ADD,
+Power Dialer EXCL Call 7,PREVIEW,ADD,187
+Preview Recycle 1,PREVIEW,ADD,188
+Purchase Dialer,PREVIEW,ADD,193
+Purchase Dialer Attempt 3,PREVIEW,ADD,196
+Preview Dialer 1,PREVIEW,ADD,206
+Port VA IRRRL Call 1,PREVIEW,ADD,211
+Port VA IRRRL Call 2,PREVIEW,ADD,212
+Port VA IRRRL Call 3,PREVIEW,ADD,213
+Follow Up Call 1,PREVIEW,ADD,214
+Follow Up Call 2,PREVIEW,ADD,215
+Follow Up Call 3,PREVIEW,ADD,216
+Follow Up Call 4,PREVIEW,ADD,217
+Payoff Demand Call 1,PREVIEW,ADD,218
+Payoff Demand Call 2,PREVIEW,ADD,219
+Payoff Demand Call 3,PREVIEW,ADD,220
+Ex Port HL Call 1,PREVIEW,ADD,224
+Ex Port HL Call 2,PREVIEW,ADD,225
+Ex Port HL Call 3,PREVIEW,ADD,226
+Ex Port HL Call 4,PREVIEW,ADD,227
+Ex Port HL Call 5,PREVIEW,ADD,228
+Ex Port Trigger Call 1,PREVIEW,ADD,229
+Ex Port Trigger Call 2,PREVIEW,ADD,230
+Ex Port Trigger Call 3,PREVIEW,ADD,231
+Ex Port Trigger Call 4,PREVIEW,ADD,232
+Ex Port Trigger Call 5,PREVIEW,ADD,233
+Jornaya Call 1,PREVIEW,ADD,234
+Jornaya Call 2,PREVIEW,ADD,235
+Jornaya Call 3,PREVIEW,ADD,236
+Customer Captain Call 1,PREVIEW,ADD,237
+Customer Captain Call 2,PREVIEW,ADD,238
+Customer Captain Call 3,PREVIEW,ADD,239
+Customer Captain Call 4,PREVIEW,ADD,240
+Customer Captain Call 5,PREVIEW,ADD,241
+Calendar Event Callback 1,PREVIEW,ADD,
+Cashout Call 1,PREVIEW,ADD,245
+USDA Call 1,PREVIEW,ADD,250
+Jumbo Cashout Call 1,PREVIEW,ADD,255
+Lower Rate Call 1,PREVIEW,ADD,260
+FHA Streamline Call 1,PREVIEW,ADD,263
+FHA to Conv Call 1,PREVIEW,ADD,266
+Lower Rate - Prior Cashout Call 1,PREVIEW,ADD,
+Payoff Prediction Model Call 1,PREVIEW,ADD,272
+Purchase PreMover Call 1,PREVIEW,ADD,277
+NCA Preview Dialer Call 1,PREVIEW,ADD,306

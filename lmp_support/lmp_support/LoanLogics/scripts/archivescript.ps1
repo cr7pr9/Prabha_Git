@@ -1,0 +1,3 @@
+C:\"Program Files"\Amazon\AWSCLI\bin\aws s3 mv s3://pnmaciicswindowsagentdev/LoanLogics/LoadXML/ s3://pnmaciicswindowsagentdev/LoanLogics/Archive --exclude "*" --include "*.xml" --recursive
+C:\"Program Files"\Amazon\AWSCLI\bin\aws s3 mv s3://pnmaciicswindowsagentdev/LoanLogics/MetadataXML/ s3://pnmaciicswindowsagentdev/LoanLogics/Archive --exclude "*" --include "*.xml" --recursive
+Remove-Item C:\Users\informatica\lmp_support\LoanLogics\*.*

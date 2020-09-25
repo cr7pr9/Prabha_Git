@@ -1,0 +1,1 @@
+python C:\Users\informatica\lmp_support\INFA_API_Shared\API_LoanLogics\Scripts\Trigger_DI_Taskflows.py DEP_PCG\DEP_PCG_ED_CORR_PROD_LOAN_LOGICS_MAILROOM tf_LoanLogics https://na1.dm-us.informaticacloud.com/active-bpel/rt/tf_LoanLogics-14 DI_Taskflows

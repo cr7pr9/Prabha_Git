@@ -1,0 +1,1 @@
+python C:\Users\informatica\lmp_support\Lock_Details\Scripts\lock_details_csvjson_s3upload.py

@@ -1,0 +1,148 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "homecaptain.azure-api.net",
+  "basePath" : "/sendlead",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/Create" : {
+      "post" : {
+        "tags" : [ "hc-post-lead" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "hc-post-lead",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : null,
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/hc-post-lead_Request##body"
+          }
+        }, {
+          "name" : "Ocp-Apim-Subscription-Key",
+          "in" : "header",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/hc-post-lead"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "hc-post-lead" : {
+      "properties" : {
+        "Success" : {
+          "type" : "string"
+        },
+        "Failure": {
+          "type": "string"   
+        }
+      }
+    },
+    "hc-post-lead_Request##body##Sellers_Home_Address" : {
+      "properties" : {
+        "City" : {
+          "type" : "string"
+        },
+        "Country" : {
+          "type" : "string"
+        },
+        "CountryCode" : {
+          "type" : "string"
+        },
+        "PostalCode" : {
+          "type" : "string"
+        },
+        "State" : {
+          "type" : "string"
+        },
+        "StateCode" : {
+          "type" : "string"
+        },
+        "Street" : {
+          "type" : "string"
+        }
+      }
+    },
+    "hc-post-lead_Request##body" : {
+      "properties" : {
+        "Salesforce_ID" : {
+          "type" : "string"
+        },
+        "Client_Phone_1" : {
+          "type" : "string"
+        },
+        "Client_Last_Name" : {
+          "type" : "string"
+        },
+        "Client_First_Name" : {
+          "type" : "string"
+        },
+        "Client_Email" : {
+          "type" : "string"
+        },
+        "Client_Phone_2" : {
+          "type" : "string"
+        },
+        "Client_Phone_3" : {
+          "type" : "string"
+        },
+        "Desired_City" : {
+          "type" : "string"
+        },
+        "Desired_State" : {
+          "type" : "string"
+        },
+        "Loan_Officer_Name" : {
+          "type" : "string"
+        },
+        "Loan_Officer_Email" : {
+          "type" : "string"
+        },
+        "Loan_Officer_Comments" : {
+          "type" : "string"
+        },
+        "PreApproval_Amount" : {
+          "type" : "string"
+        },
+        "Lender_Source_Campaign" : {
+          "type" : "string"
+        },
+        "Buyer_Lead_Type" : {
+          "type" : "string"
+        },
+        "Sellers_Home_Address" : {
+          "$ref" : "#/definitions/hc-post-lead_Request##body##Sellers_Home_Address"
+        },
+        "Seller_Lead_Type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "hc-post-lead_Request" : {
+      "properties" : {
+        "body" : {
+          "$ref" : "#/definitions/hc-post-lead_Request##body"
+        }
+      }
+    }
+  }
+}

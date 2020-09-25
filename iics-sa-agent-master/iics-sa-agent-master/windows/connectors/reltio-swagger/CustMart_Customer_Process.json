@@ -1,0 +1,214 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "CustMart_Customer_Process"
+  },
+  "host" : "na1.ai.dm-us.informaticacloud.com:443",
+  "basePath" : "/active-bpel/rt",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/CustMart_Customer_Process" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "CustMart_Customer_ProcessOperation",
+        "consumes" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CustMart_Customer_ProcessRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The service has not returned any response data."
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CustMart_Customer_ProcessRequest" : {
+      "type" : "object",
+      "properties" : {
+        "access_token" : {
+          "type" : "string"
+        },
+        "CustomerPayload" : {
+          "$ref" : "#/definitions/CustMartCustomerPO-1"
+        }
+      }
+    },
+    "CustMartCustomerPO-1" : {
+      "type" : "object",
+      "properties" : {
+        "HomePhoneStatus" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "workismobile" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "SourceSystemCustomerIdentifier" : {
+          "type" : "string"
+        },
+        "WorkPhoneNumber" : {
+          "type" : "string"
+        },
+        "SourceSystemEffectiveCustomerID" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "MobilePhoneNumber" : {
+          "type" : "string"
+        },
+        "SSNLast4" : {
+          "type" : "string"
+        },
+        "LoanNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "MobileIsConfirmed" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "MobilePhoneLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "WorkisBad" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "CustomerDeceasedFlag" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "HomePhoneNumber" : {
+          "type" : "string"
+        },
+        "WorkPhoneStatus" : {
+          "type" : "string"
+        },
+        "WorkPhoneLUD" : {
+          "type" : "string"
+        },
+        "AddressSourceName" : {
+          "type" : "string"
+        },
+        "BorrowerPosition" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "HomePhoneType" : {
+          "type" : "string"
+        },
+        "WorkisConfirmed" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "LoanKey" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "WorkPhoneType" : {
+          "type" : "string"
+        },
+        "HomeisBad" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "FirstName" : {
+          "type" : "string"
+        },
+        "StateProvince" : {
+          "type" : "string"
+        },
+        "MobilePhoneType" : {
+          "type" : "string"
+        },
+        "EmailLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "City" : {
+          "type" : "string"
+        },
+        "AddressLastModifyDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "HomeIsConfirmed" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "AddressLine3" : {
+          "type" : "string"
+        },
+        "AddressLine2" : {
+          "type" : "string"
+        },
+        "AddressLine1" : {
+          "type" : "string"
+        },
+        "HomePhoneSourceName" : {
+          "type" : "string"
+        },
+        "MobilePhoneStatus" : {
+          "type" : "string"
+        },
+        "mobileismobile" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "DoB" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "HomeisMobile" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Country" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "AddressType" : {
+          "type" : "string"
+        },
+        "WorkPhoneSourceName" : {
+          "type" : "string"
+        },
+        "EmailSourceName" : {
+          "type" : "string"
+        },
+        "MobileIsBad" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Zip5" : {
+          "type" : "string"
+        },
+        "HomePhoneLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "MobilePhoneSourceName" : {
+          "type" : "string"
+        },
+		"RunDate":{
+		  "type" : "string",
+          "format" : "date-time"
+		}
+      }
+    }
+  }
+}

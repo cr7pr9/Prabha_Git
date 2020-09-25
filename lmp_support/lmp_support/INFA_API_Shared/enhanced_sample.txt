@@ -1,0 +1,2 @@
+"PATH"
+"C:\Users\informatica\lmp_support\INFA_API_Shared\get_enhanced.json"

@@ -1,0 +1,59 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "everest-dev.pnmac.com",
+  "basePath" : "/api",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/v1/proxy/settings/Users" : {
+      "get" : {
+        "tags" : [ "sw_retrieve_all_users_basic_k" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "sw_retrieve_all_users_basic_k",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/sw_retrieve_all_users_basic_k"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "sw_retrieve_all_users_basic_k" : {
+      "properties" : {
+        "systemName" : {
+          "type" : "string"
+        },
+        "endpointType" : {
+          "type" : "string"
+        },
+        "endpointUri" : {
+          "type" : "string"
+        },
+        "statusCode" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://services.informatica.com/rt/p_restv2_ssvr_get_internal_users" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="p_restv2_ssvr_get_internal_users" targetNamespace="http://services.informatica.com/rt/p_restv2_ssvr_get_internal_users">
+<types>
+<xsd:schema targetNamespace="http://services.informatica.com/rt/p_restv2_ssvr_get_internal_users">
+<xsd:element name="p_restv2_ssvr_get_internal_usersResponse">
+<xsd:complexType>
+<xsd:sequence/>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="p_restv2_ssvr_get_internal_usersRequest">
+<xsd:complexType>
+<xsd:sequence/>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+</types>
+<message name="p_restv2_ssvr_get_internal_usersRequest">
+<part element="tns:p_restv2_ssvr_get_internal_usersRequest" name="request"/>
+</message>
+<message name="p_restv2_ssvr_get_internal_usersResponse">
+<part element="tns:p_restv2_ssvr_get_internal_usersResponse" name="response"/>
+</message>
+<portType name="p_restv2_ssvr_get_internal_users_PortType">
+<operation name="p_restv2_ssvr_get_internal_users">
+<input message="tns:p_restv2_ssvr_get_internal_usersRequest"/>
+<output message="tns:p_restv2_ssvr_get_internal_usersResponse"/>
+</operation>
+</portType>
+<binding name="p_restv2_ssvr_get_internal_users_Binding" type="tns:p_restv2_ssvr_get_internal_users_PortType">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="p_restv2_ssvr_get_internal_users">
+<soap:operation soapAction="p_restv2_ssvr_get_internal_users"/>
+<input>
+<soap:body parts="request" use="literal"/>
+</input>
+<output>
+<soap:body parts="response" use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="p_restv2_ssvr_get_internal_users">
+<port binding="tns:p_restv2_ssvr_get_internal_users_Binding" name="p_restv2_ssvr_get_internal_users_Service">
+<soap:address location="https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/soap/f1Lt3JengEPi7JFvkUE6wS/p_restv2_ssvr_get_internal_users"/>
+</port>
+</service>
+</definitions>

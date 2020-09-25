@@ -1,0 +1,32 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "Get_AccessToken_Proc-1"
+  },
+  "host" : "https://localhost:7443",
+  "basePath" : "/process-engine/public/rt",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/Get_AccessToken_Proc-1" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "Get_AccessToken_Proc-1Operation",
+        "produces" : [ "text/plain" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful response",
+            "schema" : {
+              "type" : "string",
+              "xml" : {
+                "name" : "Get_AccessToken_Proc1Response"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

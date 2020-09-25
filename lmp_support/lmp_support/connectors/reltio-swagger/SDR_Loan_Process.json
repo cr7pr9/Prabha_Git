@@ -1,0 +1,244 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "SDR_Loan_Process"
+  },
+  "host" : "na1.ai.dm-us.informaticacloud.com:443",
+  "basePath" : "/active-bpel/rt",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/SDR_Loan_Process" : {
+      "post" : {
+        "description" : "This process will be invoked in CDI using RestV2 connection to insert, update and upsert the Loan information",
+        "operationId" : "SDR_Loan_ProcessOperation",
+        "consumes" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/SDR_Loan_ProcessRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The service has not returned any response data."
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "SDR_Loan_ProcessRequest" : {
+      "type" : "object",
+      "properties" : {
+        "access_token" : {
+          "type" : "string"
+        },
+        "SDRLoanPayLoad" : {
+          "$ref" : "#/definitions/SDRLoanPO-1"
+        }
+      }
+    },
+    "SDRLoanPO-1" : {
+      "type" : "object",
+      "properties" : {
+        "BillingAddressType" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "BillingCity" : {
+          "type" : "string"
+        },
+        "SeasonalAddressType" : {
+          "type" : "string"
+        },
+        "BorrowerSequence" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "WorkPhoneLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "OPT_OUT_SOLICITATION_STOP_CODE" : {
+          "type" : "string"
+        },
+        "VelocifySolicitOK" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "SeasonalAddressLine2" : {
+          "type" : "string"
+        },
+        "SeasonalAddressLine3" : {
+          "type" : "string"
+        },
+        "SeasonalAddressLine4" : {
+          "type" : "string"
+        },
+        "OPT_OUT_STOP_CHANGE_DATE" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "AnnualInterestRate" : {
+          "type" : "number"
+        },
+        "SeasonalAddressLine1" : {
+          "type" : "string"
+        },
+        "BillingAddressLMD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "EMailSolicitOK" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "OptOutSolicitationCodeDesc" : {
+          "type" : "string"
+        },
+        "WorkPhoneSourceName" : {
+          "type" : "string"
+        },
+        "MonthlyPaymentAmount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "CurrentMonthlyPrincipal" : {
+          "type" : "number"
+        },
+        "MobilePhoneSourceName" : {
+          "type" : "string"
+        },
+        "BillingZip5" : {
+          "type" : "string"
+        },
+        "SeasonalCountry" : {
+          "type" : "string"
+        },
+        "WorkPhoneNumber" : {
+          "type" : "string"
+        },
+        "BillingStateProvince" : {
+          "type" : "string"
+        },
+        "FIRST_P_AND_I_AMOUNT" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "DELINQUENCY_INDICATOR" : {
+          "type" : "string"
+        },
+        "MobilePhoneNumber" : {
+          "type" : "string"
+        },
+        "DelinquentStatusCodeDesc" : {
+          "type" : "string"
+        },
+        "BillingAddressLine1" : {
+          "type" : "string"
+        },
+        "BillingAddressLine2" : {
+          "type" : "string"
+        },
+        "BillingAddressLine3" : {
+          "type" : "string"
+        },
+        "MobilePhoneLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "BillingAddressLine4" : {
+          "type" : "string"
+        },
+        "SeasonalZip5" : {
+          "type" : "string"
+        },
+        "AcquisitionDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "HomePhoneNumber" : {
+          "type" : "string"
+        },
+        "PayoffDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "HomePhoneType" : {
+          "type" : "string"
+        },
+        "RunDt" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "LoanKey" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "BillingAddressSourceName" : {
+          "type" : "string"
+        },
+        "CurrentRate" : {
+          "type" : "number"
+        },
+        "EmailLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "RemainingTerm" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "SeasonalStateProvince" : {
+          "type" : "string"
+        },
+        "MaturityDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "LoanPurpose" : {
+          "type" : "string"
+        },
+        "NoteDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "BillingCountry" : {
+          "type" : "string"
+        },
+        "DMSolicitOK" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "HomePhoneSourceName" : {
+          "type" : "string"
+        },
+        "ServicingLoanNumber" : {
+          "type" : "string"
+        },
+        "SeasonalCity" : {
+          "type" : "string"
+        },
+        "HomePhoneLastModifyDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "SeasonalAddressSourceName" : {
+          "type" : "string"
+        },
+        "SrcRowModifyDateTime" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "EmailSourceName" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,743 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": null,
+		"version": "1.0.0",
+		"title": null,
+		"termsOfService": null,
+		"contact": null,
+		"license": null
+	},
+	"host": "dev.reltio.com",
+	"basePath": "/reltio",
+	"schemes": ["https"],
+	"paths": {
+		"/api/{tenantid}/entities": {
+			"get": {
+				"tags": ["EntitySearch"],
+				"summary": null,
+				"description": null,
+				"operationId": "EntitySearch",
+				"produces": ["application/json"],
+				"consumes": ["application/json"],
+				"parameters": [{
+						"name": "tenantid",
+						"in": "path",
+						"description": null,
+						"required": true,
+						"type": "string"
+					}, {
+						"name": "filter",
+						"in": "query",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "select",
+						"in": "query",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "max",
+						"in": "query",
+						"description": null,
+						"required": false,
+						"type": "number",
+						"format": "int32"
+					}, {
+						"name": "sort",
+						"in": "query",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "order",
+						"in": "query",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "options",
+						"in": "query",
+						"description": null,
+						"required": false,
+						"type": "string"
+					}, {
+						"name": "defaultMaxValues",
+						"in": "query",
+						"description": null,
+						"required": false,
+						"type": "number",
+						"format": "int32"
+					}, {
+						"name": "Authorization",
+						"in": "header",
+						"description": null,
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "successful operation",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/EntitySearch"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"EntitySearch##attributes##FirstName": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##AlternateFirstName": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##LastName": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##AlternateLastName": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##DoB": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##AddressType": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##Country": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##AddressLine1": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##City": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##StateProvince": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##Zip5": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##Zip4": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##VerificationStatus": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value##VerificationStatusDetails": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses##value": {
+			"properties": {
+				"AddressType": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##AddressType"
+					}
+				},
+				"Country": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##Country"
+					}
+				},
+				"AddressLine1": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##AddressLine1"
+					}
+				},
+				"City": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##City"
+					}
+				},
+				"StateProvince": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##StateProvince"
+					}
+				},
+				"Zip5": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##Zip5"
+					}
+				},
+				"Zip4": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##Zip4"
+					}
+				},
+				"VerificationStatus": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##VerificationStatus"
+					}
+				},
+				"VerificationStatusDetails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses##value##VerificationStatusDetails"
+					}
+				}
+			}
+		},
+		"EntitySearch##attributes##Addresses": {
+			"properties": {
+				"label": {
+					"type": "string"
+				},
+				"value": {
+					"$ref": "#/definitions/EntitySearch##attributes##Addresses##value"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Phone##value##Number": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Phone##value##PhoneLUD": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Phone##value": {
+			"properties": {
+				"Number": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Phone##value##Number"
+					}
+				},
+				"PhoneLUD": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Phone##value##PhoneLUD"
+					}
+				}
+			}
+		},
+		"EntitySearch##attributes##Phone": {
+			"properties": {
+				"label": {
+					"type": "string"
+				},
+				"value": {
+					"$ref": "#/definitions/EntitySearch##attributes##Phone##value"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Email##value##Email": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Email##value##EmailLUD": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##Email##value": {
+			"properties": {
+				"Email": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Email##value##Email"
+					}
+				},
+				"EmailLUD": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Email##value##EmailLUD"
+					}
+				}
+			}
+		},
+		"EntitySearch##attributes##Email": {
+			"properties": {
+				"label": {
+					"type": "string"
+				},
+				"value": {
+					"$ref": "#/definitions/EntitySearch##attributes##Email##value"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##SSNLast4": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##BorrowerPosition": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##SourceSystemDetails##value##SourceSystemCustomerIdentifier": {
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"value": {
+					"type": "string"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes##SourceSystemDetails##value": {
+			"properties": {
+				"SourceSystemCustomerIdentifier": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##SourceSystemDetails##value##SourceSystemCustomerIdentifier"
+					}
+				}
+			}
+		},
+		"EntitySearch##attributes##SourceSystemDetails": {
+			"properties": {
+				"label": {
+					"type": "string"
+				},
+				"value": {
+					"$ref": "#/definitions/EntitySearch##attributes##SourceSystemDetails##value"
+				},
+				"ov": {
+					"type": "boolean"
+				},
+				"uri": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch##attributes": {
+			"properties": {
+				"FirstName": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##FirstName"
+					}
+				},
+				"AlternateFirstName": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##AlternateFirstName"
+					}
+				},
+				"LastName": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##LastName"
+					}
+				},
+				"AlternateLastName": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##AlternateLastName"
+					}
+				},
+				"DoB": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##DoB"
+					}
+				},
+				"Addresses": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Addresses"
+					}
+				},
+				"Phone": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Phone"
+					}
+				},
+				"Email": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##Email"
+					}
+				},
+				"SSNLast4": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##SSNLast4"
+					}
+				},
+				"BorrowerPosition": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##BorrowerPosition"
+					}
+				},
+				"SourceSystemDetails": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##attributes##SourceSystemDetails"
+					}
+				}
+			}
+		},
+		"EntitySearch##crosswalks": {
+			"properties": {
+				"uri": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"value": {
+					"type": "string"
+				},
+				"reltioLoadDate": {
+					"type": "string"
+				},
+				"createDate": {
+					"type": "string"
+				},
+				"updateDate": {
+					"type": "string"
+				},
+				"attributes": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"singleAttributeUpdateDates": {
+					"type": "string"
+				}
+			}
+		},
+		"EntitySearch": {
+			"properties": {
+				"uri": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string"
+				},
+				"createdBy": {
+					"type": "string"
+				},
+				"createdTime": {
+					"type": "number",
+					"format": "int64"
+				},
+				"updatedBy": {
+					"type": "string"
+				},
+				"updatedTime": {
+					"type": "number",
+					"format": "int64"
+				},
+				"attributes": {
+					"$ref": "#/definitions/EntitySearch##attributes"
+				},
+				"isFavorite": {
+					"type": "boolean"
+				},
+				"crosswalks": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/EntitySearch##crosswalks"
+					}
+				},
+				"analyticsAttributes": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"secondaryLabel": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

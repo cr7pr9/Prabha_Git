@@ -1,0 +1,286 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "SDR_Customer_Process"
+  },
+  "host" : "na1.ai.dm-us.informaticacloud.com:443",
+  "basePath" : "/active-bpel/rt",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/SDR_Customer_Process" : {
+      "post" : {
+        "description" : "This process is invoked in CDI  mapping using RestV2 connection",
+        "operationId" : "SDR_Customer_ProcessOperation",
+        "consumes" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/SDR_Customer_ProcessRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The service has not returned any response data."
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "SDRCustomerPO-1" : {
+      "type" : "object",
+      "properties" : {
+        "Email" : {
+          "type" : "string"
+        },
+        "BillingCity" : {
+          "type" : "string"
+        },
+        "SourceSystemCustomerIdentifier" : {
+          "type" : "string"
+        },
+        "SeasonalAddressType" : {
+          "type" : "string"
+        },
+        "Deceasedindicator" : {
+          "type" : "string"
+        },
+        "CS_BORR_CREDIT_QUALITY_DATE" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "CurrentPrincipalBalanceAmount" : {
+          "type" : "string"
+        },
+        "MortgagorIncomeAmount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "SSNLast4" : {
+          "type" : "string"
+        },
+        "BorrowerSequence" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "LoanNumber" : {
+          "type" : "string"
+        },
+        "SourceSystemType" : {
+          "type" : "string"
+        },
+        "SourceSystemCustomerCreateDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "AlternateFirstName" : {
+          "type" : "string"
+        },
+        "WorkPhoneLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "EmployeeFlag" : {
+          "type" : "string"
+        },
+        "SeasonalAddressLine2" : {
+          "type" : "string"
+        },
+        "EMAIL_ADDRESS_2" : {
+          "type" : "string"
+        },
+        "SeasonalAddressLine3" : {
+          "type" : "string"
+        },
+        "SeasonalAddressLine4" : {
+          "type" : "string"
+        },
+        "SourceSystemCustomerLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "WorkPhoneType" : {
+          "type" : "string"
+        },
+        "BillingAddressesType" : {
+          "type" : "string"
+        },
+        "OPT_OUT_STOP_CHANGE_DATE" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "CustomerType" : {
+          "type" : "string"
+        },
+        "RunDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "SeasonalAddressLine1" : {
+          "type" : "string"
+        },
+        "AlternateLastName" : {
+          "type" : "string"
+        },
+        "FullDOB" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "BillingAddressLastModifyDate" : {
+          "type" : "string"
+        },
+        "CS_BORR_ORIG_CREDIT_QLTY_CODE" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "OptOutSolicitationCodeDesc" : {
+          "type" : "string"
+        },
+        "WorkPhoneSourceName" : {
+          "type" : "string"
+        },
+        "BorrowerName" : {
+          "type" : "string"
+        },
+        "HomePhoneLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "MobilePhoneSourceName" : {
+          "type" : "string"
+        },
+        "BillingZip5" : {
+          "type" : "string"
+        },
+        "SeasonalCountry" : {
+          "type" : "string"
+        },
+        "WorkPhoneNumber" : {
+          "type" : "string"
+        },
+        "SourceSystemName" : {
+          "type" : "string"
+        },
+        "CS_BORR_CREDIT_QUALITY_CODE" : {
+          "type" : "string"
+        },
+        "BillingStateProvince" : {
+          "type" : "string"
+        },
+        "SEASONAL_ADDRESS_CITY_STATE" : {
+          "type" : "string"
+        },
+        "BILLING_CITY_STATE" : {
+          "type" : "string"
+        },
+        "MobilePhoneNumber" : {
+          "type" : "string"
+        },
+        "BillingAddressLine1" : {
+          "type" : "string"
+        },
+        "BillingAddressLine2" : {
+          "type" : "string"
+        },
+        "BillingAddressLine3" : {
+          "type" : "string"
+        },
+        "MobilePhoneLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "BillingAddressLine4" : {
+          "type" : "string"
+        },
+        "LanguagePreference" : {
+          "type" : "string"
+        },
+        "SeasonalZip5" : {
+          "type" : "string"
+        },
+        "HomePhoneNumber" : {
+          "type" : "string"
+        },
+        "PayoffDate" : {
+          "type" : "string"
+        },
+        "BorrowerPosition" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "HomePhoneType" : {
+          "type" : "string"
+        },
+        "LoanKey" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "BillingAddressSourceName" : {
+          "type" : "string"
+        },
+        "FirstName" : {
+          "type" : "string"
+        },
+        "MobilePhoneType" : {
+          "type" : "string"
+        },
+        "EmailLUD" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "SeasonalStateProvince" : {
+          "type" : "string"
+        },
+        "MORTGAGOR_FULL_NAME" : {
+          "type" : "string"
+        },
+        "MiddleName" : {
+          "type" : "string"
+        },
+        "SSN" : {
+          "type" : "string"
+        },
+        "BillingCountry" : {
+          "type" : "string"
+        },
+        "HomePhoneSourceName" : {
+          "type" : "string"
+        },
+        "SeasonalCity" : {
+          "type" : "string"
+        },
+        "MAIL_ADDR_COUNTRY_CODE" : {
+          "type" : "string"
+        },
+        "SeasonalAddressSourceName" : {
+          "type" : "string"
+        },
+        "SourceSystemCode" : {
+          "type" : "string"
+        },
+        "AlternateMiddleName" : {
+          "type" : "string"
+        },
+        "EmailSourceName" : {
+          "type" : "string"
+        }
+      }
+    },
+    "SDR_Customer_ProcessRequest" : {
+      "type" : "object",
+      "properties" : {
+        "access_token" : {
+          "type" : "string"
+        },
+        "CustomerPayload" : {
+          "$ref" : "#/definitions/SDRCustomerPO-1"
+        }
+      }
+    }
+  }
+}

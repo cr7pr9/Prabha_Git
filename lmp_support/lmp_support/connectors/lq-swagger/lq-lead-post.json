@@ -1,0 +1,211 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "www.leadqual.com",
+  "basePath" : "/post",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/penny-mac-salesforce-test/lead-post.php" : {
+      "post" : {
+        "tags" : [ "lq-post-lead" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "lq-post-lead",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : null,
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/lq-post-lead_Request##body"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/lq-post-lead"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "lq-post-lead##lead-response" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "status_code" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "status_description" : {
+          "type" : "string"
+        }
+      }
+    },
+    "lq-post-lead##error" : {
+      "properties" : {
+        "status_code" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "status_description" : {
+          "type" : "string"
+        }
+      }
+    },
+    "lq-post-lead" : {
+      "properties" : {
+        "lead-response" : {
+          "$ref" : "#/definitions/lq-post-lead##lead-response"
+        },
+        "error" :{
+          "$ref": "#/definitions/lq-post-lead##error"
+        }
+      }
+    },
+    "lq-post-lead_Request##body" : {
+      "properties" : {
+        "FirstName__c" : {
+          "type" : "string"
+        },
+        "LastName__c" : {
+          "type" : "string"
+        },
+        "PersonMobilePhone" : {
+          "type" : "string"
+        },
+        "WorkPhone__c" : {
+          "type" : "string"
+        },
+        "Property_Address__c" : {
+          "type" : "string"
+        },
+        "Property_City__c" : {
+          "type" : "string"
+        },
+        "Property_State__c" : {
+          "type" : "string"
+        },
+        "Property_ZipCode__c" : {
+          "type" : "string"
+        },
+        "mailing_address" : {
+          "type" : "string"
+        },
+        "mailing_city" : {
+          "type" : "string"
+        },
+        "mailing_state" : {
+          "type" : "string"
+        },
+        "mailing_zip" : {
+          "type" : "string"
+        },
+        "Est_Annual_Pmt_Sav_High__c" : {
+          "type" : "string"
+        },
+        "Est_Annual_Pmt_Sav_Low__c" : {
+          "type" : "string"
+        },
+        "Est_Monthly_Pmt_Sav_High__c" : {
+          "type" : "string"
+        },
+        "Est_Monthly_Pmt_Sav_Low__c" : {
+          "type" : "string"
+        },
+        "Opportunity_Month__c" : {
+          "type" : "string"
+        },
+        "Sales_Group__c" : {
+          "type" : "string"
+        },
+        "Velocify_Lead_ID__c" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "Portfolio_Type__c" : {
+          "type" : "string"
+        },
+        "Lead_Source__c" : {
+          "type" : "string"
+        },
+        "intended_finance_type" : {
+          "type" : "string"
+        },
+        "intended_loan_type" : {
+          "type" : "string"
+        },
+        "date_activated" : {
+          "type" : "string"
+        },
+        "PersonEmail" : {
+          "type" : "string"
+        },
+        "CampaignId" : {
+          "type" : "string"
+        },
+        "Campaign_Name__c" : {
+          "type" : "string"
+        },
+        "Reltio_ID__c" : {
+          "type" : "string"
+        },
+        "Ref_Id__c" : {
+          "type" : "string"
+        },
+        "Lead_Provider_Name__c" : {
+          "type" : "string"
+        },
+        "PersonHomePhone" : {
+          "type" : "string"
+        },
+        "Offers__c" : {
+          "type" : "string"
+        },
+        "Offers_Indicator__c" : {
+          "type" : "string"
+        },
+        "Product_Type__c" : {
+          "type" : "string"
+        },
+        "Lead_Program__c" : {
+          "type" : "string"
+        },
+        "Workflow_Status__c" : {
+          "type" : "string"
+        },
+        "ic_message_id" : {
+          "type" : "string"
+        },
+        "LeadCreationToken" : {
+          "type" : "string"
+        },
+        "lead_opportunity_number" : {
+          "type" : "string"
+        }
+      }
+    },
+    "lq-post-lead_Request" : {
+      "properties" : {
+        "body" : {
+          "$ref" : "#/definitions/lq-post-lead_Request##body"
+        }
+      }
+    }
+  }
+}

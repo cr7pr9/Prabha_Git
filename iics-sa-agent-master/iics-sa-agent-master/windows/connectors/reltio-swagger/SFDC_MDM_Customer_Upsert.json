@@ -1,0 +1,229 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "na1.ai.dm-us.informaticacloud.com",
+  "basePath" : "/active-bpel/rt",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/MP-SFDC-Reltio-Customer-PartialOverride-Handler" : {
+      "post" : {
+        "tags" : [ "customer_upsert" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "customer_upsert",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : null,
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/customer_upsert_Request##body"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/customer_upsert"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "customer_upsert" : {
+      "properties" : {
+        "ReltioId" : {
+          "type" : "string"
+        },
+        "Successful" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "customer_upsert_Request##body##in_Entity" : {
+      "properties" : {
+        "ReltioId" : {
+          "type" : "string"
+        },
+        "FirstName" : {
+          "type" : "string"
+        },
+        "MiddleName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "DoB" : {
+          "type" : "string"
+        },
+        "LanguagePreference" : {
+          "type" : "string"
+        },
+        "BillingCountry" : {
+          "type" : "string"
+        },
+        "BillingStreet" : {
+          "type" : "string"
+        },
+        "BillingCity" : {
+          "type" : "string"
+        },
+        "BillingState" : {
+          "type" : "string"
+        },
+        "BillingPostalCode" : {
+          "type" : "string"
+        },
+		"ShippingCountry" : {
+          "type" : "string"
+        },
+        "ShippingStreet" : {
+          "type" : "string"
+        },
+        "ShippingCity" : {
+          "type" : "string"
+        },
+        "ShippingState" : {
+          "type" : "string"
+        },
+        "ShippingPostalCode" : {
+          "type" : "string"
+        },
+        "Phone" : {
+          "type" : "string"
+        },
+        "WorkPhone" : {
+          "type" : "string"
+        },
+        "AlternatePhone" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Id" : {
+          "type" : "string"
+        },
+        "ContactPreferenceLastUpdated" : {
+          "type" : "string"
+        },
+		"ContactPreference" : {
+          "type" : "string"
+        },
+		"BorrowerPosition" : {
+          "type" : "string"
+        },		
+		"PreferredName" : {
+          "type" : "string"
+        },
+		"SSNLast4" : {
+          "type" : "string"
+        },		
+        "BadPhoneNumberFlag" : {
+          "type" : "string"
+        },
+        "CustomerDeceased" : {
+          "type" : "string"
+        },
+        "CustomerType" : {
+          "type" : "string"
+        },
+        "EmployeeFlag" : {
+          "type" : "string"
+        },
+        "CountryCode" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "EmailStatus" : {
+          "type" : "string"
+        },
+        "SourceSystemName" : {
+          "type" : "string"
+        },
+        "SourceSystemCustomerLUD" : {
+          "type" : "string"
+        },
+        "SourceSystemCode" : {
+          "type" : "string"
+        },
+        "SourceSystemType" : {
+          "type" : "string"
+        },
+        "Loan" : {
+          "type" : "string"
+        },
+        "MacPortalIDSUserID" : {
+          "type" : "string"
+        },
+        "MaritalStatus" : {
+          "type" : "string"
+        },
+        "Salutation" : {
+          "type" : "string"
+        },
+        "SSN" : {
+          "type" : "string"
+        },
+        "Suffix" : {
+          "type" : "string"
+        },
+        "Title" : {
+          "type" : "string"
+        },
+        "SourceSystemCustomerCreateDate" : {
+          "type" : "string"
+        },
+        "Veteran" : {
+          "type" : "string"
+        },
+        "sfdcObject" : {
+          "type" : "string"
+        },
+        "MailingCity" : {
+          "type" : "string"
+        },
+        "MailingCountry" : {
+          "type" : "string"
+        },
+        "MailingPostalCode" : {
+          "type" : "string"
+        },
+        "MailingState" : {
+          "type" : "string"
+        },
+        "MailingStreet" : {
+          "type" : "string"
+        }
+      }
+    },
+    "customer_upsert_Request##body" : {
+      "properties" : {
+        "in_Entity" : {
+          "$ref" : "#/definitions/customer_upsert_Request##body##in_Entity"
+        }
+      }
+    },
+    "customer_upsert_Request" : {
+      "properties" : {
+        "body" : {
+          "$ref" : "#/definitions/customer_upsert_Request##body"
+        }
+      }
+    }
+  }
+}

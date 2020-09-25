@@ -1,0 +1,2 @@
+$$pre_processing=cmd /k copy C:\Users\informatica\lmp_support\staging\SQS\mdm_customer_sfdc_lead_headers.csv + C:\Users\informatica\lmp_support\staging\SQS\mdm_customer_sfdc_lead.csv C:\Users\informatica\lmp_support\staging\SQS\mdm_customer_sfdc_lead_processing.csv /Y /b
+$$post_processing=erase C:\Users\informatica\lmp_support\staging\SQS\mdm_customer_sfdc_lead.csv

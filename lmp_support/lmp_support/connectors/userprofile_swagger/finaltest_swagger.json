@@ -1,0 +1,25 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "p_restv2_ssvr_get_internal_users"
+  },
+  "host" : "na1.ai.dm-us.informaticacloud.com:443",
+  "basePath" : "/active-bpel/public/rt/f1Lt3JengEPi7JFvkUE6wS",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/p_restv2_ssvr_get_internal_users" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "p_restv2_ssvr_get_internal_usersOperation",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "The service has not returned any response data."
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

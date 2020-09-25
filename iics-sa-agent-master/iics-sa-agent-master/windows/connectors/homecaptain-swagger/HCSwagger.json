@@ -1,0 +1,110 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "Post_SFDC_HC"
+  },
+  "host" : "na1.ai.dm-us.informaticacloud.com:443",
+  "basePath" : "/active-bpel/rt",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/Post_SFDC_HC" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "Post_SFDC_HCOperation",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "Input",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/PO-HomeCaptain"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful response",
+            "schema" : {
+              "$ref" : "#/definitions/Post_SFDC_HCResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Post_SFDC_HCResponse" : {
+      "type" : "object",
+      "properties" : {
+        "Output_Response" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Output-HomeCaptain"
+          }
+        }
+      },
+      "xml" : {
+        "name" : "Post_SFDC_HCResponse"
+      }
+    },
+    "PO-HomeCaptain" : {
+      "type" : "object",
+      "properties" : {
+        "Client_Email" : {
+          "type" : "string"
+        },
+        "Desired_City" : {
+          "type" : "string"
+        },
+        "PreApproval_Amount" : {
+          "type" : "string"
+        },
+        "Lender_Source_Campaign" : {
+          "type" : "string"
+        },
+        "Buyer_Lead_Type" : {
+          "type" : "string"
+        },
+        "Client_Phone_1" : {
+          "type" : "string"
+        },
+        "Client_Phone_2" : {
+          "type" : "string"
+        },
+        "Client_Phone_3" : {
+          "type" : "string"
+        },
+        "Loan_Officer_Comments" : {
+          "type" : "string"
+        },
+        "Salesforce_ID" : {
+          "type" : "string"
+        },
+        "Desired_State" : {
+          "type" : "string"
+        },
+        "Loan_Officer_Email" : {
+          "type" : "string"
+        },
+        "Loan_Officer_Name" : {
+          "type" : "string"
+        },
+        "Client_First_Name" : {
+          "type" : "string"
+        },
+        "Client_Last_Name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Output-HomeCaptain" : {
+      "type" : "object",
+      "properties" : {
+        "Response" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

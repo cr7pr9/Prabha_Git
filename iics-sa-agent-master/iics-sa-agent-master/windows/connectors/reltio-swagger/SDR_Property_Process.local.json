@@ -1,0 +1,131 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "SDR_Property_Process"
+  },
+  "host" : "localhost:7080",
+  "basePath" : "/process-engine/rt",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/SDR_Property_Process" : {
+      "post" : {
+        "description" : "This process is invoked in CDI  mapping using RestV2 connection",
+        "operationId" : "SDR_Property_ProcessOperation",
+        "consumes" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/SDR_Property_ProcessRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The service has not returned any response data."
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "SDR_Property_ProcessRequest" : {
+      "type" : "object",
+      "properties" : {
+        "access_token" : {
+          "type" : "string"
+        },
+        "PropertyPayLoad" : {
+          "$ref" : "#/definitions/SDRPropertyPO-1"
+        }
+      }
+    },
+    "SDRPropertyPO-1" : {
+      "type" : "object",
+      "properties" : {
+        "CrosswalkLastUpdateDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "SubjectPropertyKey" : {
+          "type" : "string"
+        },
+        "PropertyType" : {
+          "type" : "string"
+        },
+        "CustomerID" : {
+          "type" : "string"
+        },
+        "County" : {
+          "type" : "string"
+        },
+        "LoanNumber" : {
+          "type" : "string"
+        },
+        "CombinedPropertyValueAmount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "LoanKey" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "OccupancyCodeDesc" : {
+          "type" : "string"
+        },
+        "PROPERTY_STREET_NAME" : {
+          "type" : "string"
+        },
+        "StateProvince" : {
+          "type" : "string"
+        },
+        "City" : {
+          "type" : "string"
+        },
+        "PropertyValueDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "Apartment" : {
+          "type" : "string"
+        },
+        "OCCUPANCY_CODE" : {
+          "type" : "string"
+        },
+        "ValueAmount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "RunDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "AddressLine2" : {
+          "type" : "string"
+        },
+        "AddressLine1" : {
+          "type" : "string"
+        },
+        "PROPERTY_STREET_NUMBER" : {
+          "type" : "string"
+        },
+        "NumberOfUnits" : {
+          "type" : "string"
+        },
+        "PropertyUsageType" : {
+          "type" : "string"
+        },
+        "Zip4" : {
+          "type" : "string"
+        },
+        "Zip5" : {
+          "type" : "string"
+        },
+        "PROPERTY_STATE_CODE" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+zip -r ${CI_PROJECT_NAME}.zip .  --exclude .*
+aws s3 cp ${CI_PROJECT_NAME}.zip s3://pnmac-deployments-${ENVIRONMENT}/${CI_PROJECT_NAME}/${CI_PROJECT_NAME}.zip

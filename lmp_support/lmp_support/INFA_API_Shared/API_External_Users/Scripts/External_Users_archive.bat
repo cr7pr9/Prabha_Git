@@ -1,0 +1,1 @@
+python C:\Users\informatica\lmp_support\INFA_API_Shared\API_External_Users\Scripts\External_Users_archive.py

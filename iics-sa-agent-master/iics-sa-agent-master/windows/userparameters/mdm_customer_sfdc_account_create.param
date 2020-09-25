@@ -1,0 +1,2 @@
+$$pre_processing=cmd /k copy C:\Users\informatica\lmp_support\staging\SQS\mdm_customer_sfdc_account_headers.csv + C:\Users\informatica\lmp_support\staging\SQS\mdm_customer_sfdc_account_create.csv C:\Users\informatica\lmp_support\staging\SQS\mdm_customer_sfdc_account_create_processing.csv /Y /b
+$$post_processing=erase C:\Users\informatica\lmp_support\staging\SQS\mdm_customer_sfdc_account_create.csv

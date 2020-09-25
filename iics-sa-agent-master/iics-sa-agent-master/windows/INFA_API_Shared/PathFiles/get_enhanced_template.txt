@@ -1,0 +1,2 @@
+"PATH"
+"C:\Users\informatica\lmp_support\INFA_API_Shared\PathFiles\get_enhanced_template.json"

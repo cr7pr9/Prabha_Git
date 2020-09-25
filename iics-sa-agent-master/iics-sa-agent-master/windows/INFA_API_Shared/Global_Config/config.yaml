@@ -1,0 +1,122 @@
+DB_ObjectNames:
+
+ tb_trade_stg : 'Los_pcg_commitmentDetails_stg'
+
+ tb_tradepairoff_stg : 'pairoff_commitmentDetails_stg'
+
+ tb_external_stg : 'los_pcg_externalusers_stg'
+
+ tb_dumessasges : 'LL_DU_FileList_LogControl'
+
+
+
+Path :
+
+ Inbound_TRD : 'C:\Users\informatica\Kanan\API_Trade_Management\Inbound'
+
+ Archive_TRD : 'C:\Users\informatica\Kanan\API_Trade_Management\Archive'
+
+ Outbound_TRD : 'C:\Users\informatica\Kanan\API_Trade_Management\Outbound'
+
+ Log_TRD : 'C:\Users\informatica\Kanan\API_Trade_Management\Logs'
+
+ Inbound_CLIENTINFO : 'C:\Users\informatica\Kanan\API_ClientConfig\Inbound'
+
+ Archive_CLIENTINFO : 'C:\Users\informatica\Kanan\API_ClientConfig\Archive'
+
+ Outbound_CLIENTINFO : 'C:\Users\informatica\Kanan\API_ClientConfig\Outbound'
+
+ Log_CLIENTINFO : 'C:\Users\informatica\Kanan\API_ClientConfig\Logs'
+
+ Inbound_EXTUSRS : 'C:\Users\informatica\Kanan\API_External_Users\Inbound'
+
+ Archive_EXTUSRS : 'C:\Users\informatica\Kanan\API_External_Users\Archive'
+
+ Outbound_EXTUSRS : 'C:\Users\informatica\Kanan\API_External_Users\Outbound'
+
+ Log_EXTUSRS : 'C:\Users\informatica\Kanan\API_External_Users\Logs'
+ 
+ Inbound_STIP : 'C:\Users\informatica\Kanan\API_Loan_Stip_Details\Inbound'
+ 
+  
+ Temp_STIP : 'C:\Users\informatica\Kanan\API_Loan_Stip_Details\Temp'
+ 
+ Archive_STIP : 'C:\Users\informatica\Kanan\API_Loan_Stip_Details\Archive'
+
+ Outbound_STIP : 'C:\Users\informatica\Kanan\API_Loan_Stip_Details\Outbound'
+
+ Log_STIP : 'C:\Users\informatica\Kanan\API_Loan_Stip_Details\Logs'
+
+ Path_Files : 'C:\Users\informatica\lmp_support\INFA_API_Shared\PathFiles'
+ 
+ 
+ 
+
+
+
+DesktopUnderwriter :
+
+ Temp_Path : 'C:\Users\informatica\Kanan\DESKTOP'
+
+ Files_Load_Path : 'C:\Users\informatica\Kanan\DesktopUnderwriter'
+
+ Sample_Path : 'C:\Users\informatica\lmp_support\DesktopUnderwriter'
+
+ Log_DU : 'C:\Users\informatica\Kanan\DesktopUnderwriter\Logs'
+
+ File_Prefix : 'du_messages'
+
+LockDetails :
+
+ Json_Path : 'C:\Users\informatica\Kanan\LockDetails\JSON'
+
+ Csv_Path : 'C:\Users\informatica\Kanan\LockDetails\CSV'
+
+LoanLogics :
+
+ Temp_Path : 'C:\Users\informatica\Kanan\LoanLogics'
+
+ Sample_Path : 'C:\Users\informatica\lmp_support\LoanLogics'
+ 
+ Archive_Path : 'C:\Users\informatica\Kanan\LoanLogics\Archive\'
+ 
+ Log_Path : 'C:\Users\informatica\Kanan\LoanLogics\Logs\'
+ 
+ Inbound : 'C:\Users\informatica\Kanan\LoanLogics\Inbound\' 
+ 
+ Unprocessed : 'C:\Users\informatica\Kanan\LoanLogics\Inbound\Unprocessed\'
+ 
+ tb_LoanLogics_Trg : 'LoanLogicsCheckTrigger'
+ 
+ tb_LDM_Finding_stg : 'LDM_XML_Finding_Stg'
+ 
+ tb_LDM_DocData_stg : 'LDM_XML_DocData_Stg'
+ 
+ tb_LoanLogics_SrcList :  'XML_LSM_LDM_SourceFileList'
+ 
+ tb_LSM_Loan_Stg : 'LSM_XML_Loan_stg'
+ 
+ tb_LSM_Borrower_Stg : 'LSM_XML_Borrower_stg'
+ 
+ tb_LSM_Income_Stg : 'LSM_XML_Income_stg'
+ 
+ tb_LSM_Asset_Stg : 'LSM_XML_Asset_stg'
+ 
+ tb_LSM_Liablty_Stg : 'LSM_XML_Liability_stg'
+ 
+ tb_LSM_IntDisFee_Stg : 'LSM_XML_IntegratedDiscFees_stg'
+ 
+ tb_LSM_ClCost_Stg : 'LSM_XML_ClosingCost_stg'
+ 
+ Log_file : 'log_LoanLogics_'
+ 
+ Trg_file_name : 'LoanLogics.trg'
+ 
+ subject : ' Stage Load Failed '
+ 
+ body : "Hi All,\n The LoanLogics stageload has been failed. Please find the attached logfiles for details."
+ 
+ receiver_email : ['poornima.joshi@pnmac.com','arun.mohandas@pnmac.com','bandreddy.prasanna@pnmac.com','srini.sundraram@pnmac.com']
+ 
+ sender_email : "admin@informaticacloud.com"
+

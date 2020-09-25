@@ -1,0 +1,56 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "everest-dev.pnmac.com",
+  "basePath" : "/api",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "v1/cognito/oauth" : {
+      "put" : {
+        "tags" : [ "internal_user_oauth" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "internal_user_oauth",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "cognitoOauthTokenRequest",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "object"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/internal_user_oauth"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "internal_user_oauth" : {
+      "properties" : {
+        "AccessToken" : {
+          "type" : "string"
+        },
+        "Session" : {
+          "type" : "string"
+        },
+        "Message" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

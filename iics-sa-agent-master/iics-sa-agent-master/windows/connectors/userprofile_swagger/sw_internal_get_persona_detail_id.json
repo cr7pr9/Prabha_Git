@@ -1,0 +1,336 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "everest-dev.pnmac.com",
+  "basePath" : "/api",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/v1/proxy/settings/personas/62" : {
+      "get" : {
+        "tags" : [ "sw_internal_get_persona_detail_id" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "sw_internal_get_persona_detail_id",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/sw_internal_get_persona_detail_id"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "sw_internal_get_persona_detail_id##aclRights##documents" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##eFolderSetup" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        },
+        "rights" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##forms" : {
+      "properties" : {
+        "entityId" : {
+          "type" : "string"
+        },
+        "entityName" : {
+          "type" : "string"
+        },
+        "entityType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##services" : {
+      "properties" : {
+        "category" : {
+          "type" : "string"
+        },
+        "accessSetting" : {
+          "type" : "string"
+        },
+        "defaultAccess" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##manageServiceProviders" : {
+      "properties" : {
+        "accessSetting" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##milestoneWorkflowManagement##finishMilestones" : {
+      "properties" : {
+        "entityId" : {
+          "type" : "string"
+        },
+        "entityName" : {
+          "type" : "string"
+        },
+        "entityType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##milestoneWorkflowManagement" : {
+      "properties" : {
+        "finishMilestones" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##milestoneWorkflowManagement##finishMilestones"
+          }
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##pipeline##pipelineViews" : {
+      "properties" : {
+        "entityId" : {
+          "type" : "string"
+        },
+        "entityName" : {
+          "type" : "string"
+        },
+        "entityType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##pipeline" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        },
+        "pipelineViews" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##pipeline##pipelineViews"
+          }
+        },
+        "nonAccessibleColumns" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##exportServices" : {
+      "properties" : {
+        "accessSetting" : {
+          "type" : "string"
+        },
+        "defaultAccess" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##tools" : {
+      "properties" : {
+        "entityName" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##tpoCompanyDetails" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        },
+        "rights" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##tpoContacts" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        },
+        "rights" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##tpoInformation" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        },
+        "rights" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##tpoOrganizationSettings" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        },
+        "rights" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##trades" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        },
+        "rights" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights##enhancedConditions" : {
+      "properties" : {
+        "access" : {
+          "type" : "boolean"
+        },
+        "conditionType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id##aclRights" : {
+      "properties" : {
+        "access" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "documents" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##documents"
+        },
+        "eFolderSetup" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##eFolderSetup"
+        },
+        "externalSettings" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "forms" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##forms"
+          }
+        },
+        "services" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##services"
+          }
+        },
+        "manageServiceProviders" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##manageServiceProviders"
+        },
+        "milestoneWorkflowManagement" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##milestoneWorkflowManagement"
+        },
+        "personalSettings" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "pipeline" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##pipeline"
+        },
+        "exportServices" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##exportServices"
+        },
+        "tools" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##tools"
+          }
+        },
+        "tpoCompanyDetails" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##tpoCompanyDetails"
+        },
+        "tpoContacts" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##tpoContacts"
+        },
+        "tpoInformation" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##tpoInformation"
+        },
+        "tpoOrganizationSettings" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##tpoOrganizationSettings"
+        },
+        "trades" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##trades"
+        },
+        "enhancedConditions" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights##enhancedConditions"
+        }
+      }
+    },
+    "sw_internal_get_persona_detail_id" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "defaultAccess" : {
+          "type" : "string"
+        },
+        "isInternal" : {
+          "type" : "boolean"
+        },
+        "isExternal" : {
+          "type" : "boolean"
+        },
+        "displayOrder" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "aclRights" : {
+          "$ref" : "#/definitions/sw_internal_get_persona_detail_id##aclRights"
+        }
+      }
+    }
+  }
+}

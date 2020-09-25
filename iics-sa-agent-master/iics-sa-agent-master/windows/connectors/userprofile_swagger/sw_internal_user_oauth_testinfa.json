@@ -1,0 +1,83 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "everest-dev.pnmac.com",
+  "basePath" : "/api",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/v1/cognito/oauth/" : {
+      "put" : {
+        "tags" : [ "sw_internal_user_oauth_testinfa" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "sw_internal_user_oauth_testinfa",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : null,
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/sw_internal_user_oauth_testinfa_Request##body"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/sw_internal_user_oauth_testinfa"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "sw_internal_user_oauth_testinfa" : {
+      "properties" : {
+        "AccessToken" : {
+          "type" : "string"
+        },
+        "Session" : {
+          "type" : "string"
+        },
+        "Message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_user_oauth_testinfa_Request##body##cognitoOauthTokenRequest" : {
+      "properties" : {
+        "pnmacKey" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "oldPassword" : {
+          "type" : "string"
+        }
+      }
+    },
+    "sw_internal_user_oauth_testinfa_Request##body" : {
+      "properties" : {
+        "cognitoOauthTokenRequest" : {
+          "$ref" : "#/definitions/sw_internal_user_oauth_testinfa_Request##body##cognitoOauthTokenRequest"
+        }
+      }
+    },
+    "sw_internal_user_oauth_testinfa_Request" : {
+      "properties" : {
+                  "$ref" : "#/definitions/sw_internal_user_oauth_testinfa_Request##body"
+             }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "everest-dev.pnmac.com",
+  "basePath" : "/api",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/v1/proxy/settings/personas" : {
+      "get" : {
+        "tags" : [ "sw_internal_get_persona_file" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "sw_internal_get_persona_file",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "isInternal",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "isExternal",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "defaultAccess",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "displayOrder",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "number",
+          "format" : "int32"
+        }, {
+          "name" : "id",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/sw_internal_get_persona_file"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "sw_internal_get_persona_file" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "defaultAccess" : {
+          "type" : "string"
+        },
+        "isInternal" : {
+          "type" : "boolean"
+        },
+        "isExternal" : {
+          "type" : "boolean"
+        },
+        "displayOrder" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    }
+  }
+}

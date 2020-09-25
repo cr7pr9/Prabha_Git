@@ -1,0 +1,129 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "MP-SFDC-Five9-LeadOpp-AsyncAdd-Handler"
+  },
+  "host" : "na1.ai.dm-us.informaticacloud.com:443",
+  "basePath" : "/active-bpel/public/rt/f1Lt3JengEPi7JFvkUE6wS",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/MP-SFDC-Five9-LeadOpp-AsyncAdd-Handler" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "MP-SFDC-Five9-LeadOpp-AsyncAdd-HandlerOperation",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "in_LeadOpportunityRequest",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/LeadOpportunityRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful response",
+            "schema" : {
+              "$ref" : "#/definitions/asyncAddRecordsToListResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "importIdentifier" : {
+      "type" : "object",
+      "properties" : {
+        "identifier" : {
+          "type" : "string"
+        }
+      }
+    },
+    "asyncAddRecordsToListResponse" : {
+      "type" : "object",
+      "properties" : {
+        "return" : {
+          "$ref" : "#/definitions/importIdentifier"
+        }
+      },
+      "xml" : {
+        "name" : "asyncAddRecordsToListResponse"
+      }
+    },
+    "LeadOpportunityRequest" : {
+      "type" : "object",
+      "properties" : {
+        "Zip" : {
+          "type" : "string"
+        },
+        "Company" : {
+          "type" : "string"
+        },
+        "WorkPhone" : {
+          "type" : "string"
+        },
+        "CallNowColumnNumber" : {
+          "type" : "string"
+        },
+        "ListName" : {
+          "type" : "string"
+        },
+        "FirstName" : {
+          "type" : "string"
+        },
+        "CellPhone" : {
+          "type" : "string"
+        },
+        "CampaignName" : {
+          "type" : "string"
+        },
+        "City" : {
+          "type" : "string"
+        },
+        "ListAddMode" : {
+          "type" : "string"
+        },
+        "ReportEmail" : {
+          "type" : "string"
+        },
+        "LeadOpportunityID" : {
+          "type" : "string"
+        },
+        "LeadStatus" : {
+          "type" : "string"
+        },
+        "AgentEmail" : {
+          "type" : "string"
+        },
+        "HomePhone" : {
+          "type" : "string"
+        },
+        "State" : {
+          "type" : "string"
+        },
+        "CrmAddMode" : {
+          "type" : "string"
+        },
+        "Street" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "CrmUpdateMode" : {
+          "type" : "string"
+        },
+        "DateAdded" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "CountryCode" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

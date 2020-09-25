@@ -1,0 +1,157 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.1",
+    "title" : "C360_Reltio_Process"
+  },
+  "host" : "na1.ai.dm-us.informaticacloud.com:443",
+  "basePath" : "/active-bpel/public/rt/f1Lt3JengEPi7JFvkUE6wS",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/C360_Reltio_Process" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "C360_Reltio_ProcessOperation",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/C360_Reltio_ProcessRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful response",
+            "schema" : {
+              "$ref" : "#/definitions/C360_Reltio_ProcessResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "C360_Reltio_ProcessRequest" : {
+      "type" : "object",
+      "required" : [ "FilterCondition", "access_token" ],
+      "properties" : {
+        "access_token" : {
+          "type" : "string"
+        },
+        "FilterCondition" : {
+          "type" : "string"
+        }
+      }
+    },
+    "C360_Reltio_ProcessResponse" : {
+      "type" : "object",
+      "properties" : {
+        "outputpayload" : {
+          "$ref" : "#/definitions/OutputFields"
+        }
+      },
+      "xml" : {
+        "name" : "C360_Reltio_ProcessResponse"
+      }
+    },
+    "OutputFields" : {
+      "type" : "object",
+      "properties" : {
+        "output_Zip4" : {
+          "type" : "string"
+        },
+        "output_Zip5" : {
+          "type" : "string"
+        },
+        "output_PhoneStatus" : {
+          "type" : "string"
+        },
+        "output_AddressType" : {
+          "type" : "string"
+        },
+        "output_PhoneNumber" : {
+          "type" : "string"
+        },
+        "output_IsDelinquent" : {
+          "type" : "string"
+        },
+        "output_MiddleName" : {
+          "type" : "string"
+        },
+        "output_uri_BorrowerPhone" : {
+          "type" : "string"
+        },
+        "output_City" : {
+          "type" : "string"
+        },
+        "output_PhoneSourceName" : {
+          "type" : "string"
+        },
+        "output_LastFourSSN" : {
+          "type" : "string"
+        },
+        "output_State" : {
+          "type" : "string"
+        },
+        "output_PhoneCreatedDateTime" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "output_Reltio_PhoneSolicitOK" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "output_uri_Borrower" : {
+          "type" : "string"
+        },
+        "output_Reltio_EmailSolicitOK" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "output_Email" : {
+          "type" : "string"
+        },
+        "output_PhoneType" : {
+          "type" : "string"
+        },
+        "output_uri_BorrowerAddress" : {
+          "type" : "string"
+        },
+        "output_Reltio_DirectMailSolicitOK" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "output_FullName" : {
+          "type" : "string"
+        },
+        "output_FirstName" : {
+          "type" : "string"
+        },
+        "output_AddressCreatedDateTime" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "output_LoanKey" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "output_LastName" : {
+          "type" : "string"
+        },
+        "output_AddressStatus" : {
+          "type" : "string"
+        },
+        "output_EntitycreatedDateTime" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "output_AddressLine1" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

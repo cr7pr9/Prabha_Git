@@ -1,0 +1,1 @@
+python C:\Users\informatica\lmp_support\LoanLogics\scripts\downloadLoanLogics.py

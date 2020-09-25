@@ -1,0 +1,2 @@
+PATH
+C:\Users\informatica\lmp_support\connectors\userprofile_swagger\Get_Users_output.xsd
